@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_BrewApricotSoda</defName>
+        <label>brew apricot soda</label>
+        <description>Brew apricots and syrup into a sweet soda.\n\nMakes 6.</description>
+        <jobString>Brewing apricot soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Apricots</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Apricots</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_ApricotSoda>6</VV_VGD_ApricotSoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_DurianSoda</defName>
+        <label>brew durian soda</label>
+        <description>Brew durian and syrup into a polarizing soda.\n\nMakes 6.</description>
+        <jobString>Brewing durian soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Durians</li>
+                    </thingDefs>
+                </filter>
+                <count>6</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Durians</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_DurianSoda>6</VV_VGD_DurianSoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_GrapefruitSoda</defName>
+        <label>brew grapefruit soda</label>
+        <description>Brew grapefruit and syrup into a tart soda.\n\nMakes 6.</description>
+        <jobString>Brewing grapefruit soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Grapefruits</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Grapefruits</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_GrapefruitSoda>6</VV_VGD_GrapefruitSoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_JabuticabaBerrySoda</defName>
+        <label>brew jabuticaba berry soda</label>
+        <description>Brew jabuticaba berries and syrup into a sweet soda.\n\nMakes 6.</description>
+        <jobString>Brewing jabuticaba berry soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_JabuticabaBerries</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_JabuticabaBerries</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_JabuticabaBerrySoda>6</VV_VGD_JabuticabaBerrySoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_LimeSoda</defName>
+        <label>brew lime soda</label>
+        <description>Brew limes and syrup into a tart soda.\n\nMakes 6.</description>
+        <jobString>Brewing lime soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Limes</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Limes</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_LimeSoda>6</VV_VGD_LimeSoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_MedlarSoda</defName>
+        <label>brew medlar soda</label>
+        <description>Brew over-ripened medlars and syrup into a sweet soda.\n\nMakes 6.</description>
+        <jobString>Brewing medlar soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Medlars</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Medlars</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_MedlarSoda>6</VV_VGD_MedlarSoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_MulberrySoda</defName>
+        <label>brew mulberry soda</label>
+        <description>Brew mulberries and syrup into a sweet soda.\n\nMakes 6.</description>
+        <jobString>Brewing mulberry soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Mulberries</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Mulberries</li>
+                <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_MulberrySoda>6</VV_VGD_MulberrySoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_PapayaSoda</defName>
+        <label>brew papaya soda</label>
+        <description>Brew papayas and syrup into a sweet soda.\n\nMakes 6.</description>
+        <jobString>Brewing papaya soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Papayas</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Papayas</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_PapayaSoda>6</VV_VGD_PapayaSoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_PersimmonSoda</defName>
+        <label>brew persimmon soda</label>
+        <description>Brew persimmons and syrup into a sweet soda.\n\nMakes 6.</description>
+        <jobString>Brewing persimmon soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Persimmons</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Persimmons</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_PersimmonSoda>6</VV_VGD_PersimmonSoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_PomegranateSoda</defName>
+        <label>brew pomegranate soda</label>
+        <description>Brew pomegranates and syrup into a sweet-tart soda.\n\nMakes 6.</description>
+        <jobString>Brewing pomegranate soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Pomegranates</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Pomegranates</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_PomegranateSoda>6</VV_VGD_PomegranateSoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_QuinceSoda</defName>
+        <label>brew quince soda</label>
+        <description>Brew quinces and syrup into a slightly sweet soda.\n\nMakes 6.</description>
+        <jobString>Brewing pomegranate soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Quinces</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Quinces</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_QuinceSoda>6</VV_VGD_QuinceSoda>
+        </products>
+    </RecipeDef>
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_SourCherrySoda</defName>
+        <label>brew sour cherry soda</label>
+        <description>Brew sour cherries and syrup into a tart soda.\n\nMakes 6.</description>
+        <jobString>Brewing sour cherry soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_SourCherrys</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_SourCherrys</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_SourCherrySoda>6</VV_VGD_SourCherrySoda>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_LemonLimeSoda</defName>
+        <label>brew lemon-lime soda</label>
+        <description>Brew lemon and limes and syrup into a sweet-tart soda.\n\nMakes 10.</description>
+        <jobString>Brewing lemon-lime soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs />
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_Limes</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_Limes</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>VV_Limes</li>          
+            </thingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <VV_VGD_LemonLimeSoda>10</VV_VGD_LemonLimeSoda>
+        </products>
+    </RecipeDef>  
+</Defs>

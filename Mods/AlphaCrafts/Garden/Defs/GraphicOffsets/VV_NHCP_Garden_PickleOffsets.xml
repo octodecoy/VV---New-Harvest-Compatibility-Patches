@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VEF.Graphics.GraphicOffsets>
+        <defName>VV_AC_PickleOffsets_NewHarvest_Garden</defName>
+        <thingDef>AC_Pickles</thingDef>
+        <ingredientsAndOffsetList>
+            <li>
+                <key>VV_Artichoke</key>
+                <value>8</value>
+            </li>
+            <li>
+                <key>VV_Asparagus</key>
+                <value>6</value>
+            </li>
+            <li>
+                <key>VV_BlackBeans</key>
+                <value>6</value>
+            </li>
+            <li>
+                <key>VV_BroccoliFlorets</key>
+                <value>8</value>
+            </li>
+            <li>
+                <key>VV_Parsnips</key>
+                <value>9</value>
+            </li>
+            <li>
+                <key>VV_WhiteTurnips</key>
+                <value>9</value>
+            </li>
+        </ingredientsAndOffsetList>
+    </VEF.Graphics.GraphicOffsets>
+</Defs>

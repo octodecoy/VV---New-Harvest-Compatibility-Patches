@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>            
+            /Defs/ThingDef
+            [defName="VV_AlfalfaHay" or defName="VV_CloverHay" or defName="VV_TimothyHay"]
+            [not(modExtensions/li[@Class="MedievalOverhaul.FuelValueProperty"])]
+        </xpath>
+        <value>
+            <li Class="MedievalOverhaul.FuelValueProperty">
+                <fuelValue>0.5</fuelValue>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>            
+            Defs/ThingDef
+            [defName="DankPyon_BirdPost"]
+            /comps/li
+            [@Class="MedievalOverhaul.CompProperties_RefuelableCustom"]
+            /fuelFilter/thingDefs
+            [li="Hay"]
+        </xpath>
+        <value>
+            <li>VV_AlfalfaHay</li>
+            <li>VV_CloverHay</li>
+            <li>VV_TimothyHay</li>
+        </value>
+    </Operation>
+</Patch>

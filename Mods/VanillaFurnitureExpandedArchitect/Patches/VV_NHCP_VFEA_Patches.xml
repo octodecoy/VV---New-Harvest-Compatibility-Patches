@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/TerrainDef[defName="VV_NHCP_CedarPlankFloor"]/label</xpath>
+                <value>
+                    <label>cedar laminate floor</label>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/TerrainDef[defName="VV_NHCP_EbonyPlankFloor"]/label</xpath>
+                <value>
+                    <label>ebony laminate floor</label>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/TerrainDef[defName="VV_NHCP_MahoganyPlankFloor"]/label</xpath>
+                <value>
+                    <label>mahogany laminate floor</label>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/TerrainDef[defName="VV_NHCP_RosewoodPlankFloor"]/label</xpath>
+                <value>
+                    <label>rosewood laminate floor</label>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

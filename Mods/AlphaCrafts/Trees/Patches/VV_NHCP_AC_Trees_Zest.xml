@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- ZEST -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Plants Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/ingredients/li/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Grapefruits</li>
+                        <li>VV_Limes</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Grapefruits</li>
+                        <li>VV_Limes</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/defaultIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Grapefruits</li>
+                        <li>VV_Limes</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

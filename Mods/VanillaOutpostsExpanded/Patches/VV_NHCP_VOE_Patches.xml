@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Doesn't reflect if the tree types are actually found at the outpost -->
+    <!-- Values could probably use tweaking -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Industrial Crops</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/WorldObjectDef[defName="Outpost_Logging"]/modExtensions/li[@Class="Outposts.OutpostExtension"]/ResultOptions</xpath>
+            <value>
+                <li>
+                    <AmountPerPawn>25</AmountPerPawn>
+                    <Thing>VV_EbonyWood</Thing>
+                </li>
+                <li>
+                    <AmountPerPawn>50</AmountPerPawn>
+                    <Thing>VV_MahoganyWood</Thing>
+                </li>
+                <li>
+                    <AmountPerPawn>25</AmountPerPawn>
+                    <Thing>VV_RosewoodWood</Thing>
+                </li>
+                <li>
+                    <AmountPerPawn>50</AmountPerPawn>
+                    <Thing>VV_CedarWood</Thing>
+                </li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

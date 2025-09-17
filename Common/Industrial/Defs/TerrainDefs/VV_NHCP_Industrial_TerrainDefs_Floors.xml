@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Folder must be loaded regardless of settings/mods so that other defs requiring them don't throw errors when not found.  MayRequireAnyOf works fine though, just not loadfolder. -->
+    <TerrainDef Name="VV_NHCP_FloorBase" ParentName="FloorBase" Abstract="True">
+        <renderPrecedence>250</renderPrecedence>
+        <burnedDef>BurnedWoodPlankFloor</burnedDef>
+        <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughSoftLight</pollutionShaderType>
+        <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionFloorSmooth</pollutionOverlayTexturePath>
+        <isPaintable>true</isPaintable>
+        <constructEffect>ConstructWood</constructEffect>
+        <designationCategory>Floors</designationCategory>
+        <uiOrder>2001</uiOrder>
+    </TerrainDef>
+
+    <TerrainDef Name="VV_NHCP_FloorBase_Cedar" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <color>(201,151,112)</color>
+    </TerrainDef>
+
+    <TerrainDef Name="VV_NHCP_FloorBase_Ebony" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <color>(40,40,42)</color>
+    </TerrainDef>
+
+    <TerrainDef Name="VV_NHCP_FloorBase_Mahogany" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <color>(92,31,31)</color>
+    </TerrainDef>
+
+    <TerrainDef Name="VV_NHCP_FloorBase_Rosewood" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    
+    <TerrainDef Name="VV_NHCP_FloorBase_Core" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+        <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Core">
+        <defName>VV_NHCP_CedarPlankFloor</defName>
+        <label>cedar floor</label>
+        <costList>
+            <VV_CedarWood>3</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Core">
+        <defName>VV_NHCP_EbonyPlankFloor</defName>
+        <label>ebony floor</label>
+        <costList>
+            <VV_EbonyWood>3</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Core">
+        <defName>VV_NHCP_MahoganyPlankFloor</defName>
+        <label>mahogany floor</label>
+        <costList>
+            <VV_MahoganyWood>3</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Core">
+        <defName>VV_NHCP_RosewoodPlankFloor</defName>
+        <label>rosewood floor</label>
+        <costList>
+            <VV_RosewoodWood>3</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+</Defs>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Put VV plants into VGP research if they don't already have research, otherwise let whichever mods research got added (like MO) take over.
+         Checking that the VGP research def actually exists first, then that VGP plants are actually using them. Only adding if other research hasn't already been added. -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Forage Crops</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ResearchProjectDef[defName="agriculture"]</xpath>
+            <match Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="Plant_Snowbeet"]/plant/sowResearchPrerequisites[li="agriculture"]</xpath>
+                <match Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>/Defs/ThingDef[defName="VV_Alfalfa" or defName="VV_Clover" or defName="VV_TimothyGrass"]/plant[not(sowResearchPrerequisites)]
+                    </xpath>
+                    <value>
+                        <sowResearchPrerequisites>
+                            <li>agriculture</li>
+                        </sowResearchPrerequisites>
+                    </value>
+                </match>
+            </match>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Garden Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="agriculture"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="Plant_Snowbeet"]/plant/sowResearchPrerequisites[li="agriculture"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>
+                                /Defs/ThingDef
+                                [defName="VV_SpinachPlant" or
+                                defName="VV_ParsnipPlant" or
+                                defName="VV_WhiteTurnipPlant" or
+                                defName="VV_LeekPlant" or
+                                defName="VV_BlackBeanPlant" or
+                                defName="VV_BlackberryBush"]
+                                /plant
+                                [not(sowResearchPrerequisites)]
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>agriculture</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="agricultureII"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="Plantgrape"]/plant/sowResearchPrerequisites[li="agricultureII"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>
+                                /Defs/ThingDef
+                                [defName="VV_BroccoliPlant" or
+                                defName="VV_MilletPlant" or
+                                defName="VV_AmaranthPlant" or
+                                defName="VV_TeffPlant" or
+                                defName="VV_QuinoaPlant" or
+                                defName="VV_RedCabbagePlant" or
+                                defName="VV_AsparagusPlant"]
+                                /plant
+                                [not(sowResearchPrerequisites)]
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>agricultureII</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="agricultureIV"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="DateTree"]/plant/sowResearchPrerequisites[li="agricultureIV"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>
+                                /Defs/ThingDef
+                                [defName="VV_ArtichokePlant" or
+                                defName="VV_BlackcurrantBush" or
+                                defName="VV_RosehipBush" or
+                                defName="VV_DragonFruitPlant"]
+                                /plant
+                                [not(sowResearchPrerequisites)]
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>agricultureIV</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Industrial Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="agriculture"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="Plant_Snowbeet"]/plant/sowResearchPrerequisites[li="agriculture"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="VV_ReedPlant"]/plant[not(sowResearchPrerequisites)]</xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>agriculture</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="agricultureII"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="Plantgrape"]/plant/sowResearchPrerequisites[li="agricultureII"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="VV_JutePlant" or defName="VV_RamiePlant" or defName="VV_RattanPlant"]/plant[not(sowResearchPrerequisites)]</xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>agricultureII</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="TreeSowing"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[@Name="TreeBase"]/plant/sowResearchPrerequisites[li="TreeSowing"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>
+                                /Defs/ThingDef
+                                [defName="VV_CedarTree" or
+                                defName="VV_CorkTree" or
+                                defName="VV_RubberTree" or
+                                defName="VV_EbonyTree" or
+                                defName="VV_MahoganyTree" or
+                                defName="VV_RosewoodTree" or
+                                defName="VV_WhiteMulberryTree"]
+                                /plant
+                                [not(sowResearchPrerequisites)]
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>TreeSowing</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Trees</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="agricultureIII"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="PlantAppletree"]/plant/sowResearchPrerequisites[li="agricultureIII"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>
+                                /Defs/ThingDef[
+                                defName="VV_SourCherryTree" or
+                                defName="VV_ApricotTree" or
+                                defName="VV_QuinceTree" or
+                                defName="VV_MulberryTree" or
+                                defName="VV_WalnutTree" or
+                                defName="VV_HazelnutTree" or
+                                defName="VV_CashewTree" or
+                                defName="VV_PecanTree" or
+                                defName="VV_SugarMapleTree" or
+                                defName="VV_LimeTree"]
+                                /plant
+                                [not(sowResearchPrerequisites)]
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>agricultureIII</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="agricultureIV"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="DateTree"]/plant/sowResearchPrerequisites[li="agricultureIV"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>
+                                /Defs/ThingDef
+                                [defName="VV_MedlarTree" or
+                                defName="VV_PapayaTree" or
+                                defName="VV_GrapefruitTree" or
+                                defName="VV_PomegranateTree" or
+                                defName="VV_DurianTree" or
+                                defName="VV_ChestnutTree" or
+                                defName="VV_StonePineTree" or
+                                defName="VV_PersimmonTree"]
+                                /plant
+                                [not(sowResearchPrerequisites)]
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>agricultureIV</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

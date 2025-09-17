@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- PERFUME -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractPerfume"]/ingredients/li/filter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Papayas</li>
+            <li>VV_Pomegranates</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractPerfume"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Papayas</li>
+            <li>VV_Pomegranates</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractPerfume"]/defaultIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Papayas</li>
+            <li>VV_Pomegranates</li>
+        </value>
+    </Operation>
+</Patch>

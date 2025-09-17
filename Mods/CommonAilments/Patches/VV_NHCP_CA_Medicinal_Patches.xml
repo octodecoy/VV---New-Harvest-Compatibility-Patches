@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/HediffDef[defName="VV_LindenTeaEffect"]/stages//makeImmuneTo</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_LindenTeaEffect"]/stages//makeImmuneTo</xpath>
+                        <value>
+                            <li>CA_CommonCold</li>
+                            <li>CA_Headache</li>
+                            <li>CA_Indigestion</li>
+                            <li>CA_SoreThroat</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_LindenTeaEffect"]/stages/li</xpath>
+                        <value>
+                            <makeImmuneTo>
+                                <li>CA_CommonCold</li>
+                                <li>CA_Headache</li>
+                                <li>CA_Indigestion</li>
+                                <li>CA_SoreThroat</li>
+                            </makeImmuneTo>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/HediffDef[defName="VV_ChamomileTeaEffect"]/stages//makeImmuneTo</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_ChamomileTeaEffect"]/stages//makeImmuneTo</xpath>
+                        <value>
+                            <li>CA_CommonCold</li>
+                            <li>CA_Headache</li>
+                            <li>CA_Indigestion</li>
+                            <li>CA_SoreThroat</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_ChamomileTeaEffect"]/stages/li</xpath>
+                        <value>
+                            <makeImmuneTo>
+                                <li>CA_CommonCold</li>
+                                <li>CA_Headache</li>
+                                <li>CA_Indigestion</li>
+                                <li>CA_SoreThroat</li>
+                            </makeImmuneTo>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/HediffDef[defName="VV_ThymeTeaEffect"]/stages//makeImmuneTo</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_ThymeTeaEffect"]/stages//makeImmuneTo</xpath>
+                        <value>
+                            <li>CA_CommonCold</li>
+                            <li>CA_Headache</li>
+                            <li>CA_Indigestion</li>
+                            <li>CA_SoreThroat</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_ThymeTeaEffect"]/stages/li</xpath>
+                        <value>
+                            <makeImmuneTo>
+                                <li>CA_CommonCold</li>
+                                <li>CA_Headache</li>
+                                <li>CA_Indigestion</li>
+                                <li>CA_SoreThroat</li>
+                            </makeImmuneTo>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/HediffDef[defName="VV_GinkgoTeaEffect"]/stages//makeImmuneTo</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_GinkgoTeaEffect"]/stages//makeImmuneTo</xpath>
+                        <value>
+                            <li>CA_CommonCold</li>
+                            <li>CA_Headache</li>
+                            <li>CA_Indigestion</li>
+                            <li>CA_SoreThroat</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_GinkgoTeaEffect"]/stages/li</xpath>
+                        <value>
+                            <makeImmuneTo>
+                                <li>CA_CommonCold</li>
+                                <li>CA_Headache</li>
+                                <li>CA_Indigestion</li>
+                                <li>CA_SoreThroat</li>
+                            </makeImmuneTo>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/HediffDef[defName="VV_GinsengDecoctionEffect"]/stages//makeImmuneTo</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_GinsengDecoctionEffect"]/stages//makeImmuneTo</xpath>
+                        <value>
+                            <li>CA_CommonCold</li>
+                            <li>CA_Headache</li>
+                            <li>CA_Indigestion</li>
+                            <li>CA_SoreThroat</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_GinsengDecoctionEffect"]/stages/li</xpath>
+                        <value>
+                            <makeImmuneTo>
+                                <li>CA_CommonCold</li>
+                                <li>CA_Headache</li>
+                                <li>CA_Indigestion</li>
+                                <li>CA_SoreThroat</li>
+                            </makeImmuneTo>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/HediffDef[defName="VV_EchinaceaDecoctionEffect"]/stages//makeImmuneTo</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_EchinaceaDecoctionEffect"]/stages//makeImmuneTo</xpath>
+                        <value>
+                            <li>CA_CommonCold</li>
+                            <li>CA_Headache</li>
+                            <li>CA_Indigestion</li>
+                            <li>CA_SoreThroat</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_EchinaceaDecoctionEffect"]/stages/li</xpath>
+                        <value>
+                            <makeImmuneTo>
+                                <li>CA_CommonCold</li>
+                                <li>CA_Headache</li>
+                                <li>CA_Indigestion</li>
+                                <li>CA_SoreThroat</li>
+                            </makeImmuneTo>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/HediffDef[defName="VV_ValerianDecoctionEffect"]/stages//makeImmuneTo</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_ValerianDecoctionEffect"]/stages//makeImmuneTo</xpath>
+                        <value>
+                            <li>CA_CommonCold</li>
+                            <li>CA_Headache</li>
+                            <li>CA_Indigestion</li>
+                            <li>CA_SoreThroat</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_ValerianDecoctionEffect"]/stages/li</xpath>
+                        <value>
+                            <makeImmuneTo>
+                                <li>CA_CommonCold</li>
+                                <li>CA_Headache</li>
+                                <li>CA_Indigestion</li>
+                                <li>CA_SoreThroat</li>
+                            </makeImmuneTo>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

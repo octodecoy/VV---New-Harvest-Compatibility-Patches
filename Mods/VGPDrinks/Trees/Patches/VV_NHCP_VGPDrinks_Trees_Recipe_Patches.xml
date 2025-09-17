@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.FindMod">
+        <modGroupOne>
+            <li>Vanilla Plants Expanded</li>
+            <li>Vanilla Brewing Expanded - Coffees and Teas</li>         
+        </modGroupOne>
+        <modGroupTwo>
+            <li>Medieval Overhaul</li>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>          
+        </modGroupTwo>
+        <logicGroupOne>And</logicGroupOne>
+        <logicGroupTwo>Or</logicGroupTwo>
+        <logicBetweenGroups>Or</logicBetweenGroups>
+        <caseTrue Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="VV_VGD_LemonLimeSoda"]/ingredients/li[1]/filter/thingDefs</xpath>
+                    <value>
+                        <li MayRequire="vanillaexpanded.vplantse,vanillaexpanded.vbrewecandt">VCE_RawLemon</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawLemons</li>
+                        <li MayRequireAnyOf="vvenchov.vvnewharvest,vvenchov.vvnewharvestmedicinalplants">VV_LemonBalmLeaves</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="VV_VGD_LemonLimeSoda"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li MayRequire="vanillaexpanded.vplantse,vanillaexpanded.vbrewecandt">VCE_RawLemon</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawLemons</li>
+                        <li MayRequireAnyOf="vvenchov.vvnewharvest,vvenchov.vvnewharvestmedicinalplants">VV_LemonBalmLeaves</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="VV_VGD_LemonLimeSoda"]/defaultIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li MayRequire="vanillaexpanded.vplantse,vanillaexpanded.vbrewecandt">VCE_RawLemon</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawLemons</li>
+                        <li MayRequireAnyOf="vvenchov.vvnewharvest,vvenchov.vvnewharvestmedicinalplants">VV_LemonBalmLeaves</li>
+                    </value>
+                </li>
+            </operations>
+        </caseTrue>
+        <caseFalse Class="PatchOperationSequence">
+            <operations>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <xpath>/Defs/RecipeDef[defName="VV_VGD_LemonLimeSoda"]</xpath>
+                    <value>
+                        <recipeUsers Inherit="False" />
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_VGD_LemonLimeSoda"]</xpath>
+                    <value>
+                        <thingCategories Inherit="False" />
+                    </value>
+                </li>             
+            </operations>
+        </caseFalse>
+    </Operation>
+</Patch>

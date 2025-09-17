@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<VEF.Graphics.GraphicOffsets>
+		<defName>VV_AC_EssenceOffsets_NewHarvest_Trees</defName>
+		<thingDef>AC_Essence</thingDef>
+		<ingredientsAndOffsetList>
+			<li>
+				<key>VV_Apricots</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>VV_JabuticabaBerries</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>VV_Medlars</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>VV_Mulberries</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>VV_Papayas</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>VV_Pomegranates</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>VV_SourCherrys</key>
+				<value>1</value>
+			</li>
+		</ingredientsAndOffsetList>
+	</VEF.Graphics.GraphicOffsets>
+</Defs>

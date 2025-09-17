@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- True by default, so run on caseFalse -->
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>HayNeedsCooling</setting>  
+        <caseFalse Class="PatchOperationFindMod">
+            <mods>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Forage Crops</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="NewHarvestPatches.AddOrReplace">
+                        <xpath>/Defs/ThingDef[defName="VV_AlfalfaHay" or defName="VV_CloverHay" or defName="VV_TimothyHay"]/statBases</xpath>
+                        <value>
+                            <DeteriorationRate>0.25</DeteriorationRate>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="VV_AlfalfaHay" or defName="VV_CloverHay" or defName="VV_TimothyHay"]/comps/li[@Class="CompProperties_Rottable"]</xpath>
+                        <match Class="PatchOperationRemove">
+                            <xpath>/Defs/ThingDef[defName="VV_AlfalfaHay" or defName="VV_CloverHay" or defName="VV_TimothyHay"]/comps/li[@Class="CompProperties_Rottable"]</xpath>
+                        </match>
+                    </li>
+                </operations>
+            </match>
+        </caseFalse>
+    </Operation>
+</Patch>

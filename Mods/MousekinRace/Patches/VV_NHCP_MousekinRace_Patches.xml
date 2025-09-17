@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Forage Crops</li>
+        </mods>  
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TraderKindDef[@Name="Mousekin_TraderSettlementBase"]/stockGenerators</xpath>
+                    <value>
+                        <li Class="StockGenerator_SingleDef">
+                            <thingDef>VV_AlfalfaHay</thingDef>
+                            <countRange>250~1000</countRange>
+                            <price>Cheap</price>
+                        </li>
+                        <li Class="StockGenerator_SingleDef">
+                            <thingDef>VV_CloverHay</thingDef>
+                            <countRange>250~1000</countRange>
+                            <price>Cheap</price>
+                        </li>
+                        <li Class="StockGenerator_SingleDef">
+                            <thingDef>VV_TimothyHay</thingDef>
+                            <countRange>250~1000</countRange>
+                            <price>Cheap</price>
+                        </li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TraderKindDef[@Name="Mousekin_TraderCaravanBase"]/stockGenerators</xpath>
+                    <value>
+                        <li Class="StockGenerator_BuySingleDef">
+                            <thingDef>VV_AlfalfaHay</thingDef>
+                        </li>      
+                        <li Class="StockGenerator_BuySingleDef">
+                            <thingDef>VV_CloverHay</thingDef>
+                        </li>  
+                        <li Class="StockGenerator_BuySingleDef">
+                            <thingDef>VV_TimothyHay</thingDef>
+                        </li>                    
+                    </value>
+                </li>
+            </operations>
+        </match>    
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/ThingDef
+                        [defName="VV_SoothingHerbalOintment" or 
+                        defName="VV_RestorativeHerbalOintment" or 
+                        defName="VV_AdvancedHerbalMedicine" or
+                        defName="VV_GinsengDecoction" or
+                        defName="VV_EchinaceaDecoction" or
+                        defName="VV_ValerianDecoction"]
+                        /recipeMaker/recipeUsers
+                    </xpath>
+                    <value>
+                        <li>Mousekin_WorkbenchAlchemy</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MousekinRace.FlowerListDef[defName="Mousekin_ValidFlowers"]/flowerPlants</xpath>
+                    <value>
+                        <li>VV_CalendulaPlant</li>
+                        <li>VV_ChamomilePlant</li>
+                        <li>VV_EchinaceaPlant</li>
+                        <li>VV_HawthornTree</li>
+                        <li>VV_LavenderPlant</li>
+                        <li>VV_LindenTree</li>
+                        <li>VV_StJohnsWortPlant</li>
+                        <li>VV_ThymePlant</li>
+                        <li>VV_YarrowPlant</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

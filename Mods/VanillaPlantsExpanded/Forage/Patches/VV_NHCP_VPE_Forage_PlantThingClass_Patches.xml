@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Growth boost while raining -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_Clover"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_Clover"]</xpath>
+                    <value>
+                        <thingClass>VanillaPlantsExpanded.Plant_RainAffected</thingClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_Clover"]/description</xpath>
+                    <value>
+                        <description>A resilient, low-growing plant with trifoliate leaves and vibrant flowers. Often cultivated as animal forage due to its fast growth and adaptability.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Clover will receive a huge 50% growth boost if it is raining.</description>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

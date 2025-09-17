@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>AddWoodConversionRecipe</setting>  
+        <caseTrue Class="NewHarvestPatches.FindMod">
+            <modGroupOne>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Industrial Crops</li>
+            </modGroupOne> 
+            <modGroupTwo>
+                <li>Extended Woodworking</li>
+                <li>Expanded Woodworking (Continued)</li>
+                <li>Medieval Overhaul</li>
+            </modGroupTwo>
+            <logicGroupTwo>Not</logicGroupTwo>
+            <logicBetweenGroups>And</logicBetweenGroups>
+            <caseTrue Class="PatchOperationAdd">
+                <xpath>/Defs/RecipeDef[defName="VV_NHCP_ConvertNewHarvestWoodToWood"]/recipeUsers</xpath>
+                <value>
+                    <li>TableStonecutter</li>
+                </value>    
+            </caseTrue>
+        </caseTrue>
+    </Operation>
+</Patch>

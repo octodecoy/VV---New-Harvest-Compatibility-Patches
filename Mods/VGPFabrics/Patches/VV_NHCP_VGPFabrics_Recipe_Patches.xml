@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VV - New Harvest</li>
+			<li>VV - New Harvest: Industrial Crops</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/RecipeDef[defName="TableLoom"]</xpath>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef[@Name="VV_MakeClothBase"]/recipeUsers</xpath>
+								<value>
+									<li>TableLoom</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/WorkGiverDef[defName="VV_DoBillsSpinFabric"]/fixedBillGiverDefs</xpath>
+								<value>
+									<li>TableLoom</li>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/RecipeDef[defName="TableElecLoom"]</xpath>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef[@Name="VV_MakeClothBase"]/recipeUsers</xpath>
+								<value>
+									<li>TableElecLoom</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/WorkGiverDef[defName="VV_DoBillsSpinFabric"]/fixedBillGiverDefs</xpath>
+								<value>
+									<li>TableElecLoom</li>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>		
+			</operations>
+		</match>
+	</Operation>
+</Patch>

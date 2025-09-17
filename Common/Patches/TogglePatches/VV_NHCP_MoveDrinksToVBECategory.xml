@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>MoveDrinksToVBECategory</setting>
+        <caseTrue Class="NewHarvestPatches.FindMod">
+            <modGroupOne>
+                <li>Vanilla Brewing Expanded</li>
+            </modGroupOne>
+            <modGroupTwo>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Medicinal Plants</li>
+            </modGroupTwo>
+            <logicBetweenGroups>And</logicBetweenGroups>
+            <caseTrue Class="NewHarvestPatches.AddOrReplace">
+                <xpath>
+                    /Defs/ThingDef
+                    [defName="VV_ChamomileTea" or
+                    defName="VV_GinkgoTea" or
+                    defName="VV_LindenTea" or
+                    defName="VV_ThymeTea" or
+                    defName="VV_EchinaceaDecoction" or
+                    defName="VV_GinsengDecoction" or
+                    defName="VV_ValerianDecoction"]
+                </xpath>
+                <value>
+                    <thingCategories>
+                        <li>VBE_DrinksNonAlcoholic</li>
+                    </thingCategories>
+                </value>
+            </caseTrue>
+        </caseTrue>
+    </Operation>
+</Patch>

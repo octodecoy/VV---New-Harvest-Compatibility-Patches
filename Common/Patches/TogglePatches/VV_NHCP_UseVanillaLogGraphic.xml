@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>UseVanillaLogGraphic</setting>
+        <caseTrue Class="PatchOperationFindMod">
+            <mods>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Industrial Crops</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Medieval Overhaul</li>
+                </mods>
+                <match Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef/killedLeavings/DankPyon_RawWood</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationTest">
+                                <xpath>/Defs/ThingDef[defName="DankPyon_RawWood"]/graphicData/texPath[text()="Things/Item/Resource/WoodLogs"]</xpath>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="DankPyon_Log_VV_CedarWood"]/graphicData</xpath>
+                                <value>
+                                    <graphicData>
+                                        <texPath>Things/Item/Resource/WoodLogs</texPath>
+                                        <color>(201,151,112)</color>
+                                    </graphicData>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="DankPyon_Log_VV_EbonyWood"]/graphicData</xpath>
+                                <value>
+                                    <graphicData>
+                                        <texPath>Things/Item/Resource/WoodLogs</texPath>
+                                        <color>(40,40,42)</color>
+                                    </graphicData>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="DankPyon_Log_VV_MahoganyWood"]/graphicData</xpath>
+                                <value>
+                                    <graphicData>
+                                        <texPath>Things/Item/Resource/WoodLogs</texPath>
+                                        <color>(92,31,31)</color>
+                                    </graphicData>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="DankPyon_Log_VV_RosewoodWood"]/graphicData</xpath>
+                                <value>
+                                    <graphicData>
+                                        <texPath>Things/Item/Resource/WoodLogs</texPath>
+                                        <color>(119,13,60)</color>
+                                    </graphicData>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                    <nomatch Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationTest">
+                                <xpath>/Defs/ThingDef[defName="DankPyon_RawWood"]/graphicData/texPath[text()="Things/Item/Resource/WoodLogs"]</xpath>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_CedarWood"]/graphicData</xpath>
+                                <value>
+                                    <graphicData>
+                                        <texPath>Things/Item/Resource/WoodLogs</texPath>
+                                        <color>(201,151,112)</color>
+                                    </graphicData>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_EbonyWood"]/graphicData</xpath>
+                                <value>
+                                    <graphicData>
+                                        <texPath>Things/Item/Resource/WoodLogs</texPath>
+                                        <color>(40,40,42)</color>
+                                    </graphicData>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_MahoganyWood"]/graphicData</xpath>
+                                <value>
+                                    <graphicData>
+                                        <texPath>Things/Item/Resource/WoodLogs</texPath>
+                                        <color>(92,31,31)</color>
+                                    </graphicData>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_RosewoodWood"]/graphicData</xpath>
+                                <value>
+                                    <graphicData>
+                                        <texPath>Things/Item/Resource/WoodLogs</texPath>
+                                        <color>(119,13,60)</color>
+                                    </graphicData>
+                                </value>
+                            </li>
+                        </operations>
+                    </nomatch>
+                </match>
+                <nomatch Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="PatchOperationReplace">
+                            <xpath>/Defs/ThingDef[defName="VV_CedarWood"]/graphicData</xpath>
+                            <value>
+                                <graphicData>
+                                    <texPath>Things/Item/Resource/NHCP_WoodLogs</texPath>
+                                    <graphicClass>Graphic_StackCount</graphicClass>
+                                    <color>(201,151,112)</color>
+                                </graphicData>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationReplace">
+                            <xpath>/Defs/ThingDef[defName="VV_EbonyWood"]/graphicData</xpath>
+                            <value>
+                                <graphicData>
+                                    <texPath>Things/Item/Resource/NHCP_WoodLogs</texPath>
+                                    <graphicClass>Graphic_StackCount</graphicClass>
+                                    <color>(40,40,42)</color>
+                                </graphicData>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationReplace">
+                            <xpath>/Defs/ThingDef[defName="VV_MahoganyWood"]/graphicData</xpath>
+                            <value>
+                                <graphicData>
+                                    <texPath>Things/Item/Resource/NHCP_WoodLogs</texPath>
+                                    <graphicClass>Graphic_StackCount</graphicClass>
+                                    <color>(92,31,31)</color>
+                                </graphicData>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationReplace">
+                            <xpath>/Defs/ThingDef[defName="VV_RosewoodWood"]/graphicData</xpath>
+                            <value>
+                                <graphicData>
+                                    <texPath>Things/Item/Resource/NHCP_WoodLogs</texPath>
+                                    <graphicClass>Graphic_StackCount</graphicClass>
+                                    <color>(119,13,60)</color>
+                                </graphicData>
+                            </value>
+                        </li>
+                    </operations>
+                </nomatch>
+            </match>
+        </caseTrue>
+    </Operation>
+</Patch>

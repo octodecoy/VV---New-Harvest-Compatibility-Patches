@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- FINE -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar">
+        <defName>VV_NHCP_VFEArch_FineWoodenFloorCedar</defName>
+        <label>cedar vinyl fine wooden floor</label>
+        <description>Beautiful wooden parquet, made with no compromises, for expressing economic status. Slow to construct.</description>
+        <texturePath>Terrains/FineWoodenFloor</texturePath>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <CleaningTimeFactor>0.8</CleaningTimeFactor>
+        </statBases>
+        <costList>
+            <VV_CedarWood>20</VV_CedarWood>
+        </costList>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony">
+        <defName>VV_NHCP_VFEArch_FineWoodenFloorEbony</defName>
+        <label>ebony vinyl fine wooden floor</label>
+        <description>Beautiful wooden parquet, made with no compromises, for expressing economic status. Slow to construct.</description>
+        <texturePath>Terrains/FineWoodenFloor</texturePath>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <CleaningTimeFactor>0.8</CleaningTimeFactor>
+        </statBases>
+        <costList>
+            <VV_EbonyWood>20</VV_EbonyWood>
+        </costList>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany">
+        <defName>VV_NHCP_VFEArch_FineWoodenFloorMahogany</defName>
+        <label>mahogany vinyl fine wooden floor</label>
+        <description>Beautiful wooden parquet, made with no compromises, for expressing economic status. Slow to construct.</description>
+        <texturePath>Terrains/FineWoodenFloor</texturePath>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <CleaningTimeFactor>0.8</CleaningTimeFactor>
+        </statBases>
+        <costList>
+            <VV_MahoganyWood>20</VV_MahoganyWood>
+        </costList>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood">
+        <defName>VV_NHCP_VFEArch_FineWoodenFloorRosewood</defName>
+        <label>rosewood vinyl fine wooden floor</label>
+        <description>Beautiful wooden parquet, made with no compromises, for expressing economic status. Slow to construct.</description>
+        <texturePath>Terrains/FineWoodenFloor</texturePath>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <CleaningTimeFactor>0.8</CleaningTimeFactor>
+        </statBases>
+        <costList>
+            <VV_RosewoodWood>20</VV_RosewoodWood>
+        </costList>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- ESSENCE -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractEssence"]/ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+        <value>
+            <li>VV_Blackberries</li>
+            <li>VV_Blackcurrants</li>
+            <li>VV_DragonFruits</li>
+            <li>VV_Rosehips</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractEssence"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Blackberries</li>
+            <li>VV_Blackcurrants</li>
+            <li>VV_DragonFruits</li>
+            <li>VV_Rosehips</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractEssence"]/defaultIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Blackberries</li>
+            <li>VV_Blackcurrants</li>
+            <li>VV_DragonFruits</li>
+            <li>VV_Rosehips</li>
+        </value>
+    </Operation>
+</Patch>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- <drawPosition>(-1, -1)</drawPosition> to hide them by default.  If setting is on, position in code. -->
+    <ThingDef ParentName="DryadBase">
+        <defName>VV_NHCP_Dryad_Cedarmaker</defName>
+        <label>cedarmaker dryad</label>
+        <description>A slow, bumbling caste of dryad which specializes in cedar wood production. Together with its Gauranlen tree, this dryad can generate a cedar wood-like material on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+        <statBases>
+            <MoveSpeed>3</MoveSpeed>
+        </statBases>
+        <descriptionHyperlinks>
+            <ThingDef>VV_CedarWood</ThingDef>
+        </descriptionHyperlinks>
+        <race>
+            <useMeatFrom>Dryad_Basic</useMeatFrom>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <soundWounded>Pawn_Dryad_Woodmaker_Wounded</soundWounded>
+                    <soundCall>Pawn_Dryad_Woodmaker_Call</soundCall>
+                </li>
+            </lifeStageAges>
+            <headPosPerRotation>
+                <li>(0.0, 0, 0.16)</li>
+                <li>(0.15, 0, 0.03)</li>
+                <li>(0, 0, 0)</li>
+                <li>(-0.15, 0, 0.03)</li>
+            </headPosPerRotation>
+        </race>
+        <comps>
+            <li Class="CompProperties_Spawner">
+                <thingToSpawn>VV_CedarWood</thingToSpawn>
+                <spawnCount>32</spawnCount>
+                <spawnIntervalRange>120000</spawnIntervalRange>
+                <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+                <showMessageIfOwned>true</showMessageIfOwned>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="DryadKindBase">
+        <defName>VV_NHCP_Dryad_Cedarmaker</defName>
+        <label>cedarmaker dryad</label>
+        <race>VV_NHCP_Dryad_Cedarmaker</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/Dryad_Cedarmaker/Dryad_Cedarmaker</texPath>
+                    <drawSize>1.5</drawSize>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/Dryad_Barkskin/Dessicated_DryadBarkskin</texPath>
+                    <drawSize>1.5</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+    <ThingDef ParentName="DryadBase">
+        <defName>VV_NHCP_Dryad_Ebonymaker</defName>
+        <label>ebonymaker dryad</label>
+        <description>A slow, bumbling caste of dryad which specializes in ebony wood production. Together with its Gauranlen tree, this dryad can generate a ebony wood-like material on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+        <statBases>
+            <MoveSpeed>3</MoveSpeed>
+        </statBases>
+        <uiIconScale>1.25</uiIconScale>
+        <descriptionHyperlinks>
+            <ThingDef>VV_EbonyWood</ThingDef>
+        </descriptionHyperlinks>
+        <race>
+            <useMeatFrom>Dryad_Basic</useMeatFrom>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <soundWounded>Pawn_Dryad_Woodmaker_Wounded</soundWounded>
+                    <soundCall>Pawn_Dryad_Woodmaker_Call</soundCall>
+                </li>
+            </lifeStageAges>
+            <headPosPerRotation>
+                <li>(0.0, 0, 0.12)</li>
+                <li>(0.2, 0, 0.03)</li>
+                <li>(0, 0, 0.1)</li>
+                <li>(-0.2, 0, 0.03)</li>
+            </headPosPerRotation>
+        </race>
+        <comps>
+            <li Class="CompProperties_Spawner">
+                <thingToSpawn>VV_EbonyWood</thingToSpawn>
+                <spawnCount>32</spawnCount>
+                <spawnIntervalRange>120000</spawnIntervalRange>
+                <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+                <showMessageIfOwned>true</showMessageIfOwned>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="DryadKindBase">
+        <defName>VV_NHCP_Dryad_Ebonymaker</defName>
+        <label>ebonymaker dryad</label>
+        <race>VV_NHCP_Dryad_Ebonymaker</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/Dryad_Ebonymaker/Dryad_Ebonymaker</texPath>
+                    <drawSize>1.5</drawSize>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/Dryad_Clawer/Dessicated_DryadClawer</texPath>
+                    <drawSize>1.5</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+    <ThingDef ParentName="DryadBase">
+        <defName>VV_NHCP_Dryad_Mahoganymaker</defName>
+        <label>mahoganymaker dryad</label>
+        <description>A slow, bumbling caste of dryad which specializes in mahogany wood production. Together with its Gauranlen tree, this dryad can generate a mahogany wood-like material on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+        <statBases>
+            <MoveSpeed>3</MoveSpeed>
+        </statBases>
+        <uiIconScale>1.25</uiIconScale>
+        <descriptionHyperlinks>
+            <ThingDef>VV_MahoganyWood</ThingDef>
+        </descriptionHyperlinks>
+        <race>
+            <useMeatFrom>Dryad_Basic</useMeatFrom>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <soundWounded>Pawn_Dryad_Woodmaker_Wounded</soundWounded>
+                    <soundCall>Pawn_Dryad_Woodmaker_Call</soundCall>
+                </li>
+            </lifeStageAges>
+            <headPosPerRotation>
+                <li>(0.0, 0, 0.18)</li>
+                <li>(0.22, 0, 0.08)</li>
+                <li>(0, 0, 0.05)</li>
+                <li>(-0.22, 0, 0.08)</li>
+            </headPosPerRotation>
+        </race>
+        <comps>
+            <li Class="CompProperties_Spawner">
+                <thingToSpawn>VV_MahoganyWood</thingToSpawn>
+                <spawnCount>32</spawnCount>
+                <spawnIntervalRange>120000</spawnIntervalRange>
+                <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+                <showMessageIfOwned>true</showMessageIfOwned>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="DryadKindBase">
+        <defName>VV_NHCP_Dryad_Mahoganymaker</defName>
+        <label>mahoganymaker dryad</label>
+        <race>VV_NHCP_Dryad_Mahoganymaker</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/Dryad_Mahoganymaker/Dryad_Mahoganymaker</texPath>
+                    <drawSize>1.5</drawSize>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/Dryad_Woodmaker/Dessicated_DryadWoodmaker</texPath>
+                    <drawSize>1.5</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+    <ThingDef ParentName="DryadBase">
+        <defName>VV_NHCP_Dryad_Rosewoodmaker</defName>
+        <label>rosewoodmaker dryad</label>
+        <description>A slow, bumbling caste of dryad which specializes in rosewood wood production. Together with its Gauranlen tree, this dryad can generate a rosewood wood-like material on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+        <statBases>
+            <MoveSpeed>3</MoveSpeed>
+        </statBases>
+        <uiIconScale>1.25</uiIconScale>
+        <descriptionHyperlinks>
+            <ThingDef>VV_RosewoodWood</ThingDef>
+        </descriptionHyperlinks>
+        <race>
+            <useMeatFrom>Dryad_Basic</useMeatFrom>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <soundWounded>Pawn_Dryad_Woodmaker_Wounded</soundWounded>
+                    <soundCall>Pawn_Dryad_Woodmaker_Call</soundCall>
+                </li>
+            </lifeStageAges>
+            <headPosPerRotation>
+                <li>(0.0, 0, 0.25)</li>
+                <li>(0.19, 0, 0.21)</li>
+                <li>(0, 0, 0.13)</li>
+                <li>(-0.19, 0, 0.21)</li>
+            </headPosPerRotation>
+        </race>
+        <comps>
+            <li Class="CompProperties_Spawner">
+                <thingToSpawn>VV_RosewoodWood</thingToSpawn>
+                <spawnCount>32</spawnCount>
+                <spawnIntervalRange>120000</spawnIntervalRange>
+                <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+                <showMessageIfOwned>true</showMessageIfOwned>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="DryadKindBase">
+        <defName>VV_NHCP_Dryad_Rosewoodmaker</defName>
+        <label>rosewoodmaker dryad</label>
+        <race>VV_NHCP_Dryad_Rosewoodmaker</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/Dryad_Rosewoodmaker/Dryad_Rosewoodmaker</texPath>
+                    <drawSize>1.25</drawSize>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/Dryad_Carrier/Dessicated_DryadCarrier</texPath>
+                    <drawSize>1.25</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+</Defs>

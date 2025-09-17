@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Garden -->
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Amaranth</defName>
+        <label>Amaranth seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_AmaranthPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Amaranth</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_AmaranthPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Artichoke</defName>
+        <label>Artichoke seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_ArtichokePlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Artichoke</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_ArtichokePlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Asparagus</defName>
+        <label>Asparagus seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_AsparagusPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Asparagus</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_AsparagusPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_BlackBeans</defName>
+        <label>Black bean seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_BlackBeanPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/BlackBean</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_BlackBeanPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Blackberry</defName>
+        <label>Blackberry bush seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_BlackberryBush</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Blackberry</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_BlackberryBush</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Blackcurrant</defName>
+        <label>Blackcurrant bush seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_BlackcurrantBush</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Blackcurrant</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_BlackcurrantBush</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Broccoli</defName>
+        <label>Broccoli seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_BroccoliPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Broccoli</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_BroccoliPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_DragonFruit</defName>
+        <label>Dragonfruit seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_DragonFruitPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Dragonfruit</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_DragonFruitPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Leeks</defName>
+        <label>Leek seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_LeekPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Leek</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_LeekPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Millet</defName>
+        <label>Millet seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_MilletPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Millet</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_MilletPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Parsnip</defName>
+        <label>Parsnip seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_ParsnipPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Parsnip</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_ParsnipPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Quinoa</defName>
+        <label>Quinoa seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_QuinoaPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Quinoa</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_QuinoaPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_RedCabbage</defName>
+        <label>Red cabbage seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_RedCabbagePlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/RedCabbage</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_RedCabbagePlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Rosehip</defName>
+        <label>Rosehip bush seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_RosehipBush</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Rosehip</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_RosehipBush</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Spinach</defName>
+        <label>Spinach seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_SpinachPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Spinach</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_SpinachPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Teff</defName>
+        <label>Teff seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_TeffPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Teff</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_TeffPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_WhiteTurnips</defName>
+        <label>White turnip seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_WhiteTurnipPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/WhiteTurnip</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_WhiteTurnipPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+</Defs>

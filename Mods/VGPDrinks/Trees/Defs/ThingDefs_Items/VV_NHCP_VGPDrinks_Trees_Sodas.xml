@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_ApricotSoda</defName>
+        <label>apricot soda</label>
+        <description>A sweet soda made from apricots.</description>
+        <graphicData>
+            <texPath>Things/Item/OrangeSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_DurianSoda</defName>
+        <label>durian soda</label>
+        <description>A polarizing soda made from durian.</description>
+        <graphicData>
+            <texPath>Things/Item/AppleSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_GrapefruitSoda</defName>
+        <label>grapefruit soda</label>
+        <description>A tart soda made from grapefruit.</description>
+        <graphicData>
+            <texPath>Things/Item/CoconutSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_JabuticabaBerrySoda</defName>
+        <label>jabuticaba berry soda</label>
+        <description>A sweet soda made from jabuticaba berries.</description>
+        <graphicData>
+            <texPath>Things/Item/GrapeSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_LimeSoda</defName>
+        <label>lime soda</label>
+        <description>A tart soda made from limes.</description>
+        <graphicData>
+            <texPath>Things/Item/GooseberrySoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_MedlarSoda</defName>
+        <label>medlar soda</label>
+        <description>A sweet soda made from over-ripened medlars.</description>
+        <graphicData>
+            <texPath>Things/Item/CherrySoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_MulberrySoda</defName>
+        <label>mulberry soda</label>
+        <description>A sweet soda made from mulberries.</description>
+        <graphicData>
+            <texPath>Things/Item/CherrySoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_PapayaSoda</defName>
+        <label>papaya soda</label>
+        <description>A sweet soda made from papayas.</description>
+        <graphicData>
+            <texPath>Things/Item/OrangeSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_PersimmonSoda</defName>
+        <label>persimmon soda</label>
+        <description>A sweet soda made from persimmons.</description>
+        <graphicData>
+            <texPath>Things/Item/OrangeSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_PomegranateSoda</defName>
+        <label>pomegranate soda</label>
+        <description>A sweet soda made from pomegranates.</description>
+        <graphicData>
+            <texPath>Things/Item/CherrySoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_QuinceSoda</defName>
+        <label>quince soda</label>
+        <description>A slightly sweet soda made from quinces.</description>
+        <graphicData>
+            <texPath>Things/Item/PineappleSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_SourCherrySoda</defName>
+        <label>sour cherry soda</label>
+        <description>A tart soda made from sour cherries.</description>
+        <graphicData>
+            <texPath>Things/Item/CherrySoda</texPath>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_LemonLimeSoda</defName>
+        <label>lemon-lime soda</label>
+        <description>A sweet-tart soda made from lemon and limes.</description>
+        <graphicData>
+            <texPath>Things/Item/GooseberrySoda</texPath>
+        </graphicData>
+    </ThingDef>   
+</Defs>

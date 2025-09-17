@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- RUSTIC -->
+    <TerrainDef Name="VV_NHCP_FloorBase_MF_Rustic" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Rustic wooden floorboards, finely polished and with splinters removed. Nice to look at but somewhat slow to build.</description>
+        <texturePath>Terrain/Surfaces/MoreFloors/WoodFloor1</texturePath>
+        <statBases>
+            <WorkToBuild>140</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>1</Beauty>
+        </statBases>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Rustic">
+        <defName>VV_NHCP_FloorWoodRustic_Cedar</defName>
+        <label>cedar floorboards</label>
+        <costList>
+            <VV_CedarWood>6</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Rustic">
+        <defName>VV_NHCP_FloorWoodRustic_Ebony</defName>
+        <label>ebony floorboards</label>
+        <costList>
+            <VV_EbonyWood>6</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Rustic">
+        <defName>VV_NHCP_FloorWoodRustic_Mahogany</defName>
+        <label>mahogany floorboards</label>
+        <costList>
+            <VV_MahoganyWood>6</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Rustic">
+        <defName>VV_NHCP_FloorWoodRustic_Rosewood</defName>
+        <label>rosewood floorboards</label>
+        <costList>
+            <VV_RosewoodWood>6</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- WIDE -->
+    <TerrainDef Name="VV_NHCP_FloorBase_MF_Wide" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Wide, plain-looking floorboards for that minimalistic feel. Easy to build.</description>
+        <texturePath>Terrain/Surfaces/MoreFloors/WoodFloor2</texturePath>
+        <statBases>
+            <WorkToBuild>60</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Wide">
+        <defName>VV_NHCP_FloorWoodWide_Cedar</defName>
+        <label>wide cedar floorboards</label>
+        <costList>
+            <VV_CedarWood>2</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Wide">
+        <defName>VV_NHCP_FloorWoodWide_Ebony</defName>
+        <label>wide ebony floorboards</label>
+        <costList>
+            <VV_EbonyWood>2</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Wide">
+        <defName>VV_NHCP_FloorWoodWide_Mahogany</defName>
+        <label>wide mahogany floorboards</label>
+        <costList>
+            <VV_MahoganyWood>2</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Wide">
+        <defName>VV_NHCP_FloorWoodWide_Rosewood</defName>
+        <label>wide rosewood floorboards</label>
+        <costList>
+            <VV_RosewoodWood>2</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- LIGHT -->
+    <TerrainDef Name="VV_NHCP_FloorBase_MF_Light" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Light-coloured polished wooden floorboards in a pleasant interlocking pattern.</description>
+        <texturePath>Terrain/Surfaces/MoreFloors/WoodFloor3</texturePath>
+        <statBases>
+            <WorkToBuild>120</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>1</Beauty>
+        </statBases>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Light">
+        <defName>VV_NHCP_FloorWoodLight_Cedar</defName>
+        <label>light cedar floor</label>
+        <costList>
+            <VV_CedarWood>5</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Light">
+        <defName>VV_NHCP_FloorWoodLight_Ebony</defName>
+        <label>light ebony floor</label>
+        <costList>
+            <VV_EbonyWood>5</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Light">
+        <defName>VV_NHCP_FloorWoodLight_Mahogany</defName>
+        <label>light mahogany floor</label>
+        <costList>
+            <VV_MahoganyWood>5</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Light">
+        <defName>VV_NHCP_FloorWoodLight_Rosewood</defName>
+        <label>light rosewood floor</label>
+        <costList>
+            <VV_RosewoodWood>5</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- MOSAIC -->
+    <TerrainDef Name="VV_NHCP_FloorBase_MF_Mosaic" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>A wooden floor with planks laid in a mosaic-like pattern - beautiful, but needs a lot of wood and is time-consuming to build.</description>
+        <texturePath>Terrain/Surfaces/MoreFloors/WoodFloor4</texturePath>
+        <statBases>
+            <WorkToBuild>200</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>2</Beauty>
+        </statBases>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Mosaic">
+        <defName>VV_NHCP_FloorWoodMosaic_Cedar</defName>
+        <label>mosaic cedar floor</label>
+        <costList>
+            <VV_CedarWood>9</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Mosaic">
+        <defName>VV_NHCP_FloorWoodMosaic_Ebony</defName>
+        <label>mosaic ebony floor</label>
+        <costList>
+            <VV_EbonyWood>9</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Mosaic">
+        <defName>VV_NHCP_FloorWoodMosaic_Mahogany</defName>
+        <label>mosaic mahogany floor</label>
+        <costList>
+            <VV_MahoganyWood>9</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Mosaic">
+        <defName>VV_NHCP_FloorWoodMosaic_Rosewood</defName>
+        <label>mosaic rosewood floor</label>
+        <costList>
+            <VV_RosewoodWood>9</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- VERTICAL -->
+    <TerrainDef Name="VV_NHCP_FloorBase_MF_Vertical" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Wooden floorboards.</description>
+        <texturePath>Terrain/Surfaces/MoreFloors/WoodFloor5</texturePath>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Vertical">
+        <defName>VV_NHCP_FloorWoodVertical_Cedar</defName>
+        <label>vertical cedar floor</label>
+        <costList>
+            <VV_CedarWood>3</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Vertical">
+        <defName>VV_NHCP_FloorWoodVertical_Ebony</defName>
+        <label>vertical ebony floor</label>
+        <costList>
+            <VV_EbonyWood>3</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Vertical">
+        <defName>VV_NHCP_FloorWoodVertical_Mahogany</defName>
+        <label>vertical mahogany floor</label>
+        <costList>
+            <VV_MahoganyWood>3</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Vertical">
+        <defName>VV_NHCP_FloorWoodVertical_Rosewood</defName>
+        <label>vertical rosewood floor</label>
+        <costList>
+            <VV_RosewoodWood>3</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- BARN -->
+    <TerrainDef Name="VV_NHCP_FloorBase_MF_Barn" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Barn board flooring best used in farm buildings where animals are kept. Somewhat ugly to look at but it's cheap and accepts significantly less filth than other wooden floors.</description>
+        <texturePath>Terrain/Surfaces/MoreFloors/WoodFloor6</texturePath>
+        <statBases>
+            <WorkToBuild>50</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>-1</Beauty>
+            <Cleanliness>-0.1</Cleanliness>
+            <FilthMultiplier>0.10</FilthMultiplier>
+        </statBases>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Barn">
+        <defName>VV_NHCP_FloorWoodBarn_Cedar</defName>
+        <label>cedar barn board floor</label>
+        <costList>
+            <VV_CedarWood>2</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Barn">
+        <defName>VV_NHCP_FloorWoodBarn_Ebony</defName>
+        <label>ebony barn board floor</label>
+        <costList>
+            <VV_EbonyWood>2</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Barn">
+        <defName>VV_NHCP_FloorWoodBarn_Mahogany</defName>
+        <label>mahogany barn board floor</label>
+        <costList>
+            <VV_MahoganyWood>2</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Barn">
+        <defName>VV_NHCP_FloorWoodBarn_Rosewood</defName>
+        <label>rosewood barn board floor</label>
+        <costList>
+            <VV_RosewoodWood>2</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+</Defs>

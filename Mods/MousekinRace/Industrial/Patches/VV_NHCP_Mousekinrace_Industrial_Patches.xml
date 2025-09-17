@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Mousekin_CharcoalPile"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
+        <value>
+            <li>VV_NHCP_Mousekin_CedarLogToCharcoal</li>
+            <li>VV_NHCP_Mousekin_EbonyLogToCharcoal</li>
+            <li>VV_NHCP_Mousekin_MahoganyLogToCharcoal</li>
+            <li>VV_NHCP_Mousekin_RosewoodLogToCharcoal</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medieval Overhaul</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef/killedLeavings/DankPyon_RawWood</xpath>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/PipeSystem.ProcessDef[defName="VV_NHCP_Mousekin_CedarLogToCharcoal"]/ingredients/li[thing="VV_CedarWood"]/thing</xpath>
+                        <value>
+                            <thing>DankPyon_Log_VV_CedarWood</thing>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/PipeSystem.ProcessDef[defName="VV_NHCP_Mousekin_EbonyLogToCharcoal"]/ingredients/li[thing="VV_EbonyWood"]/thing</xpath>
+                        <value>
+                            <thing>DankPyon_Log_VV_EbonyWood</thing>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/PipeSystem.ProcessDef[defName="VV_NHCP_Mousekin_MahoganyLogToCharcoal"]/ingredients/li[thing="VV_MahoganyWood"]/thing</xpath>
+                        <value>
+                            <thing>DankPyon_Log_VV_MahoganyWood</thing>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/PipeSystem.ProcessDef[defName="VV_NHCP_Mousekin_RosewoodLogToCharcoal"]/ingredients/li[thing="VV_RosewoodWood"]/thing</xpath>
+                        <value>
+                            <thing>DankPyon_Log_VV_RosewoodWood</thing>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+</Patch>

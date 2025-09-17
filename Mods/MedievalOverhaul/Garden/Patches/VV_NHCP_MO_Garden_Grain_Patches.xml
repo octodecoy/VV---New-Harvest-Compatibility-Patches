@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Alter MO flour recipe labeling to reflect added VV grains instead of 'wheat' exclusively. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlour_Manual" or defName="DankPyon_CraftFlour"]/label</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlour_Manual" or defName="DankPyon_CraftFlour"]/label</xpath>
+            <value>
+                <label>grind grain into flour</label>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlourBulk"]/label</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlourBulk"]/label</xpath>
+            <value>
+                <label>grind grain into flour x10</label>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlour_Manual" or defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk"]/description</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlour_Manual" or defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk"]/description</xpath>
+            <value>
+                <description>Grind grain into flour.</description>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlour_Manual" or defName="DankPyon_CraftFlour"]/jobString</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlour_Manual" or defName="DankPyon_CraftFlour"]/jobString</xpath>
+            <value>
+                <jobString>Grinding grain into flour.</jobString>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlourBulk"]/jobString</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="DankPyon_CraftFlourBulk"]/jobString</xpath>
+            <value>
+                <jobString>Grinding grain into 10 flour.</jobString>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/ThingDef
+            [defName="DankPyon_LargeShelf_Grain" or defName="DankPyon_SackWheat"]
+            /building/fixedStorageSettings/filter
+            [not(categories)]
+        </xpath>
+        <value>
+            <categories />
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>            
+            /Defs/ThingDef
+            [defName="DankPyon_LargeShelf_Grain" or defName="DankPyon_SackWheat"]
+            /building/fixedStorageSettings/filter/categories
+        </xpath>
+        <value>
+            <li>DankPyon_Cereal</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/ThingDef
+            [defName="DankPyon_LargeShelf_Grain" or defName="DankPyon_SackWheat"]
+            /building/defaultStorageSettings/filter
+            [not(categories)]
+        </xpath>
+        <value>
+            <categories />
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>            
+            /Defs/ThingDef
+            [defName="DankPyon_LargeShelf_Grain" or defName="DankPyon_SackWheat"]
+            /building/defaultStorageSettings/filter/categories
+        </xpath>
+        <value>
+            <li>DankPyon_Cereal</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="DankPyon_SackWheat"]/label</xpath>
+        <value>
+            <label>sack of grain</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>            
+            /Defs/ThingDef
+            [defName="DankPyon_HideoutLargeShelf_Grain" or defName="DankPyon_HideoutSackWheat"]
+            /modExtensions/li
+            [@Class="MedievalOverhaul.BuildingLootableExtension"]
+            /randomItems
+        </xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>                
+                /Defs/ThingDef
+                [defName="DankPyon_HideoutLargeShelf_Grain" or defName="DankPyon_HideoutSackWheat"]
+                /modExtensions/li
+                [@Class="MedievalOverhaul.BuildingLootableExtension"]
+                /randomItems
+            </xpath>
+            <value>
+                <li>VV_MilletGrain</li>
+                <li>VV_AmaranthGrain</li>
+                <li>VV_TeffGrain</li>
+                <li>VV_QuinoaSeeds</li>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="DankPyon_HideoutSackWheat"]/label</xpath>
+        <value>
+            <label>sack of grain</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="DankPyon_Make_WortAle"]/description</xpath>
+        <value>
+            <description>Make ale wort by boiling grains.</description>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medieval Overhaul: House Roxmont</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>                        
+                        /Defs/RecipeDef
+                        [defName="DankPyon_Make_Wort_RoxberryStout"]
+                        /ingredients/li/filter
+                        [thingDefs/li="DankPyon_RawWheat"]
+                        [not(categories)]
+                    </xpath>
+                    <value>
+                        <categories />
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>                        
+                        /Defs/RecipeDef
+                        [defName="DankPyon_Make_Wort_RoxberryStout"]
+                        /ingredients/li/filter
+                        [thingDefs/li="DankPyon_RawWheat"]
+                        /categories
+                    </xpath>
+                    <value>
+                        <li>DankPyon_Cereal</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>                        
+                        /Defs/RecipeDef
+                        [defName="DankPyon_Make_Wort_RoxberryStout"]
+                        /fixedIngredientFilter
+                        [not(categories)]
+                    </xpath>
+                    <value>
+                        <categories />
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>                        
+                        /Defs/RecipeDef
+                        [defName="DankPyon_Make_Wort_RoxberryStout"]
+                        /fixedIngredientFilter/categories
+                    </xpath>
+                    <value>
+                        <li>DankPyon_Cereal</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Adaptive Primitive Storage</li>
+                    </mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <success>Always</success>
+                                <xpath>                                    
+                                    /Defs/ThingDef[defName="ASF_Granary"]
+                                    /building/fixedStorageSettings/filter/categories
+                                    [not(DankPyon_Cereal)]
+                                </xpath>
+                                <value>
+                                    <li>DankPyon_Cereal</li>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <success>Always</success>
+                                <xpath>                                    
+                                    /Defs/ThingDef[defName="ASF_Granary"]
+                                    /building/defaultStorageSettings/filter/categories
+                                    [not(DankPyon_Cereal)]
+                                </xpath>
+                                <value>
+                                    <li>DankPyon_Cereal</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

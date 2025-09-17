@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Add MO silkworm extension -->
+    <Operation Class="NewHarvestPatches.AddOrReplace">
+        <xpath>/Defs/ThingDef[defName="VV_WhiteMulberryTree"]</xpath>
+        <value>
+            <thingClass>MedievalOverhaul.Plant_SecondaryDrop</thingClass>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>            
+            /Defs/ThingDef
+            [defName="VV_WhiteMulberryTree"]
+            [thingClass="MedievalOverhaul.Plant_SecondaryDrop"]
+        </xpath>
+        <match Class="PatchOperationAddModExtension">
+            <success>Always</success>
+            <xpath>                
+                /Defs/ThingDef
+                [defName="VV_WhiteMulberryTree"]
+                [thingClass="MedievalOverhaul.Plant_SecondaryDrop"]
+                [not(modExtensions/li[@Class="MedievalOverhaul.SecondaryPlantDropExtension"])]
+            </xpath>
+            <value>
+                <li Class="MedievalOverhaul.SecondaryPlantDropExtension">
+                    <secondaryDrop>DankPyon_Silkworm</secondaryDrop>
+                    <secondaryDropAmountRange>3</secondaryDropAmountRange>
+                    <secondaryDropChance>1</secondaryDropChance>
+                    <secondaryNotWhenLeafless>false</secondaryNotWhenLeafless>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_WhiteMulberryTree"]/description</xpath>
+        <value>
+            <description>A small and fast growing tree that yields white mulberries. They are commonly known to host mulberry worms that can produce silk.</description>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_WhiteMulberryTree"]/plant/harvestedThingDef</xpath>
+        <value>
+            <harvestedThingDef>VV_WhiteMulberries</harvestedThingDef>
+        </value>
+    </Operation>
+    <!-- Hide VV silk in favor of MO silk -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Silk"]/thingCategories</xpath>
+        <value>
+            <thingCategories Inherit="False" />
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Silk"]/stuffProps/categories</xpath>
+        <value>
+            <categories Inherit="False" />
+        </value>
+    </Operation>
+    <!-- Recipes -->
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li="DankPyon_RawMulberry"]</xpath>
+        <value>
+            <li>VV_WhiteMulberries</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="DankPyon_RawMulberry"]</xpath>
+        <value>
+            <li>VV_WhiteMulberries</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="DankPyon_RawMulberry"]</xpath>
+        <value>
+            <li>VV_WhiteMulberries</li>
+        </value>
+    </Operation>
+    <!-- Add VV mulberries to MO loot containers -->
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef/modExtensions/li[@Class="MedievalOverhaul.BuildingLootableExtension"]/randomItems[li="DankPyon_RawMulberry"]</xpath>
+        <value>
+            <li>VV_WhiteMulberries</li>
+        </value>
+    </Operation>
+</Patch>

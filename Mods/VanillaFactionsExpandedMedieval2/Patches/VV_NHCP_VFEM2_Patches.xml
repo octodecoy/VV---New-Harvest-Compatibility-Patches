@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>
+                /Defs/ThingDef
+                [defName="VV_SoothingHerbalOintment" or 
+                defName="VV_RestorativeHerbalOintment" or 
+                defName="VV_AdvancedHerbalMedicine" or
+                defName="VV_GinsengDecoction" or
+                defName="VV_EchinaceaDecoction" or
+                defName="VV_ValerianDecoction"]
+                /recipeMaker/recipeUsers
+            </xpath>
+        <value>
+            <li>VFEM2_AlchemicalWorkbench</li>
+            <li>VFEM2_AlchemicalWorkbench_Electric</li>
+        </value>
+    </Operation>
+</Patch>

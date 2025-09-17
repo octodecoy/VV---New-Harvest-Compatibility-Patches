@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar">
+        <defName>VV_NHCP_Boards_Totemic_Cedar</defName>
+        <label>cedar totemic boards</label>
+        <description>Fine wood boards decorated in a totemic style.</description>
+        <texturePath>Terrain/Surfaces/TotemicBoards</texturePath>
+        <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <dominantStyleCategory>Totemic</dominantStyleCategory>
+        <costList>
+            <VV_CedarWood>20</VV_CedarWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <StyleDominance>1</StyleDominance>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony">
+        <defName>VV_NHCP_Boards_Totemic_Ebony</defName>
+        <label>ebony totemic boards</label>
+        <description>Fine wood boards decorated in a totemic style.</description>
+        <texturePath>Terrain/Surfaces/TotemicBoards</texturePath>
+        <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <dominantStyleCategory>Totemic</dominantStyleCategory>
+        <costList>
+            <VV_EbonyWood>20</VV_EbonyWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <StyleDominance>1</StyleDominance>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany">
+        <defName>VV_NHCP_Boards_Totemic_Mahogany</defName>
+        <label>mahogany totemic boards</label>
+        <description>Fine wood boards decorated in a totemic style.</description>
+        <texturePath>Terrain/Surfaces/TotemicBoards</texturePath>
+        <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <dominantStyleCategory>Totemic</dominantStyleCategory>
+        <costList>
+            <VV_MahoganyWood>20</VV_MahoganyWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <StyleDominance>1</StyleDominance>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood">
+        <defName>VV_NHCP_Boards_Totemic_Rosewood</defName>
+        <label>rosewood totemic boards</label>
+        <description>Fine wood boards decorated in a totemic style.</description>
+        <texturePath>Terrain/Surfaces/TotemicBoards</texturePath>
+        <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <dominantStyleCategory>Totemic</dominantStyleCategory>
+        <costList>
+            <VV_RosewoodWood>20</VV_RosewoodWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <StyleDominance>1</StyleDominance>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+    </TerrainDef>
+</Defs>

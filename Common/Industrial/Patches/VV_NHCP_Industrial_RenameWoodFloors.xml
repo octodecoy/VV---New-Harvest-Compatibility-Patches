@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/TerrainDef[defName="VV_EbonyFloor"]/label</xpath>
+        <value>
+            <label>luxurious ebony floor</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/TerrainDef[defName="VV_MahoganyFloor"]/label</xpath>
+        <value>
+            <label>opulent mahogany floor</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/TerrainDef[defName="VV_RosewoodFloor"]/label</xpath>
+        <value>
+            <label>lavish rosewood floor</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/TerrainDef[defName="VV_CedarFloor"]/label</xpath>
+        <value>
+            <label>elegant cedar floor</label>
+        </value>
+    </Operation>
+</Patch>

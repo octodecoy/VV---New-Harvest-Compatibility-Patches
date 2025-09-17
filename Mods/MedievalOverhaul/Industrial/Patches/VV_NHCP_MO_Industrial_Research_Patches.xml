@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Adapt VV plants to MO research, removing other research if it's been added so MO takes over. 
+         Checking that A) The research def hasn't been removed and B) MO plants are actually using MO's research. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="DankPyon_BasicAgriculture"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="DankPyon_Plant_Garlic"]/plant/sowResearchPrerequisites[li="DankPyon_BasicAgriculture"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>/Defs/ThingDef[defName="VV_ReedPlant"]/plant</xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>DankPyon_BasicAgriculture</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="DankPyon_IntermediateAgriculture"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="DankPyon_Plant_Wheat"]/plant/sowResearchPrerequisites[li="DankPyon_IntermediateAgriculture"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>/Defs/ThingDef[defName="VV_RamiePlant" or defName="VV_RattanPlant"]/plant</xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>DankPyon_IntermediateAgriculture</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+    <!-- Put VV_WhiteMulberryTree with resource trees initially, in case Industrial is installed but nothing else.
+         If Main/Trees also installed, it will be put into Cocoa research. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="TreeSowing"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[@Name="TreeBase"]/plant/sowResearchPrerequisites[li="TreeSowing"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>                    
+                    /Defs/ThingDef
+                    [defName="VV_CedarTree" or
+                    defName="VV_CorkTree" or
+                    defName="VV_RubberTree" or
+                    defName="VV_EbonyTree" or
+                    defName="VV_MahoganyTree" or
+                    defName="VV_RosewoodTree" or
+                    defName="VV_WhiteMulberryTree"]
+                    /plant
+                </xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>TreeSowing</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+</Patch>

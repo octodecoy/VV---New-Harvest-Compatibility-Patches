@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>VV - New Harvest: Compatibility Patches</name>
+    <author>octodecoy</author>
+    <packageId>octodecoy.vvnewharvest.compatpatches</packageId>
+    <modVersion>1.0</modVersion>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <url>https://github.com/octodecoy/VV---New-Harvest-Compatibility-Patches</url>
+    <description>        
+        VV - New Harvest: Compatibility Patches provides integration for the base game, DLCs, and other mods, ensuring that content from the main [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3448458106]VV - New Harvest[/url] mod (or its standalone modules) works seamlessly together.
+        
+        Also adds a settings menu with extra options pertaining to New Harvest stuff.
+        
+        Requires one of the following:
+        
+        [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3448458106]VV - New Harvest[/url]
+        [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3552456491]VV - New Harvest: Forage Crops[/url]
+        [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3552455580]VV - New Harvest: Garden Crops[/url]
+        [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3552456765]VV - New Harvest: Industrial Crops[/url]
+        [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3552456140]VV - New Harvest: Medicinal Plants[/url]
+        [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3552455805]VV - New Harvest: Trees[/url]
+    </description>
+    <modDependenciesByVersion>
+		<v1.6>
+			<li>
+				<packageId>vvenchov.vvnewharvest</packageId>
+				<displayName>VV - New Harvest</displayName>
+				<steamWorkshopUrl>steam://url/CommunityFilePage/3448458106</steamWorkshopUrl>
+				<alternativePackageIds>
+					<li>vvenchov.vvnewharvestforagecrops</li>
+					<li>vvenchov.vvnewharvestgardencrops</li>
+					<li>vvenchov.vvnewharvestindustrialcrops</li>
+					<li>vvenchov.vvnewharvestmedicinalplants</li>
+					<li>vvenchov.vvnewharvesttrees</li>
+				</alternativePackageIds>
+			</li>
+		</v1.6>
+	</modDependenciesByVersion>
+    <loadAfter>
+        <li>vvenchov.vvnewharvest</li>
+        <li>vvenchov.vvnewharvestforagecrops</li>
+        <li>vvenchov.vvnewharvestgardencrops</li>
+        <li>vvenchov.vvnewharvestindustrialcrops</li>
+        <li>vvenchov.vvnewharvestmedicinalplants</li>
+        <li>vvenchov.vvnewharvesttrees</li>
+        <li>regrowth.botr.core</li>
+        <!-- Regrowth Core -->
+        <!-- So it doesn't overwrite biome wildPlants additions. -->
+        <li>dankpyon.medieval.overhaul</li>
+        <!-- Medieval Overhaul -->
+        <!--  VV defs dependent  -->
+        <li>owlchemist.seedspleaselite</li>
+        <!-- SeedsPlease -->
+        <!--  VV defs dependent  -->
+        <li>evyatar108.seedspleaseliteredux</li>
+        <!-- SeedsPlease Lite -->
+        <!--  VV defs dependent  -->
+        <li>zal.expandwoodwork</li>
+        <!-- Expanded Woodworking -->
+        <!--  VV defs dependent  -->
+        <li>dismarzero.vgp.vgpgardendrinks</li>
+        <!-- VGP Garden Drinks -->
+        <!--  VV defs dependent  -->
+        <li>oskarpotocki.vanillafactionsexpanded.core</li>
+        <!-- Can reference a class in assembly - probably don't need to do this -->
+        <li>vanillaexpanded.vplantse</li>
+        <li>dismarzero.vgp.vgpvegetablegarden</li>
+        <li>mlie.rc2.core</li>
+        <li>davai.sortedcategories</li>
+        <li>vr.mopatches</li>
+        <li>vanillaexpanded.vplantsemore</li>
+        <li>dismarzero.vgp.vgpmoreveggies</li>
+        <li>oskarpotocki.vfe.medieval2</li>
+        <li>thevillain.animalfoodsextended</li>
+        <!-- In the hope that any category movements occur first  -->
+    </loadAfter>
+</ModMetaData>

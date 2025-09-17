@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Garden Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="PatchOperationAdd">
+                            <xpath>
+                                /Defs/RecipeDef
+                                [defName="CraftFlour" or defName="CraftBulkFlour" or defName="CraftBulkFlour100" or defName="CraftBulkFlour200" or defName="CookPorridge"]
+                                /ingredients/li/filter/thingDefs
+                            </xpath>
+                            <value>
+                                <li>VV_MilletGrain</li>
+                                <li>VV_AmaranthGrain</li>
+                                <li>VV_TeffGrain</li>
+                                <li>VV_QuinoaSeeds</li>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>
+                                /Defs/RecipeDef
+                                [defName="CraftFlour" or defName="CraftBulkFlour" or defName="CraftBulkFlour100" or defName="CraftBulkFlour200" or defName="CookPorridge"]
+                                /fixedIngredientFilter/thingDefs
+                            </xpath>
+                            <value>
+                                <li>VV_MilletGrain</li>
+                                <li>VV_AmaranthGrain</li>
+                                <li>VV_TeffGrain</li>
+                                <li>VV_QuinoaSeeds</li>
+                            </value>
+                        </li>
+                    </operations>
+                </li>
+                <li Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="PatchOperationAdd">
+                            <xpath>/Defs/RecipeDef[defName="PickleVegetable" or defName="BulkPickleVegetable"]/ingredients/li[1]/filter/thingDefs</xpath>
+                            <value>
+                                <li>VV_Artichoke</li>
+                                <li>VV_Asparagus</li>
+                                <li>VV_BlackBeans</li>
+                                <li>VV_BroccoliFlorets</li>
+                                <li>VV_Parsnips</li>
+                                <li>VV_WhiteTurnips</li>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>/Defs/RecipeDef[defName="PickleVegetable" or defName="BulkPickleVegetable"]/fixedIngredientFilter/thingDefs</xpath>
+                            <value>
+                                <li>VV_Artichoke</li>
+                                <li>VV_Asparagus</li>
+                                <li>VV_BlackBeans</li>
+                                <li>VV_BroccoliFlorets</li>
+                                <li>VV_Parsnips</li>
+                                <li>VV_WhiteTurnips</li>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>/Defs/RecipeDef[defName="PickleVegetable" or defName="BulkPickleVegetable"]/defaultIngredientFilter/thingDefs</xpath>
+                            <value>
+                                <li>VV_Artichoke</li>
+                                <li>VV_Asparagus</li>
+                                <li>VV_BlackBeans</li>
+                                <li>VV_BroccoliFlorets</li>
+                                <li>VV_Parsnips</li>
+                                <li>VV_WhiteTurnips</li>
+                            </value>
+                        </li>
+                    </operations>
+                </li>
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>[SYR] Processor Framework</li>
+                    </mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/ProcessorFramework.ProcessDef[defName="PickledVeg"]/ingredientFilter/thingDefs</xpath>
+                                <value>
+                                    <li>VV_Artichoke</li>
+                                    <li>VV_Asparagus</li>
+                                    <li>VV_BlackBeans</li>
+                                    <li>VV_BroccoliFlorets</li>
+                                    <li>VV_Parsnips</li>
+                                    <li>VV_WhiteTurnips</li>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/ProcessorFramework.ProcessDef[defName="VG_MakeFlour"]/ingredientFilter/thingDefs</xpath>
+                                <value>
+                                    <li>VV_MilletGrain</li>
+                                    <li>VV_AmaranthGrain</li>
+                                    <li>VV_TeffGrain</li>
+                                    <li>VV_QuinoaSeeds</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

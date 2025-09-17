@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <PipeSystem.ProcessDef>
+        <defName>VV_NHCP_Mousekin_CedarLogToCharcoal</defName>
+        <label>Carbonize cedar logs into charcoal</label>
+        <description>Turns 300 cedar logs into 600 charcoal.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Carbonize 300 cedar logs into 600 charcoal</labelOverride>
+        <priorityInBillList>1</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>VV_CedarWood</thing>
+                <countNeeded>300</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>180000</ticks>
+        <results>
+            <li>
+                <thing>Mousekin_Charcoal</thing>
+                <count>600</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+    </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_NHCP_Mousekin_EbonyLogToCharcoal</defName>
+        <label>Carbonize ebony logs into charcoal</label>
+        <description>Turns 300 ebony logs into 600 charcoal.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Carbonize 300 ebony logs into 600 charcoal</labelOverride>
+        <priorityInBillList>2</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>VV_EbonyWood</thing>
+                <countNeeded>300</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>180000</ticks>
+        <results>
+            <li>
+                <thing>Mousekin_Charcoal</thing>
+                <count>600</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+    </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_NHCP_Mousekin_MahoganyLogToCharcoal</defName>
+        <label>Carbonize mahogany logs into charcoal</label>
+        <description>Turns 300 mahogany logs into 600 charcoal.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Carbonize 300 mahogany logs into 600 charcoal</labelOverride>
+        <priorityInBillList>3</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>VV_MahoganyWood</thing>
+                <countNeeded>300</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>180000</ticks>
+        <results>
+            <li>
+                <thing>Mousekin_Charcoal</thing>
+                <count>600</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+    </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_NHCP_Mousekin_RosewoodLogToCharcoal</defName>
+        <label>Carbonize rosewood logs into charcoal</label>
+        <description>Turns 300 rosewood logs into 600 charcoal.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Carbonize 300 rosewood logs into 600 charcoal</labelOverride>
+        <priorityInBillList>4</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>VV_RosewoodWood</thing>
+                <countNeeded>300</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>180000</ticks>
+        <results>
+            <li>
+                <thing>Mousekin_Charcoal</thing>
+                <count>600</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+    </PipeSystem.ProcessDef>
+</Defs>

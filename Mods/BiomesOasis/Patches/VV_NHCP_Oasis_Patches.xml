@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Garden Crops</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/BiomeDef[defName="BMT_ChromaticOasis"]/wildPlants</xpath>
+            <value>
+                <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Trees</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/BiomeDef[defName="BMT_ChromaticOasis"]/wildPlants</xpath>
+            <value>
+                <VV_PapayaTree>0.01</VV_PapayaTree>
+                <VV_GrapefruitTree>0.01</VV_GrapefruitTree>
+                <VV_PomegranateTree>0.01</VV_PomegranateTree>
+                <VV_LimeTree>0.01</VV_LimeTree>
+                <VV_PersimmonTree>0.01</VV_PersimmonTree>
+            </value>
+        </match>
+    </Operation>
+</Patch>

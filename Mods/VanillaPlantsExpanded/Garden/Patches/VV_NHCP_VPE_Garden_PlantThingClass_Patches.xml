@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Can grow during winter and not die from cold -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_BroccoliPlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_BroccoliPlant"]</xpath>
+                    <value>
+                        <thingClass>VanillaPlantsExpanded.Plant_WinterResistant</thingClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_BroccoliPlant"]/description</xpath>
+                    <value>
+                        <description>A hardy, cool-season plant that produces large green heads of florets. Broccoli is rich in vitamins and grows best in fertile, well-drained soil.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Broccoli plants will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</description>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_BroccoliPlant"]/plant</xpath>
+                    <value>
+                        <dieIfLeafless>false</dieIfLeafless>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_LeekPlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_LeekPlant"]</xpath>
+                    <value>
+                        <thingClass>VanillaPlantsExpanded.Plant_WinterResistant</thingClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_LeekPlant"]/description</xpath>
+                    <value>
+                        <description>A tall, sturdy plant with long, white stalks and green tops. Leeks have a mild, onion-like flavor and grow well in cool, damp soil.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Leeks will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</description>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_LeekPlant"]/plant</xpath>
+                    <value>
+                        <dieIfLeafless>false</dieIfLeafless>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_ParsnipPlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_ParsnipPlant"]</xpath>
+                    <value>
+                        <thingClass>VanillaPlantsExpanded.Plant_WinterResistant</thingClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_ParsnipPlant"]/description</xpath>
+                    <value>
+                        <description>Parsnip is a hardy root vegetable known for its sweet, nutty flavor. It thrives in cool climates and is harvested for its nutritious, cream-colored roots.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Parsnips will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</description>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_ParsnipPlant"]/plant</xpath>
+                    <value>
+                        <dieIfLeafless>false</dieIfLeafless>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_RedCabbagePlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_RedCabbagePlant"]</xpath>
+                    <value>
+                        <thingClass>VanillaPlantsExpanded.Plant_WinterResistant</thingClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_RedCabbagePlant"]/description</xpath>
+                    <value>
+                        <description>A hardy, cool-season plant that produces tight, round heads of deep purple cabbage. Red cabbage thrives in fertile soil and cool temperatures.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Red cabbages will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</description>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_RedCabbagePlant"]/plant</xpath>
+                    <value>
+                        <dieIfLeafless>false</dieIfLeafless>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_SpinachPlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_SpinachPlant"]</xpath>
+                    <value>
+                        <thingClass>VanillaPlantsExpanded.Plant_WinterResistant</thingClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_SpinachPlant"]/description</xpath>
+                    <value>
+                        <description>A fast-growing, leafy green plant that thrives in cool weather. Spinach is packed with vitamins and grows well in fertile, well-drained soil.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Spinach will continue to grow at 10% speed through winter. It needs to be planted during growing season, though.</description>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_SpinachPlant"]/plant</xpath>
+                    <value>
+                        <dieIfLeafless>false</dieIfLeafless>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_WhiteTurnipPlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_WhiteTurnipPlant"]</xpath>
+                    <value>
+                        <thingClass>VanillaPlantsExpanded.Plant_WinterResistant</thingClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_WhiteTurnipPlant"]/description</xpath>
+                    <value>
+                        <description>White turnip is a hardy root vegetable grown for its edible white roots. It thrives in cool climates and provides a nutritious harvest once mature.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; White turnips will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</description>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_WhiteTurnipPlant"]/plant</xpath>
+                    <value>
+                        <dieIfLeafless>false</dieIfLeafless>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

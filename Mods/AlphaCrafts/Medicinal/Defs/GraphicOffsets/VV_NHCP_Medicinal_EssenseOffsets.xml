@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<VEF.Graphics.GraphicOffsets>
+		<defName>VV_AC_EssenceOffsets_NewHarvest_Medicinal</defName>
+		<thingDef>AC_Essence</thingDef>
+		<ingredientsAndOffsetList>
+			<li>
+				<key>VV_LavenderBlossoms</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>VV_LemonBalmLeaves</key>
+				<value>2</value>
+			</li>
+		</ingredientsAndOffsetList>
+	</VEF.Graphics.GraphicOffsets>
+</Defs>

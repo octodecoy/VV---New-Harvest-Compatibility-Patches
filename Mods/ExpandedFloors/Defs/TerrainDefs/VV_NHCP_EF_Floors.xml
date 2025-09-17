@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- MOSAIC -->
+    <TerrainDef Name="VV_NHCP_FloorBase_EF_Mosaic" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Polished wood floor made of small planks fitted to each other. Looks fine but very expensive and hard to build.</description>
+        <texturePath>Terrain/Surfaces/Wooden/WDWoodenFloorMosaic</texturePath>
+        <burnedDef>WDBurnedMosaicWoodenFloor</burnedDef>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>3</Beauty>
+        </statBases>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+        <renderPrecedence>245</renderPrecedence>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Mosaic">
+        <defName>VV_NHCP_WDMosaicFloor_Cedar</defName>
+        <label>mosaic cedar floor</label>
+        <costList>
+            <VV_CedarWood>20</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Mosaic">
+        <defName>VV_NHCP_WDMosaicFloor_Ebony</defName>
+        <label>mosaic ebony floor</label>
+        <costList>
+            <VV_EbonyWood>20</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Mosaic">
+        <defName>VV_NHCP_WDMosaicFloor_Mahogany</defName>
+        <label>mosaic mahogany floor</label>
+        <costList>
+            <VV_MahoganyWood>20</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Mosaic">
+        <defName>VV_NHCP_WDMosaicFloor_Rosewood</defName>
+        <label>mosaic rosewood floor</label>
+        <costList>
+            <VV_RosewoodWood>20</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- PARQUET -->
+    <TerrainDef Name="VV_NHCP_FloorBase_EF_Parquet" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Floor made of fine smooth wood planks. Makes any room better, but expensive and hard to build.</description>
+        <texturePath>Terrain/Surfaces/Wooden/WDParquet</texturePath>
+        <burnedDef>WDBurnedParquet</burnedDef>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>3</Beauty>
+        </statBases>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+        <renderPrecedence>246</renderPrecedence>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Parquet">
+        <defName>VV_NHCP_WDParquetFloor_Cedar</defName>
+        <label>cedar parquet</label>
+        <costList>
+            <VV_CedarWood>20</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Parquet">
+        <defName>VV_NHCP_WDParquetFloor_Ebony</defName>
+        <label>ebony parquet</label>
+        <costList>
+            <VV_EbonyWood>20</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Parquet">
+        <defName>VV_NHCP_WDParquetFloor_Mahogany</defName>
+        <label>mahogany parquet</label>
+        <costList>
+            <VV_MahoganyWood>20</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Parquet">
+        <defName>VV_NHCP_WDParquetFloor_Rosewood</defName>
+        <label>rosewood parquet</label>
+        <costList>
+            <VV_RosewoodWood>20</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- CHECKERED -->
+    <TerrainDef Name="VV_NHCP_FloorBase_EF_Check" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Nice looking checkered floor made of small wood planks.</description>
+        <texturePath>Terrain/Surfaces/Wooden/WDWoodenFloorCheck</texturePath>
+        <burnedDef>WDBurnedCheckWoodenFloor</burnedDef>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>3</Beauty>
+        </statBases>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+        <renderPrecedence>247</renderPrecedence>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Check">
+        <defName>VV_NHCP_WDCheckWoodenFloor_Cedar</defName>
+        <label>check cedar floor</label>
+        <costList>
+            <VV_CedarWood>20</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Check">
+        <defName>VV_NHCP_WDCheckWoodenFloor_Ebony</defName>
+        <label>check ebony floor</label>
+        <costList>
+            <VV_EbonyWood>20</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Check">
+        <defName>VV_NHCP_WDCheckWoodenFloor_Mahogany</defName>
+        <label>check mahogany floor</label>
+        <costList>
+            <VV_MahoganyWood>20</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Check">
+        <defName>VV_NHCP_WDCheckWoodenFloor_Rosewood</defName>
+        <label>check rosewood floor</label>
+        <costList>
+            <VV_RosewoodWood>20</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- WIDE PLANK -->
+    <TerrainDef Name="VV_NHCP_FloorBase_EF_WidePlank" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Floor made of smooth wide wood planks. Simple and nice.</description>
+        <texturePath>Terrain/Surfaces/Wooden/WDWoodPlankFloor</texturePath>
+        <burnedDef>WDBurnedWidePlanks</burnedDef>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <renderPrecedence>248</renderPrecedence>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_WidePlank">
+        <defName>VV_NHCP_WDWidePlanksFloor_Cedar</defName>
+        <label>cedar plank floor</label>
+        <costList>
+            <VV_CedarWood>3</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_WidePlank">
+        <defName>VV_NHCP_WDWidePlanksFloor_Ebony</defName>
+        <label>ebony plank floor</label>
+        <costList>
+            <VV_EbonyWood>3</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_WidePlank">
+        <defName>VV_NHCP_WDWidePlanksFloor_Mahogany</defName>
+        <label>mahogany plank floor</label>
+        <costList>
+            <VV_MahoganyWood>3</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_WidePlank">
+        <defName>VV_NHCP_WDWidePlanksFloor_Rosewood</defName>
+        <label>rosewood plank floor</label>
+        <costList>
+            <VV_RosewoodWood>3</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- PLYWOOD -->
+    <TerrainDef Name="VV_NHCP_FloorBase_EF_Plywood" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Plywood floor. Looks pretty bad, but cheap and fast to build. Perfect to cover big areas fast, but flammable.</description>
+        <texturePath>Terrain/Surfaces/Wooden/WDPlywoodFloor</texturePath>
+        <burnedDef>WDBurnedPlywoodFloor</burnedDef>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>-1</Beauty>
+        </statBases>
+        <renderPrecedence>249</renderPrecedence>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Plywood">
+        <defName>VV_NHCP_WDPlywoodFloor_Cedar</defName>
+        <label>cedar plywood floor</label>
+        <costList>
+            <VV_CedarWood>1</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Plywood">
+        <defName>VV_NHCP_WDPlywoodFloor_Ebony</defName>
+        <label>ebony plywood floor</label>
+        <costList>
+            <VV_EbonyWood>1</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Plywood">
+        <defName>VV_NHCP_WDPlywoodFloor_Mahogany</defName>
+        <label>mahogany plywood floor</label>
+        <costList>
+            <VV_MahoganyWood>1</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Plywood">
+        <defName>VV_NHCP_WDPlywoodFloor_Rosewood</defName>
+        <label>rosewood plywood floor</label>
+        <costList>
+            <VV_RosewoodWood>1</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+</Defs>

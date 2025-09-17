@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- FLOUR -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_GrindFlours"]/ingredients/li/filter/thingDefs</xpath>
+        <value>
+            <li>VV_MilletGrain</li>
+            <li>VV_AmaranthGrain</li>
+            <li>VV_TeffGrain</li>
+            <li>VV_QuinoaSeeds</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_GrindFlours"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_MilletGrain</li>
+            <li>VV_AmaranthGrain</li>
+            <li>VV_TeffGrain</li>
+            <li>VV_QuinoaSeeds</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_GrindFlours"]/defaultIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_MilletGrain</li>
+            <li>VV_AmaranthGrain</li>
+            <li>VV_TeffGrain</li>
+            <li>VV_QuinoaSeeds</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AC_Flour"]/comps/li[@Class="AlphaCrafts.CompProperties_LabelByIngredients"]/overrides</xpath>
+        <value>
+            <li>
+                <key>VV_MilletGrain</key>
+                <value>Millet</value>
+            </li>
+            <li>
+                <key>VV_AmaranthGrain</key>
+                <value>Amaranth</value>
+            </li>
+            <li>
+                <key>VV_TeffGrain</key>
+                <value>Teff</value>
+            </li>
+            <li>
+                <key>VV_QuinoaSeeds</key>
+                <value>Quinoa</value>
+            </li>
+        </value>
+    </Operation>
+</Patch>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- 1x2 Bales -->
+	<ThingDef ParentName="DankPyon_Bale1x2Base">
+		<defName>VV_DankPyon_AlfalfaBale1x2c</defName>
+		<label>alfalfa hay bale (1x2)</label>
+		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
+		<graphicData>
+			<texPath>Things/Building/Storage/Bale1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+			<color>(95,120,60)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<VV_AlfalfaHay>20</VV_AlfalfaHay>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="DankPyon_Bale1x2Base">
+		<defName>VV_DankPyon_CloverBale1x2c</defName>
+		<label>clover hay bale (1x2)</label>
+		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
+		<graphicData>
+			<texPath>Things/Building/Storage/Bale1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+			<color>(110,115,75)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<VV_CloverHay>20</VV_CloverHay>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="DankPyon_Bale1x2Base">
+		<defName>VV_DankPyon_TimothyBale1x2c</defName>
+		<label>timothy grass bale (1x2)</label>
+		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
+		<graphicData>
+			<texPath>Things/Building/Storage/Bale1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+			<color>(140,130,100)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<VV_TimothyHay>20</VV_TimothyHay>
+		</costList>
+	</ThingDef>
+	
+	<!-- 2x2 Bales -->
+	<ThingDef ParentName="DankPyon_Bale2x2Base">
+		<defName>VV_DankPyon_AlfalfaBale2x2c</defName>
+		<label>alfalfa hay bale (2x2)</label>
+		<graphicData>
+			<texPath>Things/Building/Storage/Bale2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<color>(95,120,60)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<VV_AlfalfaHay>40</VV_AlfalfaHay>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="DankPyon_Bale2x2Base">
+		<defName>VV_DankPyon_CloverBale2x2c</defName>
+		<label>clover hay bale (2x2)</label>
+		<graphicData>
+			<texPath>Things/Building/Storage/Bale2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<color>(110,115,75)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<VV_CloverHay>40</VV_CloverHay>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="DankPyon_Bale2x2Base">
+		<defName>VV_DankPyon_TimothyBale2x2c</defName>
+		<label>timothy grass bale (2x2)</label>
+		<graphicData>
+			<texPath>Things/Building/Storage/Bale2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<color>(140,130,100)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<VV_TimothyHay>40</VV_TimothyHay>
+		</costList>
+	</ThingDef>
+	
+	<!-- 1x2 Piles -->
+	<ThingDef ParentName="DankPyon_Pile1x2Base">
+		<defName>VV_DankPyon_AlfalfaPile1x2c</defName>
+		<label>alfalfa hay pile</label>
+		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
+		<graphicData>
+			<texPath>Things/Building/Storage/Pile1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+			<color>(95,120,60)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<VV_AlfalfaHay>20</VV_AlfalfaHay>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="DankPyon_Pile1x2Base">
+		<defName>VV_DankPyon_CloverPile1x2c</defName>
+		<label>clover hay pile</label>
+		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
+		<graphicData>
+			<texPath>Things/Building/Storage/Pile1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+			<color>(110,115,75)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<VV_CloverHay>20</VV_CloverHay>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="DankPyon_Pile1x2Base">
+		<defName>VV_DankPyon_TimothyPile1x2c</defName>
+		<label>timothy grass pile</label>
+		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
+		<graphicData>
+			<texPath>Things/Building/Storage/Pile1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+			<color>(140,130,100)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<VV_TimothyHay>20</VV_TimothyHay>
+		</costList>
+	</ThingDef>
+	
+</Defs>

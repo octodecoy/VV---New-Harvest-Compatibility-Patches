@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VEF.Graphics.GraphicOffsets>
+        <defName>VV_AC_OilOffsets_NewHarvest_Trees</defName>
+        <thingDef>AC_Oil</thingDef>
+        <ingredientsAndOffsetList>
+            <li>
+                <key>VV_PineNuts</key>
+                <value>3</value>
+            </li>
+        </ingredientsAndOffsetList>
+    </VEF.Graphics.GraphicOffsets>
+</Defs>

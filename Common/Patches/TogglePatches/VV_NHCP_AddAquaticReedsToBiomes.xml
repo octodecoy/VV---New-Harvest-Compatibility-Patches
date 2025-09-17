@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>AddAquaticReedsToBiomes</setting>  
+        <caseTrue Class="NewHarvestPatches.FindMod">
+            <modGroupOne>
+                <li>Odyssey</li>
+            </modGroupOne>     
+            <modGroupTwo>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Industrial Crops</li>
+            </modGroupTwo>  
+            <logicBetweenGroups>And</logicBetweenGroups>
+            <caseTrue Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="VV_NHCP_AquaticReedPlant"]</xpath>
+                <match Class="PatchOperationConditional">
+                    <xpath>/Defs/BiomeDef/wildPlants[Plant_Reeds &gt; 0.0]</xpath>
+                    <match Class="NewHarvestPatches.AddOrReplaceSiblingWithCopiedFloat">
+                        <xpath>/Defs/BiomeDef/wildPlants/Plant_Reeds[number(.) &gt; 0.0]</xpath>
+                        <node>VV_NHCP_AquaticReedPlant</node>
+                        <operation>/</operation>
+                        <value>4</value>
+                    </match>
+                </match>
+            </caseTrue>  
+        </caseTrue>
+    </Operation>
+</Patch>

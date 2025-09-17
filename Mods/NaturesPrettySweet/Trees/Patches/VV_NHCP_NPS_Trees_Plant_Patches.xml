@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- NPS has a hazelnut tree -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_HazelnutTree"]/label</xpath>
+        <value>
+            <label>beaked hazelnut tree</label>
+        </value>
+    </Operation>
+</Patch>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <DesignatorDropdownGroupDef>
+        <defName>VV_NHCP_NewHarvestFloors</defName>
+        <label>New Harvest Floors</label>
+    </DesignatorDropdownGroupDef>
+</Defs>

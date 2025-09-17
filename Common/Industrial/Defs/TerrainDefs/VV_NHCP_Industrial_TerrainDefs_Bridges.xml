@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <TerrainDef Name="VV_NHCP_BridgeBase" ParentName="BridgeBase" Abstract="True">
+        <description>A flat wooden surface on supportive beams which can be built over water. You can build light structures on bridges, but be careful - bridges are fragile. If a bridge falls, buildings on top of it fall as well.</description>
+        <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+        <bridgePropsPath>Terrain/Misc/BridgeProps</bridgePropsPath>
+        <spaceBridgePropsPath>Terrain/Misc/BridgeSpaceProps</spaceBridgePropsPath>
+        <uiIconPath>Terrain/Surfaces/Bridge_MenuIcon</uiIconPath>
+        <affordances>
+            <li>Light</li>
+        </affordances>
+        <constructEffect>ConstructWood</constructEffect>
+        <statBases>
+            <WorkToBuild>1500</WorkToBuild>
+            <Flammability>0.8</Flammability>
+        </statBases>
+        <designationHotKey>Misc4</designationHotKey>
+        <destroyOnBombDamageThreshold>35</destroyOnBombDamageThreshold>
+        <designationCategory>Structure</designationCategory>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_BridgeBase">
+        <defName>VV_NHCP_Cedar_Bridge</defName>
+        <label>cedar bridge</label>
+        <color>(201,151,112)</color>
+        <costList>
+            <VV_CedarWood>12</VV_CedarWood>
+        </costList>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_BridgeBase">
+        <defName>VV_NHCP_Ebony_Bridge</defName>
+        <label>ebony bridge</label>
+        <color>(40,40,42)</color>
+        <costList>
+            <VV_EbonyWood>12</VV_EbonyWood>
+        </costList>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_BridgeBase">
+        <defName>VV_NHCP_Mahogany_Bridge</defName>
+        <label>mahogany bridge</label>
+        <color>(92,31,31)</color>
+        <costList>
+            <VV_MahoganyWood>12</VV_MahoganyWood>
+        </costList>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_BridgeBase">
+        <defName>VV_NHCP_Rosewood_Bridge</defName>
+        <label>rosewood bridge</label>
+        <color>(119,13,60)</color>
+        <costList>
+            <VV_RosewoodWood>12</VV_RosewoodWood>
+        </costList>
+    </TerrainDef>
+</Defs>

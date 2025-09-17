@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <PipeSystem.ProcessDef>
+        <defName>VV_NHCP_Mousekin_AmaranthToFlour</defName>
+        <label>Mill amaranth grain into flour</label>
+        <description>Turns 100 amaranth grain into 75 flour</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Mill 100 amaranth grain into 75 flour</labelOverride>
+        <priorityInBillList>1</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>VV_AmaranthGrain</thing>
+                <countNeeded>100</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>Mousekin_Flour</thing>
+                <count>75</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+    </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_NHCP_Mousekin_MilletToFlour</defName>
+        <label>Mill millet grain into flour</label>
+        <description>Turns 100 millet grain into 75 flour</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Mill 100 millet grain into 75 flour</labelOverride>
+        <priorityInBillList>2</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>VV_MilletGrain</thing>
+                <countNeeded>100</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>Mousekin_Flour</thing>
+                <count>75</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+    </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_NHCP_Mousekin_QuinoaToFlour</defName>
+        <label>Mill quinoa seeds into flour</label>
+        <description>Turns 100 quinoa seeds into 75 flour</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Mill 100 quinoa seeds into 75 flour</labelOverride>
+        <priorityInBillList>3</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>VV_QuinoaSeeds</thing>
+                <countNeeded>100</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>Mousekin_Flour</thing>
+                <count>75</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+    </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_NHCP_Mousekin_TeffToFlour</defName>
+        <label>Mill teff grain into flour</label>
+        <description>Turns 100 teff grain into 75 flour</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Mill 100 teff grain into 75 flour</labelOverride>
+        <priorityInBillList>4</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>VV_TeffGrain</thing>
+                <countNeeded>100</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>120000</ticks>
+        <results>
+            <li>
+                <thing>Mousekin_Flour</thing>
+                <count>75</count>
+            </li>
+        </results>
+        <autoExtract>false</autoExtract>
+    </PipeSystem.ProcessDef>
+</Defs>

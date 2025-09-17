@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <PipeSystem.ProcessDef>
+        <defName>VV_AC_ApricotsToVinegar</defName>
+        <label>Ferment apricots into vinegar</label>
+        <description>Turns 50 apricots into 25 vinegar.</description>
+        <useIngredients>true</useIngredients>
+        <labelOverride>Ferment 50 apricots into 25 vinegar</labelOverride>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <ingredients>
+            <li>
+                <thing>VV_Apricots</thing>
+                <countNeeded>50</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>600000</ticks>
+        <priorityInBillList>10</priorityInBillList>
+        <results>
+            <li>
+                <thing>AC_Vinegar</thing>
+                <count>25</count>
+            </li>
+        </results>
+    </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_AC_SourCherriesToVinegar</defName>
+        <label>Ferment sour cherries into vinegar</label>
+        <description>Turns 75 sour cherries into 25 vinegar.</description>
+        <useIngredients>true</useIngredients>
+        <labelOverride>Ferment 75 sour cherries into 25 vinegar</labelOverride>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <ingredients>
+            <li>
+                <thing>VV_SourCherrys</thing>
+                <countNeeded>75</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>600000</ticks>
+        <priorityInBillList>10</priorityInBillList>
+        <results>
+            <li>
+                <thing>AC_Vinegar</thing>
+                <count>25</count>
+            </li>
+        </results>
+    </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_AC_JabuticabaBerriesToVinegar</defName>
+        <label>Ferment jabuticaba berries into vinegar</label>
+        <description>Turns 75 jabuticaba berries into 25 vinegar.</description>
+        <useIngredients>true</useIngredients>
+        <labelOverride>Ferment 75 jabuticaba berries into 25 vinegar</labelOverride>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <ingredients>
+            <li>
+                <thing>VV_JabuticabaBerries</thing>
+                <countNeeded>75</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>600000</ticks>
+        <priorityInBillList>10</priorityInBillList>
+        <results>
+            <li>
+                <thing>AC_Vinegar</thing>
+                <count>25</count>
+            </li>
+        </results>
+    </PipeSystem.ProcessDef>
+</Defs>

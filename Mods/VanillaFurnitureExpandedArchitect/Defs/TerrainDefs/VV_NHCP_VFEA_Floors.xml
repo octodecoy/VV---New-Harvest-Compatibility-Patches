@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- PARQUET -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar">
+        <defName>VV_NHCP_VFEArch_WoodenParquetCedar</defName>
+        <label>cedar laminate wooden parquet</label>
+        <description>Beautifully laid down wooden flooring for that posh, fancy feeling. Whilst beautiful, it takes a long time to lay down and is also very flammable.</description>
+        <texturePath>Terrains/Parquet</texturePath>
+        <statBases>
+            <WorkToBuild>3000</WorkToBuild>
+            <Beauty>2</Beauty>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <costList>
+            <VV_CedarWood>12</VV_CedarWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony">
+        <defName>VV_NHCP_VFEArch_WoodenParquetEbony</defName>
+        <label>ebony laminate wooden parquet</label>
+        <description>Beautifully laid down wooden flooring for that posh, fancy feeling. Whilst beautiful, it takes a long time to lay down and is also very flammable.</description>
+        <texturePath>Terrains/Parquet</texturePath>
+        <statBases>
+            <WorkToBuild>3000</WorkToBuild>
+            <Beauty>2</Beauty>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <costList>
+            <VV_EbonyWood>12</VV_EbonyWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany">
+        <defName>VV_NHCP_VFEArch_WoodenParquetMahogany</defName>
+        <label>mahogany laminate wooden parquet</label>
+        <description>Beautifully laid down wooden flooring for that posh, fancy feeling. Whilst beautiful, it takes a long time to lay down and is also very flammable.</description>
+        <texturePath>Terrains/Parquet</texturePath>
+        <statBases>
+            <WorkToBuild>3000</WorkToBuild>
+            <Beauty>2</Beauty>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <costList>
+            <VV_MahoganyWood>12</VV_MahoganyWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood">
+        <defName>VV_NHCP_VFEArch_WoodenParquetRosewood</defName>
+        <label>rosewood laminate wooden parquet</label>
+        <description>Beautifully laid down wooden flooring for that posh, fancy feeling. Whilst beautiful, it takes a long time to lay down and is also very flammable.</description>
+        <texturePath>Terrains/Parquet</texturePath>
+        <statBases>
+            <WorkToBuild>3000</WorkToBuild>
+            <Beauty>2</Beauty>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <costList>
+            <VV_RosewoodWood>12</VV_RosewoodWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
+</Defs>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- ESSENCE -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractEssence"]/ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Durians</li>
+            <li>VV_Grapefruits</li>
+            <li>VV_JabuticabaBerries</li>
+            <li>VV_Limes</li>
+            <li>VV_Medlars</li>
+            <li>VV_Mulberries</li>
+            <li>VV_Papayas</li>
+            <li>VV_Persimmons</li>
+            <li>VV_Pomegranates</li>
+            <li>VV_Quinces</li>
+            <li>VV_SourCherrys</li>
+            <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractEssence"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Durians</li>
+            <li>VV_Grapefruits</li>
+            <li>VV_JabuticabaBerries</li>
+            <li>VV_Limes</li>
+            <li>VV_Medlars</li>
+            <li>VV_Mulberries</li>
+            <li>VV_Papayas</li>
+            <li>VV_Persimmons</li>
+            <li>VV_Pomegranates</li>
+            <li>VV_Quinces</li>
+            <li>VV_SourCherrys</li>
+            <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractEssence"]/defaultIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Durians</li>
+            <li>VV_Grapefruits</li>
+            <li>VV_JabuticabaBerries</li>
+            <li>VV_Limes</li>
+            <li>VV_Medlars</li>
+            <li>VV_Mulberries</li>
+            <li>VV_Papayas</li>
+            <li>VV_Persimmons</li>
+            <li>VV_Pomegranates</li>
+            <li>VV_Quinces</li>
+            <li>VV_SourCherrys</li>
+            <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+        </value>
+    </Operation>
+</Patch>

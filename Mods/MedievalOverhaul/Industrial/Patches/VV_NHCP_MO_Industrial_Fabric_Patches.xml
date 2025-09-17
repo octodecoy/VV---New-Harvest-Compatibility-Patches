@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- If DankPyon_ClothSpinner has designationCategory then MO's fabric chain is on. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="DankPyon_ClothSpinner"]/designationCategory</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="DankPyon_SpinningWheel"]</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="DankPyon_SpinningWheel"]/description</xpath>
+                                <value>
+                                    <description>A rolling contraption that processes textiles into fabrics.</description>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/RecipeDef[@Name="VV_MakeClothBase"]/recipeUsers</xpath>
+                                <value>
+                                    <li>DankPyon_SpinningWheel</li>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/WorkGiverDef[defName="VV_DoBillsSpinFabric"]/fixedBillGiverDefs</xpath>
+                                <value>
+                                    <li>DankPyon_SpinningWheel</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SpinCloth"]/ingredientFilter/thingDefs</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SpinCloth"]/ingredientFilter/thingDefs</xpath>
+                        <value>
+                            <li>VV_RawJute</li>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SpinFlax"]/ingredientFilter/thingDefs</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SpinFlax"]/ingredientFilter/thingDefs</xpath>
+                        <value>
+                            <li>VV_RamieFibers</li>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationSetName">
+                    <xpath>/Defs/RecipeDef[defName="VV_DankPyon_MakeLinen_Ramie" or defName="VV_DankPyon_MakeLinenBulk_Ramie"]/products/Cloth</xpath>
+                    <name>DankPyon_Linen</name>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/RecipeDef[defName="VV_DankPyon_MakeLinen_Ramie"]/description</xpath>
+                    <value>
+                        <description>Weave raw ramie into linen fabric.</description>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/RecipeDef[defName="VV_DankPyon_MakeLinenBulk_Ramie"]/description</xpath>
+                    <value>
+                        <description>Weave raw ramie into 50 linen fabric.</description>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="DankPyon_TextileSpinning"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[@Name="VV_MakeClothBase"]/researchPrerequisites</xpath>
+                        <value>
+                            <li>DankPyon_TextileSpinning</li>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Forage -->
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Alfalfa</defName>
+        <label>Alfalfa seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_Alfalfa</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Alfalfa</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_Alfalfa</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Clover</defName>
+        <label>Clover seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_Clover</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Clover</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_Clover</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_TimothyGrass</defName>
+        <label>Timothy grass seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_TimothyGrass</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/TimothyGrass</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_TimothyGrass</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+</Defs>

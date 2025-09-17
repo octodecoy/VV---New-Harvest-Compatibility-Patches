@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- CHIPS -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/ingredients/li/filter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Durians</li>
+            <li>VV_Papayas</li>
+            <li>VV_Persimmons</li>
+            <li>VV_Quinces</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Durians</li>
+            <li>VV_Papayas</li>
+            <li>VV_Persimmons</li>
+            <li>VV_Quinces</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/defaultIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Durians</li>
+            <li>VV_Papayas</li>
+            <li>VV_Persimmons</li>
+            <li>VV_Quinces</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AC_Chips"]/comps/li[@Class="AlphaCrafts.CompProperties_LabelByIngredients"]/overrides</xpath>
+        <value>
+            <li>
+                <key>VV_Apricots</key>
+                <value>Apricot chips</value>
+            </li>
+            <li>
+                <key>VV_Durians</key>
+                <value>Durian chips</value>
+            </li>
+            <li>
+                <key>VV_Papayas</key>
+                <value>Papaya chips</value>
+            </li>
+            <li>
+                <key>VV_Persimmons</key>
+                <value>Persimmon chips</value>
+            </li>
+            <li>
+                <key>VV_Quinces</key>
+                <value>Quince chips</value>
+            </li>
+        </value>
+    </Operation>
+</Patch>

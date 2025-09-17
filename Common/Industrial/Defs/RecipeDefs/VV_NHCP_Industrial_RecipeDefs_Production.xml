@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <RecipeDef>
+        <defName>VV_NHCP_ConvertNewHarvestWoodToWood</defName>
+        <label>convert specialty logs to generic logs</label>
+        <description>Convert specialty logs to generic logs.\n\n50 specialty logs into 50 generic logs.</description>
+        <jobString>Chopping wood.</jobString>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_MakeWoodPlanks_Hand</soundWorking>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workAmount>100</workAmount>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_EbonyWood</li>
+                        <li>VV_MahoganyWood</li>
+                        <li>VV_RosewoodWood</li>
+                        <li>VV_CedarWood</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_EbonyWood</li>
+                <li>VV_MahoganyWood</li>
+                <li>VV_RosewoodWood</li>
+                <li>VV_CedarWood</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>VV_EbonyWood</li>
+                <li>VV_MahoganyWood</li>
+                <li>VV_RosewoodWood</li>
+                <li>VV_CedarWood</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <WoodLog>50</WoodLog>
+        </products>
+        <recipeUsers />
+    </RecipeDef>
+</Defs>

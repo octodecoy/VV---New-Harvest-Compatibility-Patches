@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VEF.Graphics.GraphicOffsets>
+        <defName>VV_AC_PerfumeOffsets_NewHarvest_Trees</defName>
+        <thingDef>AC_Perfume</thingDef>
+        <ingredientsAndOffsetList>
+            <li>
+                <key>VV_Apricots</key>
+                <value>3</value>
+            </li>
+            <li>
+                <key>VV_Papayas</key>
+                <value>8</value>
+            </li>
+            <li>
+                <key>VV_Pomegranates</key>
+                <value>2</value>
+            </li>
+        </ingredientsAndOffsetList>
+    </VEF.Graphics.GraphicOffsets>
+</Defs>

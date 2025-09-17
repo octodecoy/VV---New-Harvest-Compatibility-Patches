@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Make MO mulberry into BLACK, VV into RED, and VV white into fruit tree -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/label</xpath>
+        <value>
+            <label>black mulberry tree</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/description</xpath>
+        <value>
+            <description>A small and fast growing tree that yields sweet black mulberries. They are commonly known to host mulberry worms that can produce silk.</description>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/graphicData</xpath>
+        <value>
+            <graphicData>
+                <texPath>Things/Plants/Trees/VV_MulberryTree</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+                <shadowData>
+                    <volume>(0.15, 0.3, 0.15)</volume>
+                    <offset>(0,0,-0.38)</offset>
+                </shadowData>
+            </graphicData>
+        </value>
+    </Operation>
+    <Operation Class="NewHarvestPatches.AddOrReplace">
+        <xpath>/Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/plant</xpath>
+        <value>
+            <immatureGraphicPath>Things/Plants/TreesImmature/VV_MulberryTree</immatureGraphicPath>
+        </value>
+    </Operation>
+    <Operation Class="NewHarvestPatches.AddOrReplace">
+        <xpath>/Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/plant</xpath>
+        <value>
+            <leaflessGraphicPath>Things/Plants/TreesLeafless/VV_MulberryTree</leaflessGraphicPath>
+        </value>
+    </Operation>
+    <Operation Class="NewHarvestPatches.AddOrReplace">
+        <xpath>/Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/plant</xpath>
+        <value>
+            <leaflessSnowOverlayGraphicPath>Things/Plants/TreesSnowy/VV_MulberryTree</leaflessSnowOverlayGraphicPath>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/plant</xpath>
+        <value>
+            <visualSizeRange>0.9~2.0</visualSizeRange>
+        </value>
+    </Operation>
+    <!-- MO Raw Mulberry -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="DankPyon_RawMulberry"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="DankPyon_RawMulberry"]/label</xpath>
+                    <value>
+                        <label>black mulberries</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="DankPyon_RawMulberry"]/description</xpath>
+                    <value>
+                        <description>Sweet, soft, black berries. Mulberries are great for fresh eating, drying, and making jams.</description>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="DankPyon_RawMulberry"]/graphicData/texPath</xpath>
+                    <value>
+                        <texPath>Things/Items/Raw/VV_Mulberries</texPath>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <!-- VV Mulberry Tree -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_MulberryTree"]/label</xpath>
+        <value>
+            <label>red mulberry tree</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_MulberryTree"]/description</xpath>
+        <value>
+            <description>A small and fast growing tree that yields sweet red mulberries. They are commonly known to host mulberry worms that can produce silk.</description>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_MulberryTree"]/graphicData/texPath</xpath>
+        <value>
+            <texPath>Things/Plants/Trees/VV_RedMulberryTree</texPath>
+        </value>
+    </Operation>
+    <!-- VV Raw Mulberries -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Mulberries"]/label</xpath>
+        <value>
+            <label>red mulberries</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Mulberries"]/description</xpath>
+        <value>
+            <description>Sweet, soft, red berries. Mulberries are great for fresh eating, drying, and making jams.</description>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Mulberries"]/graphicData/texPath</xpath>
+        <value>
+            <texPath>Things/Items/Raw/VV_RedMulberries</texPath>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Mulberries"]/statBases</xpath>
+        <value>
+            <statBases>
+                <MarketValue>1.92</MarketValue>
+                <Nutrition>0.08</Nutrition>
+            </statBases>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Mulberries"]/ingestible</xpath>
+        <value>
+            <ingestible Inherit="False">
+                <preferability>RawBad</preferability>
+                <ingestEffect>EatVegetarian</ingestEffect>
+                <ingestSound>RawVegetable_Eat</ingestSound>
+                <foodType>VegetableOrFruit</foodType>
+            </ingestible>
+        </value>
+    </Operation>
+    <!-- Add MO silkworm extension -->
+    <Operation Class="NewHarvestPatches.AddOrReplace">
+        <xpath>/Defs/ThingDef[defName="VV_MulberryTree"]</xpath>
+        <value>
+            <thingClass>MedievalOverhaul.Plant_SecondaryDrop</thingClass>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>            
+            /Defs/ThingDef
+            [defName="VV_MulberryTree"]
+            [thingClass="MedievalOverhaul.Plant_SecondaryDrop"]
+        </xpath>
+        <match Class="PatchOperationAddModExtension">
+            <success>Always</success>
+            <xpath>                
+                /Defs/ThingDef[defName="VV_MulberryTree"]
+                [thingClass="MedievalOverhaul.Plant_SecondaryDrop"]
+                [not(modExtensions/li[@Class="MedievalOverhaul.SecondaryPlantDropExtension"])]
+            </xpath>
+            <value>
+                <li Class="MedievalOverhaul.SecondaryPlantDropExtension">
+                    <secondaryDrop>DankPyon_Silkworm</secondaryDrop>
+                    <secondaryDropAmountRange>3</secondaryDropAmountRange>
+                    <secondaryDropChance>1</secondaryDropChance>
+                    <secondaryNotWhenLeafless>false</secondaryNotWhenLeafless>
+                </li>
+            </value>
+        </match>
+    </Operation>
+    <!-- Recipes -->
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li="DankPyon_RawMulberry"]</xpath>
+        <value>
+            <li>VV_Mulberries</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="DankPyon_RawMulberry"]</xpath>
+        <value>
+            <li>VV_Mulberries</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="DankPyon_RawMulberry"]</xpath>
+        <value>
+            <li>VV_Mulberries</li>
+        </value>
+    </Operation>
+    <!-- Add VV mulberries to MO loot containers -->
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef/modExtensions/li[@Class="MedievalOverhaul.BuildingLootableExtension"]/randomItems[li="DankPyon_RawMulberry"]</xpath>
+        <value>
+            <li>VV_Mulberries</li>
+        </value>
+    </Operation>
+</Patch>

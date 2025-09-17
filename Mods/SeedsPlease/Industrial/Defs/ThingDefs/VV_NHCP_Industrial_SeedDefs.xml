@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Industrial -->
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Cedar</defName>
+        <label>Cedar tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_CedarTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Cedar</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_CedarTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Cork</defName>
+        <label>Cork tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_CorkTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Cork</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_CorkTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Ebony</defName>
+        <label>Ebony tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_EbonyTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Ebony</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_EbonyTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Jute</defName>
+        <label>Jute seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_JutePlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Jute</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_JutePlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Mahogany</defName>
+        <label>Mahogany tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_MahoganyTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Mahogany</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_MahoganyTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Ramie</defName>
+        <label>Ramie seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_RamiePlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Ramie</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_RamiePlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Rattan</defName>
+        <label>Rattan seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_RattanPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Rattan</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_RattanPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Reed</defName>
+        <label>Reed seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_ReedPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Reed</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_ReedPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Rosewood</defName>
+        <label>Rosewood tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_RosewoodTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Rosewood</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_RosewoodTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Rubber</defName>
+        <label>Rubber tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_RubberTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Rubber</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_RubberTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_WhiteMulberry</defName>
+        <label>White mulberry tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_WhiteMulberryTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/WhiteMulberry</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_WhiteMulberryTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <RecipeDef>
+        <defName>VV_NHCP_MixHay</defName>
+        <label>convert specialty hay to generic hay</label>
+        <description>Convert specialty hay to generic hay.\n\n50 specialty hay into 50 generic hay.</description>
+        <jobString>Mixing hay.</jobString>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Harvest_Standard</soundWorking>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workAmount>100</workAmount>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_AlfalfaHay</li>
+                        <li>VV_CloverHay</li>
+                        <li>VV_TimothyHay</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_AlfalfaHay</li>
+                <li>VV_CloverHay</li>
+                <li>VV_TimothyHay</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>VV_AlfalfaHay</li>
+                <li>VV_CloverHay</li>
+                <li>VV_TimothyHay</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <Hay>50</Hay>
+        </products>
+        <recipeUsers />
+    </RecipeDef>
+</Defs>

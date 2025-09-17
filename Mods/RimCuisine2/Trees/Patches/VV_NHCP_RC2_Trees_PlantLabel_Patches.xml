@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- To separate from RC2s versions -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_DurianTree"]/label</xpath>
+        <value>
+            <label>monthong durian tree</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Durians"]/label</xpath>
+        <value>
+            <label>monthong durians</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_PomegranateTree"]/label</xpath>
+        <value>
+            <label>angel red pomegranate tree</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Pomegranates"]/label</xpath>
+        <value>
+            <label>angel red pomegranates</label>
+        </value>
+    </Operation>
+</Patch>

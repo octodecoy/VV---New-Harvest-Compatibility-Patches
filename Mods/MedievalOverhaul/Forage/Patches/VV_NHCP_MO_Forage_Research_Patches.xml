@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Adapt VV plants to MO research, removing other research if it's been added so MO takes over. 
+         Checking that A) The research def hasn't been removed and B) MO plants are actually using MO's research. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="DankPyon_BasicAgriculture"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="DankPyon_Plant_Garlic"]/plant/sowResearchPrerequisites[li="DankPyon_BasicAgriculture"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>/Defs/ThingDef[defName="VV_Alfalfa" or defName="VV_Clover" or defName="VV_TimothyGrass"]/plant</xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>DankPyon_BasicAgriculture</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+</Patch>

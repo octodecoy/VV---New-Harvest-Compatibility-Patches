@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- To separate from RC2s versions -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_AsparagusPlant"]/label</xpath>
+        <value>
+            <label>apollo asparagus plant</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Asparagus"]/label</xpath>
+        <value>
+            <label>apollo asparagus</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_QuinoaPlant"]/label</xpath>
+        <value>
+            <label>red quinoa plant</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_QuinoaSeeds"]/label</xpath>
+        <value>
+            <label>red quinoa seeds</label>
+        </value>
+    </Operation>
+</Patch>

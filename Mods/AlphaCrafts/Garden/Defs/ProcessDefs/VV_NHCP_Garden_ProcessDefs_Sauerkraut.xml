@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <PipeSystem.ProcessDef>
+        <defName>VV_AC_RedCabbageIntoSauerkraut</defName>
+        <label>Ferment red cabbage into sauerkraut</label>
+        <description>Turns 50 red cabbage into 10 red sauerkraut.</description>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Ferment 50 red cabbage into 10 red sauerkraut</labelOverride>
+        <researchPrerequisites>
+            <li>AC_ArtisanalFermentation</li>
+        </researchPrerequisites>
+        <ingredients>
+            <li>
+                <thing>VV_RedCabbages</thing>
+                <countNeeded>50</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>1200000</ticks>
+        <priorityInBillList>80</priorityInBillList>
+        <results>
+            <li>
+                <thing>VV_AC_RedSauerkraut</thing>
+                <count>10</count>
+            </li>
+        </results>
+    </PipeSystem.ProcessDef>
+</Defs>

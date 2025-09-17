@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>
+        </mods>
+        <match Class="PatchOperationAddModExtension">
+            <xpath>                
+                /Defs/ThingDef
+                [defName="VV_LindenTea" or
+                defName="VV_ChamomileTea" or
+                defName="VV_ThymeTea" or
+                defName="VV_GinkgoTea" or
+                defName="VV_GinsengDecoction" or
+                defName="VV_EchinaceaDecoction" or
+                defName="VV_ValerianDecoction"]
+                [not(modExtensions/li[@Class="DubsBadHygiene.WaterExt"])]
+            </xpath>
+            <value>
+                <li Class="DubsBadHygiene.WaterExt">
+                    <water>0.85</water>
+                    <UseForWashing>false</UseForWashing>
+                </li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

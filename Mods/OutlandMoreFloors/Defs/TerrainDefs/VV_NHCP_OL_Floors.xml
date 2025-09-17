@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <TerrainDef Name="VV_NHCP_FloorBase_Cedar_Outland" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Wood flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <costList>
+            <VV_CedarWood>3</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef Name="VV_NHCP_FloorBase_Ebony_Outland" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Wood flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <costList>
+            <VV_EbonyWood>3</VV_EbonyWood>
+        </costList>
+        <color>(40,40,42)</color>
+    </TerrainDef>
+    <TerrainDef Name="VV_NHCP_FloorBase_Mahogany_Outland" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Wood flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <costList>
+            <VV_MahoganyWood>3</VV_MahoganyWood>
+        </costList>
+        <color>(92,31,31)</color>
+    </TerrainDef>
+    <TerrainDef Name="VV_NHCP_FloorBase_Cedar_Rosewood_Outland" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Wood flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <costList>
+            <VV_RosewoodWood>3</VV_RosewoodWood>
+        </costList>
+        <color>(119,13,60)</color>
+    </TerrainDef>
+    <!-- WoodBoards -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoards_Cedar</defName>
+        <label>cedar boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoards_Ebony</defName>
+        <label>ebony boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoards_Mahogany</defName>
+        <label>mahogany boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoards_Rosewood</defName>
+        <label>rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1</texturePath>
+    </TerrainDef>
+    <!-- WoodBoards_Ruined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsRuined_Cedar</defName>
+        <label>cedar boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsRuined_Ebony</defName>
+        <label>ebony boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsRuined_Mahogany</defName>
+        <label>mahogany boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsRuined_Rosewood</defName>
+        <label>rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsNeat -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeat_Cedar</defName>
+        <label>neat cedar boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeat_Ebony</defName>
+        <label>neat ebony boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeat_Mahogany</defName>
+        <label>neat mahogany boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeat_Rosewood</defName>
+        <label>neat rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsNeat_Ruined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeatRuined_Cedar</defName>
+        <label>neat cedar boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeatRuined_Ebony</defName>
+        <label>neat ebony boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeatRuined_Mahogany</defName>
+        <label>neat mahogany boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeatRuined_Rosewood</defName>
+        <label>neat rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <!-- HorizontalWoodBoards -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoards_Cedar</defName>
+        <label>horizontal cedar boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoards_Ebony</defName>
+        <label>horizontal ebony boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoards_Mahogany</defName>
+        <label>horizontal mahogany boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoards_Rosewood</defName>
+        <label>horizontal rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1</texturePath>
+    </TerrainDef>
+    <!-- HorizontalWoodBoards_Ruined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsRuined_Cedar</defName>
+        <label>horizontal cedar boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsRuined_Ebony</defName>
+        <label>horizontal ebony boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsRuined_Mahogany</defName>
+        <label>horizontal mahogany boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsRuined_Rosewood</defName>
+        <label>horizontal rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <!-- HorizontalWoodBoardsNeat -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeat_Cedar</defName>
+        <label>horizontal neat cedar boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeat_Ebony</defName>
+        <label>horizontal neat ebony boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeat_Mahogany</defName>
+        <label>horizontal neat mahogany boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeat_Rosewood</defName>
+        <label>horizontal neat rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2</texturePath>
+    </TerrainDef>
+    <!-- HorizontalWoodBoardsNeat_Ruined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeatRuined_Cedar</defName>
+        <label>horizontal neat cedar boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeatRuined_Ebony</defName>
+        <label>horizontal neat ebony boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeatRuined_Mahogany</defName>
+        <label>horizontal neat mahogany boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeatRuined_Rosewood</defName>
+        <label>horizontal neat rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsStaggered -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggered_Cedar</defName>
+        <label>staggered cedar boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggered_Ebony</defName>
+        <label>staggered ebony boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggered_Mahogany</defName>
+        <label>staggered mahogany boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggered_Rosewood</defName>
+        <label>staggered rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsStaggered_Ruined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggeredRuined_Cedar</defName>
+        <label>staggered cedar boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggeredRuined_Ebony</defName>
+        <label>staggered ebony boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggeredRuined_Mahogany</defName>
+        <label>staggered mahogany boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggeredRuined_Rosewood</defName>
+        <label>staggered rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3Ruined</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsDiamond -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamond_Cedar</defName>
+        <label>diamond cedar boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamond_Ebony</defName>
+        <label>diamond ebony boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamond_Mahogany</defName>
+        <label>diamond mahogany boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamond_Rosewood</defName>
+        <label>diamond rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsDiamond_Ruined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamondRuined_Cedar</defName>
+        <label>diamond cedar boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamondRuined_Ebony</defName>
+        <label>diamond ebony boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamondRuined_Mahogany</defName>
+        <label>diamond mahogany boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamondRuined_Rosewood</defName>
+        <label>diamond rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4Ruined</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsCheckered -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckered_Cedar</defName>
+        <label>checkered cedar boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckered_Ebony</defName>
+        <label>checkered ebony boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckered_Mahogany</defName>
+        <label>checkered mahogany boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckered_Rosewood</defName>
+        <label>checkered rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsCheckered_Ruined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckeredRuined_Cedar</defName>
+        <label>checkered cedar boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckeredRuined_Ebony</defName>
+        <label>checkered ebony boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckeredRuined_Mahogany</defName>
+        <label>checkered mahogany boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckeredRuined_Rosewood</defName>
+        <label>checkered rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5Ruined</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsDiagonal -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonal_Cedar</defName>
+        <label>diagonal cedar boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonal_Ebony</defName>
+        <label>diagonal ebony boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonal_Mahogany</defName>
+        <label>diagonal mahogany boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonal_Rosewood</defName>
+        <label>diagonal rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6</texturePath>
+    </TerrainDef>
+    <!-- WoodBoardsDiagonal_Ruined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonalRuined_Cedar</defName>
+        <label>diagonal cedar boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonalRuined_Ebony</defName>
+        <label>diagonal ebony boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonalRuined_Mahogany</defName>
+        <label>diagonal mahogany boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonalRuined_Rosewood</defName>
+        <label>diagonal rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6Ruined</texturePath>
+    </TerrainDef>
+    <!-- WoodFloor -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodFloor_Cedar</defName>
+        <label>cedar floor</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodFloor_Ebony</defName>
+        <label>ebony floor</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodFloor_Mahogany</defName>
+        <label>mahogany floor</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodFloor_Rosewood</defName>
+        <label>rosewood floor</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloor</texturePath>
+    </TerrainDef>
+    <!-- WoodFloorAlt -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorAlt_Cedar</defName>
+        <label>cedar floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAlt</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorAlt_Ebony</defName>
+        <label>ebony floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAlt</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorAlt_Mahogany</defName>
+        <label>mahogany floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAlt</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorAlt_Rosewood</defName>
+        <label>rosewood floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAlt</texturePath>
+    </TerrainDef>
+    <!-- WoodFloorRuined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuined_Cedar</defName>
+        <label>cedar floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuined_Ebony</defName>
+        <label>ebony floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuined_Mahogany</defName>
+        <label>mahogany floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuined_Rosewood</defName>
+        <label>rosewood floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorRuined</texturePath>
+    </TerrainDef>
+    <!-- WoodFloorRuinedAlt -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuinedAlt_Cedar</defName>
+        <label>cedar floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuinedAlt_Ebony</defName>
+        <label>ebony floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuinedAlt_Mahogany</defName>
+        <label>mahogany floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuinedAlt_Rosewood</defName>
+        <label>rosewood floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <!-- WoodFloorWarped -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorWarped_Cedar</defName>
+        <label>cedar floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/WarpedWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorWarped_Ebony</defName>
+        <label>ebony floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/WarpedWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorWarped_Mahogany</defName>
+        <label>mahogany floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/WarpedWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorWarped_Rosewood</defName>
+        <label>rosewood floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/WarpedWoodFloor</texturePath>
+    </TerrainDef>
+    <!-- HorizontalWoodFloor -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloor_Cedar</defName>
+        <label>horizontal cedar floor</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloor_Ebony</defName>
+        <label>horizontal ebony floor</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloor_Mahogany</defName>
+        <label>horizontal mahogany floor</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloor_Rosewood</defName>
+        <label>horizontal rosewood floor</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloor</texturePath>
+    </TerrainDef>
+    <!-- HorizontalWoodFloorAlt -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorAlt_Cedar</defName>
+        <label>horizontal cedar floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAlt</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorAlt_Ebony</defName>
+        <label>horizontal ebony floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAlt</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorAlt_Mahogany</defName>
+        <label>horizontal mahogany floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAlt</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorAlt_Rosewood</defName>
+        <label>horizontal rosewood floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAlt</texturePath>
+    </TerrainDef>
+    <!-- HorizontalWoodFloorRuined -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuined_Cedar</defName>
+        <label>horizontal cedar floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuined_Ebony</defName>
+        <label>horizontal ebony floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuined_Mahogany</defName>
+        <label>horizontal mahogany floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuined_Rosewood</defName>
+        <label>horizontal rosewood floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorRuined</texturePath>
+    </TerrainDef>
+    <!-- HorizontalWoodFloorRuinedAlt -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuinedAlt_Cedar</defName>
+        <label>horizontal cedar floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuinedAlt_Ebony</defName>
+        <label>horizontal ebony floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuinedAlt_Mahogany</defName>
+        <label>horizontal mahogany floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuinedAlt_Rosewood</defName>
+        <label>horizontal rosewood floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <!-- HorizontalWoodFloorWarped -->
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorWarped_Cedar</defName>
+        <label>horizontal cedar floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/HWarpedWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Ebony_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorWarped_Ebony</defName>
+        <label>horizontal ebony floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/HWarpedWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Mahogany_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorWarped_Mahogany</defName>
+        <label>horizontal mahogany floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/HWarpedWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorWarped_Rosewood</defName>
+        <label>horizontal rosewood floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/HWarpedWoodFloor</texturePath>
+    </TerrainDef>
+</Defs>

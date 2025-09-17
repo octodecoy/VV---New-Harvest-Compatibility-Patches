@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="Owl_MakeGreenLumber"]/ingredients/li/filter/thingDefs</xpath>
+        <value>
+            <li>VV_CedarWood</li>
+            <li>VV_EbonyWood</li>
+            <li>VV_MahoganyWood</li>
+            <li>VV_RosewoodWood</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="Owl_MakeGreenLumber"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_CedarWood</li>
+            <li>VV_EbonyWood</li>
+            <li>VV_MahoganyWood</li>
+            <li>VV_RosewoodWood</li>
+        </value>
+    </Operation>
+</Patch>

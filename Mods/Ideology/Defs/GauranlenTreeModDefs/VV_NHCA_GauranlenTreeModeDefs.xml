@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- <drawPosition>(-1, -1)</drawPosition> to hide them by default.  If setting is on, position in code. -->
+    <GauranlenTreeModeDef>
+        <defName>VV_NHCP_Cedarmaker</defName>
+        <label>cedarmaker</label>
+        <description>A slow, bumbling caste of dryad which specializes in cedar wood production. Together with its Gauranlen tree, this dryad can generate a cedar-like material on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+        <drawPosition>(-1, -1)</drawPosition>
+        <pawnKindDef>VV_NHCP_Dryad_Cedarmaker</pawnKindDef>
+        <displayedStats>
+            <li>MaxHitPoints</li>
+            <li>MoveSpeed</li>
+        </displayedStats>
+        <hyperlinks>
+            <ThingDef>VV_NHCP_Dryad_Cedarmaker</ThingDef>
+            <ThingDef>VV_CedarWood</ThingDef>
+        </hyperlinks>
+    </GauranlenTreeModeDef>
+    <GauranlenTreeModeDef>
+        <defName>VV_NHCP_Ebonymaker</defName>
+        <label>ebonymaker</label>
+        <description>A slow, bumbling caste of dryad which specializes in ebony wood production. Together with its Gauranlen tree, this dryad can generate a ebony-like material on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+        <drawPosition>(-1, -1)</drawPosition>
+        <pawnKindDef>VV_NHCP_Dryad_Ebonymaker</pawnKindDef>
+        <displayedStats>
+            <li>MaxHitPoints</li>
+            <li>MoveSpeed</li>
+        </displayedStats>
+        <hyperlinks>
+            <ThingDef>VV_NHCP_Dryad_Ebonymaker</ThingDef>
+            <ThingDef>VV_EbonyWood</ThingDef>
+        </hyperlinks>
+    </GauranlenTreeModeDef>
+    <GauranlenTreeModeDef>
+        <defName>VV_NHCP_Mahoganymaker</defName>
+        <label>mahoganymaker</label>
+        <description>A slow, bumbling caste of dryad which specializes in mahogany wood production. Together with its Gauranlen tree, this dryad can generate a mahogany-like material on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+        <drawPosition>(-1, -1)</drawPosition>
+        <pawnKindDef>VV_NHCP_Dryad_Mahoganymaker</pawnKindDef>
+        <displayedStats>
+            <li>MaxHitPoints</li>
+            <li>MoveSpeed</li>
+        </displayedStats>
+        <hyperlinks>
+            <ThingDef>VV_NHCP_Dryad_Mahoganymaker</ThingDef>
+            <ThingDef>VV_MahoganyWood</ThingDef>
+        </hyperlinks>
+    </GauranlenTreeModeDef>
+    <GauranlenTreeModeDef>
+        <defName>VV_NHCP_Rosewoodmaker</defName>
+        <label>rosewoodmaker</label>
+        <description>A slow, bumbling caste of dryad which specializes in rosewood wood production. Together with its Gauranlen tree, this dryad can generate a rosewood-like material on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+        <drawPosition>(-1, -1)</drawPosition>
+        <pawnKindDef>VV_NHCP_Dryad_Rosewoodmaker</pawnKindDef>
+        <displayedStats>
+            <li>MaxHitPoints</li>
+            <li>MoveSpeed</li>
+        </displayedStats>
+        <hyperlinks>
+            <ThingDef>VV_NHCP_Dryad_Rosewoodmaker</ThingDef>
+            <ThingDef>VV_RosewoodWood</ThingDef>
+        </hyperlinks>
+    </GauranlenTreeModeDef>
+</Defs>

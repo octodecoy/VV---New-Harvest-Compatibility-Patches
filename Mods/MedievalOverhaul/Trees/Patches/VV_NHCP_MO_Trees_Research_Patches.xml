@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Adapt VV plants to MO research, removing other research if it's been added so MO takes over. 
+         Checking that A) The research def hasn't been removed and B) MO plants are actually using MO's research. -->
+    <!-- If VV_WhiteMulberryTree exists, put it with the food trees.-->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="Cocoa"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="DankPyon_Tree_Apple"]/plant/sowResearchPrerequisites[li="Cocoa"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>                    
+                    /Defs/ThingDef
+                    [defName="VV_ApricotTree" or
+                    defName="VV_CashewTree" or
+                    defName="VV_ChestnutTree" or
+                    defName="VV_DurianTree" or
+                    defName="VV_GrapefruitTree" or
+                    defName="VV_HazelnutTree" or
+                    defName="VV_JabuticabaTree" or
+                    defName="VV_LimeTree" or
+                    defName="VV_MedlarTree" or
+                    defName="VV_MulberryTree" or
+                    defName="VV_PapayaTree" or
+                    defName="VV_PecanTree" or
+                    defName="VV_PersimmonTree" or
+                    defName="VV_PomegranateTree" or
+                    defName="VV_QuinceTree" or
+                    defName="VV_SourCherryTree" or
+                    defName="VV_StonePineTree" or
+                    defName="VV_SugarMapleTree" or
+                    defName="VV_WalnutTree" or
+                    defName="VV_WhiteMulberryTree"]
+                    /plant
+                </xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>Cocoa</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+</Patch>

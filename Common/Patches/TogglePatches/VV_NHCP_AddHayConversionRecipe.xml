@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>AddHayConversionRecipe</setting>
+        <caseTrue Class="PatchOperationFindMod">
+            <mods>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Forage Crops</li>
+            </mods>
+            <match Class="PatchOperationAdd">
+                <xpath>/Defs/RecipeDef[defName="VV_NHCP_MixHay"]/recipeUsers</xpath>
+                <value>
+                    <li>CraftingSpot</li>
+                </value>                
+            </match>
+        </caseTrue>
+    </Operation>
+</Patch>

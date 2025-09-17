@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Garden Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_AmaranthGrain</li>
+                        <li>VV_Artichoke</li>
+                        <li>VV_Asparagus</li>
+                        <li>VV_BlackBeans</li>
+                        <li>VV_Blackberries</li>
+                        <li>VV_Blackcurrants</li>
+                        <li>VV_BroccoliFlorets</li>
+                        <li>VV_DragonFruits</li>
+                        <li>VV_Leeks</li>
+                        <li>VV_MilletGrain</li>
+                        <li>VV_Parsnips</li>
+                        <li>VV_QuinoaSeeds</li>
+                        <li>VV_RedCabbages</li>
+                        <li>VV_Rosehips</li>
+                        <li>VV_SpinachLeaves</li>
+                        <li>VV_TeffGrain</li>
+                        <li>VV_WhiteTurnips</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/defaultStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_AmaranthGrain</li>
+                        <li>VV_Artichoke</li>
+                        <li>VV_Asparagus</li>
+                        <li>VV_BlackBeans</li>
+                        <li>VV_Blackberries</li>
+                        <li>VV_Blackcurrants</li>
+                        <li>VV_BroccoliFlorets</li>
+                        <li>VV_DragonFruits</li>
+                        <li>VV_Leeks</li>
+                        <li>VV_MilletGrain</li>
+                        <li>VV_Parsnips</li>
+                        <li>VV_QuinoaSeeds</li>
+                        <li>VV_RedCabbages</li>
+                        <li>VV_Rosehips</li>
+                        <li>VV_SpinachLeaves</li>
+                        <li>VV_TeffGrain</li>
+                        <li>VV_WhiteTurnips</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>            
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_HawthornBerries</li>
+                        <li>VV_NettleLeaves</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/defaultStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_HawthornBerries</li>
+                        <li>VV_NettleLeaves</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Trees</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Apricots</li>
+                        <li>VV_CashewNuts</li>
+                        <li>VV_Chestnuts</li>
+                        <li>VV_Durians</li>
+                        <li>VV_Grapefruits</li>
+                        <li>VV_Hazelnuts</li>
+                        <li>VV_JabuticabaBerries</li>
+                        <li>VV_Limes</li>
+                        <li>VV_MapleSyrup</li>
+                        <li>VV_Medlars</li>
+                        <li>VV_Mulberries</li>
+                        <li>VV_Papayas</li>
+                        <li>VV_Pecans</li>
+                        <li>VV_Persimmons</li>
+                        <li>VV_PineNuts</li>
+                        <li>VV_Pomegranates</li>
+                        <li>VV_Quinces</li>
+                        <li>VV_SourCherrys</li>
+                        <li>VV_Walnuts</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/defaultStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Apricots</li>
+                        <li>VV_CashewNuts</li>
+                        <li>VV_Chestnuts</li>
+                        <li>VV_Durians</li>
+                        <li>VV_Grapefruits</li>
+                        <li>VV_Hazelnuts</li>
+                        <li>VV_JabuticabaBerries</li>
+                        <li>VV_Limes</li>
+                        <li>VV_MapleSyrup</li>
+                        <li>VV_Medlars</li>
+                        <li>VV_Mulberries</li>
+                        <li>VV_Papayas</li>
+                        <li>VV_Pecans</li>
+                        <li>VV_Persimmons</li>
+                        <li>VV_PineNuts</li>
+                        <li>VV_Pomegranates</li>
+                        <li>VV_Quinces</li>
+                        <li>VV_SourCherrys</li>
+                        <li>VV_Walnuts</li>
+                        <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

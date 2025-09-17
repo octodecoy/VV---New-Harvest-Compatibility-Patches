@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- ESSENCE -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractEssence"]/ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+        <value>
+            <li>VV_ChamomileBlossoms</li>
+            <li>VV_LavenderBlossoms</li>
+            <li>VV_LemonBalmLeaves</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractEssence"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_ChamomileBlossoms</li>
+            <li>VV_LavenderBlossoms</li>
+            <li>VV_LemonBalmLeaves</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_ExtractEssence"]/defaultIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_ChamomileBlossoms</li>
+            <li>VV_LavenderBlossoms</li>
+            <li>VV_LemonBalmLeaves</li>
+        </value>
+    </Operation>
+</Patch>

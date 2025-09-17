@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Industrial Crops</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Medieval Overhaul</li>
+            </mods>
+            <nomatch Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>                
+                    /Defs/ProcessorFramework.ProcessDef/ingredientFilter
+                    [not(categories/li="WoodTypes")]
+                    /thingDefs
+                    [li="WoodLog"]
+                    [not(li="VV_EbonyWood")]
+                </xpath>
+                <value>
+                    <li>VV_EbonyWood</li>
+                    <li>VV_MahoganyWood</li>
+                    <li>VV_RosewoodWood</li>
+                    <li>VV_CedarWood</li>
+                </value>
+            </nomatch>
+            <match Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef/killedLeavings/DankPyon_RawWood</xpath>
+                <match Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>                    
+                        /Defs/ProcessorFramework.ProcessDef/ingredientFilter
+                        [not(categories/li="DankPyon_RawWood")]
+                        /thingDefs
+                        [li="WoodLog"]
+                        [not(li="DankPyon_Log_VV_EbonyWood")]
+                    </xpath>
+                    <value>
+                        <li>DankPyon_Log_VV_EbonyWood</li>
+                        <li>DankPyon_Log_VV_MahoganyWood</li>
+                        <li>DankPyon_Log_VV_RosewoodWood</li>
+                        <li>DankPyon_Log_VV_CedarWood</li>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>                    
+                        /Defs/ProcessorFramework.ProcessDef/ingredientFilter
+                        [not(categories/li="DankPyon_Wood") and not(categories/li="WoodTypes")]
+                        /thingDefs
+                        [li="WoodLog"]
+                        [not(li="VV_EbonyWood")]
+                    </xpath>
+                    <value>
+                        <li>VV_EbonyWood</li>
+                        <li>VV_MahoganyWood</li>
+                        <li>VV_RosewoodWood</li>
+                        <li>VV_CedarWood</li>
+                    </value>
+                </nomatch>
+            </match>            
+        </match>
+    </Operation>
+</Patch>

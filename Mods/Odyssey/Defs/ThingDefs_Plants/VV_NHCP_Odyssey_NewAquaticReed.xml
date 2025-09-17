@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="WaterPlantBase">
+        <defName>VV_NHCP_AquaticReedPlant</defName>
+        <label>aquatic reed plant</label>
+        <description>Unlike its cousin that has been bred to thrive outside of marshes, this type requires marshy, water-logged ground, and produces a smaller usable yield but in a shorter amount of time. It is valued for its strong stalks, which are valuable materials for construction and crafting.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Flammability>0.4</Flammability>
+            <Nutrition>0.2</Nutrition>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Plants/IndustrialCrops/VV_ReedPlant</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <ingestible />
+        <selectable>true</selectable>
+        <neverMultiSelect>false</neverMultiSelect>
+        <plant>
+            <growDays>5.5</growDays>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestWork>250</harvestWork>
+            <harvestedThingDef>VV_ReedStalks</harvestedThingDef>
+            <harvestYield>3</harvestYield>
+            <visualSizeRange>0.5~1.3</visualSizeRange>
+            <topWindExposure>0.15</topWindExposure>
+            <immatureGraphicPath>Things/Plants/IndustrialCropsImmature/VV_ReedPlant</immatureGraphicPath>
+            <wildTerrainTags>
+                <li>Mud</li>
+                <li>WaterMarshy</li>
+                <li>WaterFreshShallow</li>
+            </wildTerrainTags>
+            <wildClusterRadius>8</wildClusterRadius>
+            <wildClusterWeight>15</wildClusterWeight>
+            <harvestTag>Standard</harvestTag>
+            <!-- Sowing -->
+            <sowWork MayRequire="vanillaexpanded.vplantsemore">500</sowWork>
+            <sowTags>
+				<li MayRequire="vanillaexpanded.vplantsemore">VCE_Aquatic</li>
+			</sowTags>
+            <fertilitySensitivity MayRequire="vanillaexpanded.vplantsemore">0</fertilitySensitivity>
+            <fertilityMin MayRequire="vanillaexpanded.vplantsemore">0</fertilityMin>
+        </plant>
+    </ThingDef>
+</Defs>

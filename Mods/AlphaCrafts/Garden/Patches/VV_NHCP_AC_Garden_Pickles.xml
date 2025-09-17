@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- PICKLES -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>            
+            /Defs/RecipeDef
+            [defName="AC_PickleVegetables"]
+            /ingredients/li
+            [@Name="VegIngredient"]
+            /filter/thingDefs
+        </xpath>
+        <value>
+            <li>VV_Artichoke</li>
+            <li>VV_Asparagus</li>
+            <li>VV_BlackBeans</li>
+            <li>VV_BroccoliFlorets</li>
+            <li>VV_Parsnips</li>
+            <li>VV_WhiteTurnips</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_PickleVegetables"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Artichoke</li>
+            <li>VV_Asparagus</li>
+            <li>VV_BlackBeans</li>
+            <li>VV_BroccoliFlorets</li>
+            <li>VV_Parsnips</li>
+            <li>VV_WhiteTurnips</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_PickleVegetables"]/defaultIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Artichoke</li>
+            <li>VV_Asparagus</li>
+            <li>VV_BlackBeans</li>
+            <li>VV_BroccoliFlorets</li>
+            <li>VV_Parsnips</li>
+            <li>VV_WhiteTurnips</li>
+        </value>
+    </Operation>
+</Patch>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="RoughPlantBase">
+        <defName>VV_MilletGrain</defName>
+        <label>millet grain</label>
+        <description>A small, nutritious grain, perfect for baking or cooking. Millet is versatile and can be used in many dishes, from porridge to bread.</description>
+        <graphicData>
+            <texPath>Things/Items/Raw/VV_MilletGrain</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.1</MarketValue>
+        </statBases>
+        <ingestible>
+            <foodType>Seed</foodType>
+            <preferability>NeverForNutrition</preferability>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>120</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>DankPyon_Cereal</li>
+        </thingCategories>
+    </ThingDef>
+    <ThingDef ParentName="RoughPlantBase">
+        <defName>VV_AmaranthGrain</defName>
+        <label>amaranth grain</label>
+        <description>Tiny, nutrient-dense seeds that can be used in a variety of dishes. Amaranth is gluten-free and works well in porridge, baking, or as a side dish.</description>
+        <graphicData>
+            <texPath>Things/Items/Raw/VV_AmaranthGrain</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.1</MarketValue>
+        </statBases>
+        <ingestible>
+            <foodType>Seed</foodType>
+            <preferability>NeverForNutrition</preferability>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>120</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>DankPyon_Cereal</li>
+        </thingCategories>
+    </ThingDef>
+    <ThingDef ParentName="RoughPlantBase">
+        <defName>VV_TeffGrain</defName>
+        <label>teff grain</label>
+        <description>Tiny, nutrient-rich seeds used in baking, porridge, or flatbreads. Teff is a staple in many African cuisines and is naturally gluten-free.</description>
+        <graphicData>
+            <texPath>Things/Items/Raw/VV_TeffGrain</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.1</MarketValue>
+        </statBases>
+        <ingestible>
+            <foodType>Seed</foodType>
+            <preferability>NeverForNutrition</preferability>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>120</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>DankPyon_Cereal</li>
+        </thingCategories>
+    </ThingDef>
+    <ThingDef ParentName="RoughPlantBase">
+        <defName>VV_QuinoaSeeds</defName>
+        <label>quinoa seeds</label>
+        <description>Tiny, protein-rich seeds that are versatile in cooking. Quinoa seeds can be used in salads, soups, or as a side dish, and are naturally gluten-free.</description>
+        <graphicData>
+            <texPath>Things/Items/Raw/VV_QuinoaSeeds</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1.1</MarketValue>
+        </statBases>
+        <ingestible>
+            <foodType>Seed</foodType>
+            <preferability>NeverForNutrition</preferability>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>120</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>DankPyon_Cereal</li>
+        </thingCategories>
+    </ThingDef>
+</Defs>

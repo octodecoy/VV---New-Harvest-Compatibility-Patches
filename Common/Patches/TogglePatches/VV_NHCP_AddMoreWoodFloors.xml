@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- If both AddMoreFloors and ModWoodFloorsToDropdowns are true and More Floors is installed, move its wood floors to Floors menu for consistency.
+         Probably don't need to do this since we add Floors menu in code. -->
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>AddMoreWoodFloors</setting>
+        <caseTrue Class="NewHarvestPatches.ConditionalSetting">
+            <setting>ModWoodFloorsToDropdowns</setting>
+            <caseTrue Class="NewHarvestPatches.FindMod">
+                <modGroupOne>
+                    <li>[T] MoreFloors</li>
+                </modGroupOne>
+                <modGroupTwo>
+                    <li>VV - New Harvest</li>
+                    <li>VV - New Harvest: Industrial Crops</li>
+                </modGroupTwo>  
+                <logicBetweenGroups>And</logicBetweenGroups>     
+                <caseTrue Class="NewHarvestPatches.AddOrReplace">
+                    <xpath>/Defs/TerrainDef[@Name="TFloorBaseWood"]</xpath>
+                    <value>
+                        <designationCategory>Floors</designationCategory>
+                    </value>
+                </caseTrue>             
+            </caseTrue>
+        </caseTrue>    
+        <caseFalse Class="PatchOperationFindMod">
+            <mods>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Industrial Crops</li>
+            </mods>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>/Defs/TerrainDef[@Name="VV_NHCP_FloorBase" or @Name="VV_NHCP_BridgeBase"]</xpath>
+                <value>
+                    <designationCategory Inherit="False" /> <!-- Blocks all of our floors from appearing in architect menu -->
+                </value>
+            </match>           
+        </caseFalse>
+    </Operation>
+</Patch>

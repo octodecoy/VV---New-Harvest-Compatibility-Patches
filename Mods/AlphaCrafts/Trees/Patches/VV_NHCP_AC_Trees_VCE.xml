@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- VCE -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Cooking Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/RecipeDef[defName="AC_PreserveFruitAsJam"][not(fixedIngredientFilter/categories/li[text()="VV_NHCP_DummyCategory_Fruit"])]</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/RecipeDef[defName="AC_PreserveFruitAsJam"]/ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+                                <value>
+                                    <li>VV_Apricots</li>
+                                    <li>VV_Durians</li>
+                                    <li>VV_Grapefruits</li>
+                                    <li>VV_JabuticabaBerries</li>
+                                    <li>VV_Limes</li>
+                                    <li>VV_Medlars</li>
+                                    <li>VV_Mulberries</li>
+                                    <li>VV_Papayas</li>
+                                    <li>VV_Persimmons</li>
+                                    <li>VV_Pomegranates</li>
+                                    <li>VV_Quinces</li>
+                                    <li>VV_SourCherrys</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/RecipeDef[defName="AC_PreserveFruitAsJam"]/fixedIngredientFilter/thingDefs</xpath>
+                                <value>
+                                    <li>VV_Apricots</li>
+                                    <li>VV_Durians</li>
+                                    <li>VV_Grapefruits</li>
+                                    <li>VV_JabuticabaBerries</li>
+                                    <li>VV_Limes</li>
+                                    <li>VV_Medlars</li>
+                                    <li>VV_Mulberries</li>
+                                    <li>VV_Papayas</li>
+                                    <li>VV_Persimmons</li>
+                                    <li>VV_Pomegranates</li>
+                                    <li>VV_Quinces</li>
+                                    <li>VV_SourCherrys</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/RecipeDef[defName="AC_PreserveFruitAsJam"]/defaultIngredientFilter/thingDefs</xpath>
+                                <value>
+                                    <li>VV_Apricots</li>
+                                    <li>VV_Durians</li>
+                                    <li>VV_Grapefruits</li>
+                                    <li>VV_JabuticabaBerries</li>
+                                    <li>VV_Limes</li>
+                                    <li>VV_Medlars</li>
+                                    <li>VV_Mulberries</li>
+                                    <li>VV_Papayas</li>
+                                    <li>VV_Persimmons</li>
+                                    <li>VV_Pomegranates</li>
+                                    <li>VV_Quinces</li>
+                                    <li>VV_SourCherrys</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef/ingredients/li/filter
+            [not(categories/li="WoodTypes")]
+            /disallowedThingDefs
+            [li="WoodLog"]
+            [not(li="VV_CedarWood")]
+        </xpath>
+        <value>
+            <li>VV_CedarWood</li>
+            <li>VV_EbonyWood</li>
+            <li>VV_MahoganyWood</li>
+            <li>VV_RosewoodWood</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef/fixedIngredientFilter
+            [not(categories/li="WoodTypes")]
+            /disallowedThingDefs
+            [li="WoodLog"]
+            [not(li="VV_CedarWood")]
+        </xpath>
+        <value>
+            <li>VV_CedarWood</li>
+            <li>VV_EbonyWood</li>
+            <li>VV_MahoganyWood</li>
+            <li>VV_RosewoodWood</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef/defaultIngredientFilter
+            [not(categories/li="WoodTypes")]
+            /disallowedThingDefs
+            [li="WoodLog"]
+            [not(li="VV_CedarWood")]
+        </xpath>
+        <value>
+            <li>VV_CedarWood</li>
+            <li>VV_EbonyWood</li>
+            <li>VV_MahoganyWood</li>
+            <li>VV_RosewoodWood</li>
+        </value>
+    </Operation>
+    <!-- If true, MO installed and its lumber chain on. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef/killedLeavings/DankPyon_RawWood</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>                        
+                        /Defs/RecipeDef/ingredients/li/filter
+                        [not(categories/li="WoodTypes") and not(categories/li="DankPyon_Wood") and not(categories/li="DankPyon_RawWood")]
+                        /thingDefs
+                        [li="WoodLog" and not(li="DankPyon_RawWood") or (li="WoodLog" and li="DankPyon_RawWood")]
+                        [not(li="VV_CedarWood")]
+                    </xpath>
+                    <value>
+                        <li>VV_CedarWood</li>
+                        <li>VV_EbonyWood</li>
+                        <li>VV_MahoganyWood</li>
+                        <li>VV_RosewoodWood</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>                        
+                        /Defs/ThingDef/building/fixedStorageSettings/filter
+                        [not(categories/li="DankPyon_RawWood")]
+                        /thingDefs
+                        [li="WoodLog"]
+                        [not(li="DankPyon_Log_VV_CedarWood") and not(li="VV_CedarWood")]
+                    </xpath>
+                    <value>
+                        <li>DankPyon_Log_VV_CedarWood</li>
+                        <li>DankPyon_Log_VV_EbonyWood</li>
+                        <li>DankPyon_Log_VV_MahoganyWood</li>
+                        <li>DankPyon_Log_VV_RosewoodWood</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>                        
+                        /Defs/ThingDef/building
+                        [defaultStorageSettings]
+                        [fixedStorageSettings/filter/thingDefs/li="DankPyon_Log_VV_CedarWood"]
+                        /defaultStorageSettings/filter/thingDefs
+                        [not(li="DankPyon_Log_VV_CedarWood")]
+                    </xpath>
+                    <value>
+                        <li>DankPyon_Log_VV_CedarWood</li>
+                        <li>DankPyon_Log_VV_EbonyWood</li>
+                        <li>DankPyon_Log_VV_MahoganyWood</li>
+                        <li>DankPyon_Log_VV_RosewoodWood</li>
+                    </value>
+                </li>
+                <!-- For Adaptive Primitive and Adaptive Neolithic, and maybe others, hence the wide net that hopes for wood storages. -->
+                <li Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>                        
+                        /Defs/ThingDef
+                        [@ParentName="AdaptiveStorageBase" or @ParentName="ASNeolithicStorageBase"]
+                        [contains(defName, "Log") or contains(defName, "Wood") or contains(defName, "Hay")]
+                        /stuffCategories
+                        [li="Woody"]
+                        [not(li="DankPyon_RawWood")]
+                    </xpath>
+                    <value>
+                        <li>DankPyon_RawWood</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>                        
+                        /Defs/RecipeDef/ingredients/li/filter
+                        [not(categories/li="WoodTypes") and not(categories/li="DankPyon_Wood")]
+                        /thingDefs
+                        [li="WoodLog"]
+                        [not(li="VV_CedarWood")]
+                    </xpath>
+                    <value>
+                        <li>VV_CedarWood</li>
+                        <li>VV_EbonyWood</li>
+                        <li>VV_MahoganyWood</li>
+                        <li>VV_RosewoodWood</li>
+                    </value>
+                </li>
+            </operations>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/ThingDef/building/fixedStorageSettings/filter
+            [not(categories/li="WoodTypes") and not(categories/li="DankPyon_Wood")]
+            /thingDefs
+            [li="WoodLog"]
+            [not(li="VV_CedarWood") and not(li="DankPyon_Log_VV_CedarWood")]
+        </xpath>
+        <value>
+            <li>VV_CedarWood</li>
+            <li>VV_EbonyWood</li>
+            <li>VV_MahoganyWood</li>
+            <li>VV_RosewoodWood</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/ThingDef/building
+            [defaultStorageSettings]
+            [fixedStorageSettings/filter/thingDefs/li="VV_CedarWood"]
+            /defaultStorageSettings/filter/thingDefs
+            [not(li="VV_CedarWood")]
+        </xpath>
+        <value>
+            <li>VV_CedarWood</li>
+            <li>VV_EbonyWood</li>
+            <li>VV_MahoganyWood</li>
+            <li>VV_RosewoodWood</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef
+            [not(fixedIngredientFilter)]
+            [ingredients/li/filter/thingDefs/li="VV_CedarWood"]
+        </xpath>
+        <value>
+            <fixedIngredientFilter>
+                <thingDefs />
+            </fixedIngredientFilter>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef
+            [fixedIngredientFilter and not(fixedIngredientFilter/thingDefs)]
+            [ingredients/li/filter/thingDefs/li="VV_CedarWood"]
+            /fixedIngredientFilter
+        </xpath>
+        <value>
+            <thingDefs />
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef
+            [fixedIngredientFilter/thingDefs]
+            [ingredients/li/filter/thingDefs[li="WoodLog" and li="VV_CedarWood"]]
+            /fixedIngredientFilter/thingDefs
+            [not(li="WoodLog")]
+        </xpath>
+        <value>
+            <li>WoodLog</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef
+            [fixedIngredientFilter/thingDefs]
+            [ingredients/li/filter/thingDefs/li="VV_CedarWood"]
+            /fixedIngredientFilter/thingDefs
+            [not(li="VV_CedarWood")]
+        </xpath>
+        <value>
+            <li>VV_CedarWood</li>
+            <li>VV_EbonyWood</li>
+            <li>VV_MahoganyWood</li>
+            <li>VV_RosewoodWood</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef
+            [defaultIngredientFilter and not(defaultIngredientFilter/thingDefs)]
+            [fixedIngredientFilter/thingDefs/li="VV_CedarWood"]
+            /defaultIngredientFilter
+        </xpath>
+        <value>
+            <thingDefs />
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef
+            [defaultIngredientFilter/thingDefs]
+            [fixedIngredientFilter/thingDefs[li="WoodLog" and li="VV_CedarWood"]]
+            /defaultIngredientFilter/thingDefs
+            [not(li="WoodLog")]
+        </xpath>
+        <value>
+            <li>WoodLog</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>            
+            /Defs/RecipeDef
+            [defaultIngredientFilter/thingDefs]
+            [fixedIngredientFilter/thingDefs/li="VV_CedarWood"]
+            /defaultIngredientFilter/thingDefs
+            [not(li="VV_CedarWood")]
+        </xpath>
+        <value>
+            <li>VV_CedarWood</li>
+            <li>VV_EbonyWood</li>
+            <li>VV_MahoganyWood</li>
+            <li>VV_RosewoodWood</li>
+        </value>
+    </Operation>
+    <!-- Add VV wood types to Logging Worksite table. -->
+    <!-- Doesn't reflect if the tree types are actually found at the site. -->
+    <!-- Values could probably use tweaking. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/SitePartDef[defName="WorkSite_Logging"]/lootTable</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/SitePartDef[defName="WorkSite_Logging"]/lootTable</xpath>
+            <value>
+                <li>
+                    <thing>VV_EbonyWood</thing>
+                    <weight>0.25</weight>
+                </li>
+                <li>
+                    <thing>VV_MahoganyWood</thing>
+                    <weight>0.25</weight>
+                </li>
+                <li>
+                    <thing>VV_RosewoodWood</thing>
+                    <weight>0.25</weight>
+                </li>
+                <li>
+                    <thing>VV_CedarWood</thing>
+                    <weight>0.25</weight>
+                </li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

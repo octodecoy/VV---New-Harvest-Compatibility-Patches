@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- MAYONNAISE -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_InfuseMayonnaise"]/ingredients/li[@Name="ProduceIngredient"]/filter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Limes</li>
+            <li>VV_Papayas</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_InfuseMayonnaise"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Limes</li>
+            <li>VV_Papayas</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="AC_InfuseMayonnaise"]/defaultIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_Apricots</li>
+            <li>VV_Limes</li>
+            <li>VV_Papayas</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AC_InfusedMayonnaise"]/comps/li[@Class="AlphaCrafts.CompProperties_LabelByIngredients"]/overrides</xpath>
+        <value>
+            <li>
+                <key>VV_Apricots</key>
+                <value>Apricot mayonnaise</value>
+            </li>
+            <li>
+                <key>VV_Limes</key>
+                <value>Lime mayonnaise</value>
+            </li>
+            <li>
+                <key>VV_Papayas</key>
+                <value>Papaya mayonnaise</value>
+            </li>
+        </value>
+    </Operation>
+</Patch>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Medicinal -->
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Calendula</defName>
+        <label>Calendula seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_CalendulaPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Calendula</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_CalendulaPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Chamomile</defName>
+        <label>Chamomile seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_ChamomilePlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Chamomile</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_ChamomilePlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Echinacea</defName>
+        <label>Echinacea seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_EchinaceaPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Echinacea</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_EchinaceaPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Ginkgo</defName>
+        <label>Ginkgo tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_GinkgoTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Ginkgo</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_GinkgoTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Ginseng</defName>
+        <label>Ginseng seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_GinsengPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Ginseng</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_GinsengPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Hawthorn</defName>
+        <label>Hawthorn tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_HawthornTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Hawthorn</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_HawthornTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Lavender</defName>
+        <label>Lavender seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_LavenderPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Lavender</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_LavenderPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_LemonBalm</defName>
+        <label>Lemon Balm seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_LemonBalmPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/LemonBalm</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_LemonBalmPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Linden</defName>
+        <label>Linden tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_LindenTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Linden</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_LindenTree</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Marshmallow</defName>
+        <label>Marshmallow root seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_MarshmallowPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Marshmallow</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_MarshmallowPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Nettle</defName>
+        <label>Nettle seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_NettlePlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Nettle</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_NettlePlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_StJohnsWort</defName>
+        <label>St. John's Wort seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_StJohnsWortPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/StJohnsWort</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_StJohnsWortPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Thyme</defName>
+        <label>Thyme seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_ThymePlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Thyme</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_ThymePlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Valerian</defName>
+        <label>Valerian seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_ValerianPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Valerian</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_ValerianPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Yarrow</defName>
+        <label>Yarrow seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_YarrowPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Yarrow</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>VV_YarrowPlant</ThingDef>
+        </descriptionHyperlinks>
+    </ThingDef>
+</Defs>

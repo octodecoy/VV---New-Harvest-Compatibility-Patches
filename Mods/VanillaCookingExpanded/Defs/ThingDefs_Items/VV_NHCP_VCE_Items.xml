@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>VV_MapleSyrup</defName>
+        <label>maple syrup</label>
+        <description>Sweet, thick syrup collected from the sugar maple tree. Delicious and highly valued.</description>
+        <graphicData>
+            <texPath>Things/Items/Raw/VV_MapleSyrup</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>2.5</MarketValue>
+            <Nutrition>0.01</Nutrition>
+            <Flammability>1.3</Flammability>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>120</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>VCE_Condiments</li>
+        </thingCategories>
+        <ingestible>
+            <preferability>NeverForNutrition</preferability>
+            <specialThoughtAsIngredient>VV_VCE_ConsumedMapleSyrup</specialThoughtAsIngredient>
+            <optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
+            <foodType>Processed</foodType>
+        </ingestible>
+        <ingredient>
+            <mergeCompatibilityTags>
+                <li>Condiments</li>
+            </mergeCompatibilityTags>
+        </ingredient>
+        <modExtensions>
+            <li Class="VEF.AnimalBehaviours.AnimalStatExtension">
+                <statToAdd>
+                    <li>VCE_CondimentEffects</li>
+                </statToAdd>
+                <statValues>
+                    <li>VCE_CondimentEffectsTitle</li>
+                </statValues>
+                <statDescriptions>
+                    <li>VCE_CondimentEffectsKetchup</li>
+                    <!-- Consuming meals that include this condiment increases mood by 3 for 12 hours. -->
+                </statDescriptions>
+            </li>
+        </modExtensions>
+    </ThingDef>
+</Defs>

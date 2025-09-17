@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- No parent so it doesn't show anywhere - unless we want it to -->
+    <ThingCategoryDef>
+        <defName>VV_NHCP_DummyCategory_AnimalFoods</defName>
+        <label>Animal Food</label>
+        <resourceReadoutRoot>false</resourceReadoutRoot>
+        <iconPath>NHCP/UI/Icons/HayBaleIcon</iconPath>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>VV_NHCP_DummyCategory_Fruit</defName>
+        <label>Fruit</label>
+        <resourceReadoutRoot>false</resourceReadoutRoot>
+        <iconPath>Things/Item/Resource/PlantFoodRaw/Berries</iconPath>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>VV_NHCP_DummyCategory_Grains</defName>
+        <label>Grains</label>
+        <resourceReadoutRoot>false</resourceReadoutRoot>
+        <iconPath>Things/Item/Resource/PlantFoodRaw/Corn</iconPath>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>VV_NHCP_DummyCategory_Nuts</defName>
+        <label>Nuts and Seeds</label>
+        <resourceReadoutRoot>false</resourceReadoutRoot>
+        <iconPath>NHCP/UI/Icons/NutsIcon</iconPath>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>VV_NHCP_DummyCategory_Vegetables</defName>
+        <label>Vegetables</label>
+        <resourceReadoutRoot>false</resourceReadoutRoot>
+        <iconPath>Things/Item/Resource/PlantFoodRaw/Potatoes</iconPath>
+    </ThingCategoryDef>
+</Defs>

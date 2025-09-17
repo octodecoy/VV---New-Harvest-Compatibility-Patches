@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Garden Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TemperateForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_BlackcurrantBush>0.01</VV_BlackcurrantBush>
+                        <VV_RosehipBush>0.01</VV_RosehipBush>
+                        <VV_BlackberryBush>0.01</VV_BlackberryBush>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TemperateSwamp"]/wildPlants</xpath>
+                    <value>
+                        <VV_BlackberryBush>0.05</VV_BlackberryBush>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TropicalRainforest"]/wildPlants</xpath>
+                    <value>
+                        <VV_DragonFruitPlant>0.01</VV_DragonFruitPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TropicalSwamp"]/wildPlants</xpath>
+                    <value>
+                        <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="AridShrubland"]/wildPlants</xpath>
+                    <value>
+                        <VV_RosehipBush>0.05</VV_RosehipBush>
+                        <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="Desert"]/wildPlants</xpath>
+                    <value>
+                        <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="BorealForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_BlackcurrantBush>0.05</VV_BlackcurrantBush>
+                        <VV_RosehipBush>0.05</VV_RosehipBush>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/BiomeDef[defName="Grasslands"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/BiomeDef[defName="Grasslands"]/wildPlants</xpath>
+                        <value>
+                            <VV_RosehipBush>0.05</VV_RosehipBush>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/BiomeDef[defName="LavaField"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/BiomeDef[defName="LavaField"]/wildPlants</xpath>
+                        <value>
+                            <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Industrial Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TemperateForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_EbonyTree>0.003</VV_EbonyTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TemperateSwamp"]/wildPlants</xpath>
+                    <value>
+                        <VV_ReedPlant>0.05</VV_ReedPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TropicalRainforest"]/wildPlants</xpath>
+                    <value>
+                        <VV_CorkTree>0.005</VV_CorkTree>
+                        <VV_EbonyTree>0.005</VV_EbonyTree>
+                        <VV_RattanPlant>0.01</VV_RattanPlant>
+                        <VV_MahoganyTree>0.003</VV_MahoganyTree>
+                        <VV_RosewoodTree>0.003</VV_RosewoodTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TropicalSwamp"]/wildPlants</xpath>
+                    <value>
+                        <VV_EbonyTree>0.005</VV_EbonyTree>
+                        <VV_RattanPlant>0.05</VV_RattanPlant>
+                        <VV_ReedPlant>0.05</VV_ReedPlant>
+                        <VV_MahoganyTree>0.003</VV_MahoganyTree>
+                        <VV_RosewoodTree>0.003</VV_RosewoodTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="AridShrubland"]/wildPlants</xpath>
+                    <value>
+                        <VV_CorkTree>0.01</VV_CorkTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="BorealForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_CedarTree>0.005</VV_CedarTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="ColdBog"]/wildPlants</xpath>
+                    <value>
+                        <VV_CedarTree>0.005</VV_CedarTree>
+                        <VV_ReedPlant>0.05</VV_ReedPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/BiomeDef[defName="LavaField"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/BiomeDef[defName="LavaField"]/wildPlants</xpath>
+                        <value>
+                            <VV_CorkTree>0.01</VV_CorkTree>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TemperateForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_LindenTree>0.003</VV_LindenTree>
+                        <VV_ChamomilePlant>0.005</VV_ChamomilePlant>
+                        <VV_LemonBalmPlant>0.005</VV_LemonBalmPlant>
+                        <VV_GinsengPlant>0.005</VV_GinsengPlant>
+                        <VV_StJohnsWortPlant>0.005</VV_StJohnsWortPlant>
+                        <VV_YarrowPlant>0.005</VV_YarrowPlant>
+                        <VV_NettlePlant>0.005</VV_NettlePlant>
+                        <VV_HawthornTree>0.003</VV_HawthornTree>
+                        <VV_EchinaceaPlant>0.005</VV_EchinaceaPlant>
+                        <VV_CalendulaPlant>0.005</VV_CalendulaPlant>
+                        <VV_ValerianPlant>0.005</VV_ValerianPlant>
+                        <VV_GinkgoTree>0.001</VV_GinkgoTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TemperateSwamp"]/wildPlants</xpath>
+                    <value>
+                        <VV_LemonBalmPlant>0.005</VV_LemonBalmPlant>
+                        <VV_MarshmallowPlant>0.005</VV_MarshmallowPlant>
+                        <VV_NettlePlant>0.005</VV_NettlePlant>
+                        <VV_HawthornTree>0.005</VV_HawthornTree>
+                        <VV_ValerianPlant>0.005</VV_ValerianPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TropicalSwamp"]/wildPlants</xpath>
+                    <value>
+                        <VV_MarshmallowPlant>0.005</VV_MarshmallowPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="AridShrubland"]/wildPlants</xpath>
+                    <value>
+                        <VV_ChamomilePlant>0.005</VV_ChamomilePlant>
+                        <VV_StJohnsWortPlant>0.005</VV_StJohnsWortPlant>
+                        <VV_YarrowPlant>0.005</VV_YarrowPlant>
+                        <VV_ThymePlant>0.005</VV_ThymePlant>
+                        <VV_EchinaceaPlant>0.005</VV_EchinaceaPlant>
+                        <VV_LavenderPlant>0.005</VV_LavenderPlant>
+                        <VV_CalendulaPlant>0.005</VV_CalendulaPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="Desert"]/wildPlants</xpath>
+                    <value>
+                        <VV_ThymePlant>0.005</VV_ThymePlant>
+                        <VV_LavenderPlant>0.005</VV_LavenderPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="BorealForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_LindenTree>0.005</VV_LindenTree>
+                        <VV_GinsengPlant>0.005</VV_GinsengPlant>
+                        <VV_HawthornTree>0.005</VV_HawthornTree>
+                        <VV_ValerianPlant>0.005</VV_ValerianPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/BiomeDef[defName="Grasslands"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/BiomeDef[defName="Grasslands"]/wildPlants</xpath>
+                        <value>
+                            <VV_LindenTree>0.003</VV_LindenTree>
+                            <VV_ChamomilePlant>0.05</VV_ChamomilePlant>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/BiomeDef[defName="LavaField"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/BiomeDef[defName="LavaField"]/wildPlants</xpath>
+                        <value>
+                            <VV_GinsengPlant>0.005</VV_GinsengPlant>
+                            <VV_LavenderPlant>0.005</VV_LavenderPlant>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Trees</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TemperateForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_SourCherryTree>0.005</VV_SourCherryTree>
+                        <VV_QuinceTree>0.005</VV_QuinceTree>
+                        <VV_WalnutTree>0.005</VV_WalnutTree>
+                        <VV_PecanTree>0.005</VV_PecanTree>
+                        <VV_ChestnutTree>0.005</VV_ChestnutTree>
+                        <VV_HazelnutTree>0.005</VV_HazelnutTree>
+                        <VV_MulberryTree>0.005</VV_MulberryTree>
+                        <VV_StonePineTree>0.005</VV_StonePineTree>
+                        <VV_PersimmonTree>0.005</VV_PersimmonTree>
+                        <VV_ApricotTree>0.005</VV_ApricotTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TemperateSwamp"]/wildPlants</xpath>
+                    <value>
+                        <VV_MedlarTree>0.01</VV_MedlarTree>
+                        <VV_PecanTree>0.01</VV_PecanTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TropicalRainforest"]/wildPlants</xpath>
+                    <value>
+                        <VV_PapayaTree>0.005</VV_PapayaTree>
+                        <VV_GrapefruitTree>0.005</VV_GrapefruitTree>
+                        <VV_DurianTree>0.005</VV_DurianTree>
+                        <VV_JabuticabaTree>0.005</VV_JabuticabaTree>
+                        <VV_CashewTree>0.005</VV_CashewTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TropicalSwamp"]/wildPlants</xpath>
+                    <value>
+                        <VV_PapayaTree>0.01</VV_PapayaTree>
+                        <VV_DurianTree>0.01</VV_DurianTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="AridShrubland"]/wildPlants</xpath>
+                    <value>
+                        <VV_PomegranateTree>0.01</VV_PomegranateTree>
+                        <VV_MulberryTree>0.01</VV_MulberryTree>
+                        <VV_StonePineTree>0.01</VV_StonePineTree>
+                        <VV_PersimmonTree>0.01</VV_PersimmonTree>
+                        <VV_ApricotTree>0.01</VV_ApricotTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="Desert"]/wildPlants</xpath>
+                    <value>
+                        <VV_PomegranateTree>0.01</VV_PomegranateTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="BorealForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_WalnutTree>0.01</VV_WalnutTree>
+                        <VV_HazelnutTree>0.01</VV_HazelnutTree>
+                        <VV_ChestnutTree>0.01</VV_ChestnutTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="ColdBog"]/wildPlants</xpath>
+                    <value>
+                        <VV_MedlarTree>0.01</VV_MedlarTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/BiomeDef[defName="Grasslands"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/BiomeDef[defName="Grasslands"]/wildPlants</xpath>
+                        <value>
+                            <VV_QuinceTree>0.01</VV_QuinceTree>
+                            <VV_SourCherryTree>0.01</VV_SourCherryTree>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/BiomeDef[defName="LavaField"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/BiomeDef[defName="LavaField"]/wildPlants</xpath>
+                        <value>
+                            <VV_PomegranateTree>0.01</VV_PomegranateTree>
+                            <VV_StonePineTree>0.01</VV_StonePineTree>
+                            <VV_PersimmonTree>0.01</VV_PersimmonTree>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VEF.Graphics.GraphicOffsets>
+        <defName>VV_AC_PerfumeOffsets_NewHarvest_Medicinal</defName>
+        <thingDef>AC_Perfume</thingDef>
+        <ingredientsAndOffsetList>
+            <li>
+                <key>VV_ChamomileBlossoms</key>
+                <value>6</value>
+            </li>
+            <li>
+                <key>VV_LavenderBlossoms</key>
+                <value>1</value>
+            </li>
+            <li>
+                <key>VV_LemonBalmLeaves</key>
+                <value>7</value>
+            </li>
+        </ingredientsAndOffsetList>
+    </VEF.Graphics.GraphicOffsets>
+</Defs>

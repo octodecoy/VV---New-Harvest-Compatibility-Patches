@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>AddWoodDryads</setting>
+        <caseTrue Class="PatchOperationFindMod">
+            <mods>
+                <li>Ideology</li>
+            </mods>
+            <match Class="PatchOperationConditional">
+                <xpath>/Defs/GauranlenTreeModeDef[defName="VV_NHCP_Cedarmaker"]</xpath> <!-- Just check if one exists, if so, the rest probably do too. -->
+                <match Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef/killedLeavings/DankPyon_RawWood</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/GauranlenTreeModeDef[defName="VV_NHCP_Cedarmaker"]/hyperlinks/ThingDef[text()="VV_CedarWood"]/text()</xpath>
+                                <value>DankPyon_Log_VV_CedarWood</value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_NHCP_Dryad_Cedarmaker"]/descriptionHyperlinks/ThingDef[text()="VV_CedarWood"]/text()</xpath>
+                                <value>DankPyon_Log_VV_CedarWood</value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_NHCP_Dryad_Cedarmaker"]/comps/li[@Class="CompProperties_Spawner"]/thingToSpawn</xpath>
+                                <value>
+                                    <thingToSpawn>DankPyon_Log_VV_CedarWood</thingToSpawn>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/GauranlenTreeModeDef[defName="VV_NHCP_Ebonymaker"]/hyperlinks/ThingDef[text()="VV_EbonyWood"]/text()</xpath>
+                                <value>DankPyon_Log_VV_EbonyWood</value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_NHCP_Dryad_Ebonymaker"]/descriptionHyperlinks/ThingDef[text()="VV_EbonyWood"]/text()</xpath>
+                                <value>DankPyon_Log_VV_EbonyWood</value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_NHCP_Dryad_Ebonymaker"]/comps/li[@Class="CompProperties_Spawner"]/thingToSpawn</xpath>
+                                <value>
+                                    <thingToSpawn>DankPyon_Log_VV_EbonyWood</thingToSpawn>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/GauranlenTreeModeDef[defName="VV_NHCP_Mahoganymaker"]/hyperlinks/ThingDef[text()="VV_MahoganyWood"]/text()</xpath>
+                                <value>DankPyon_Log_VV_MahoganyWood</value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_NHCP_Dryad_Mahoganymaker"]/descriptionHyperlinks/ThingDef[text()="VV_MahoganyWood"]/text()</xpath>
+                                <value>DankPyon_Log_VV_MahoganyWood</value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_NHCP_Dryad_Mahoganymaker"]/comps/li[@Class="CompProperties_Spawner"]/thingToSpawn</xpath>
+                                <value>
+                                    <thingToSpawn>DankPyon_Log_VV_MahoganyWood</thingToSpawn>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/GauranlenTreeModeDef[defName="VV_NHCP_Rosewoodmaker"]/hyperlinks/ThingDef[text()="VV_RosewoodWood"]/text()</xpath>
+                                <value>DankPyon_Log_VV_RosewoodWood</value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_NHCP_Dryad_Rosewoodmaker"]/descriptionHyperlinks/ThingDef[text()="VV_RosewoodWood"]/text()</xpath>
+                                <value>DankPyon_Log_VV_RosewoodWood</value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_NHCP_Dryad_Rosewoodmaker"]/comps/li[@Class="CompProperties_Spawner"]/thingToSpawn</xpath>
+                                <value>
+                                    <thingToSpawn>DankPyon_Log_VV_RosewoodWood</thingToSpawn>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </match>
+            </match>
+        </caseTrue>
+    </Operation>
+</Patch>

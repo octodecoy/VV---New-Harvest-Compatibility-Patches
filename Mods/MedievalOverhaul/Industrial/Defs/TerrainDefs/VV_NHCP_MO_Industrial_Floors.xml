@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <TerrainDef Name="VV_NHCP_FloorBase_MO" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
+        <pollutionColor>(1, 1, 1, 1)</pollutionColor>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <texturePath>Terrain/RusticWoodFloor</texturePath>
+        <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MO">
+        <defName>VV_NHCP_DankPyon_Floor_RusticWoodFloor_Cedar</defName>
+        <label>rustic cedar floor</label>
+        <costList>
+            <VV_CedarWood>3</VV_CedarWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MO">
+        <defName>VV_NHCP_DankPyon_Floor_RusticWoodFloor_Ebony</defName>
+        <label>rustic ebony floor</label>
+        <costList>
+            <VV_EbonyWood>3</VV_EbonyWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MO">
+        <defName>VV_NHCP_DankPyon_Floor_RusticWoodFloor_Mahogany</defName>
+        <label>rustic mahogany floor</label>
+        <costList>
+            <VV_MahoganyWood>3</VV_MahoganyWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MO">
+        <defName>VV_NHCP_DankPyon_Floor_RusticWoodFloor_Rosewood</defName>
+        <label>rustic rosewood floor</label>
+        <costList>
+            <VV_RosewoodWood>3</VV_RosewoodWood>
+        </costList>
+        <color>(201,151,112)</color>
+    </TerrainDef>
+</Defs>
