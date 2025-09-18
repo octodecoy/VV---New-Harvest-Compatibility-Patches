@@ -15,10 +15,11 @@
             <li>VV_RawJute</li>
             <li>VV_ReedStalks</li>
             <li>VV_RosewoodWood</li>
-            <li MayRequire="zal.expandwoodwork">VV_CedarLumber</li>
+            <!-- Until new version of Expanded Woodworking is figured out; may not even be needed -->
+            <!-- <li MayRequire="zal.expandwoodwork">VV_CedarLumber</li>
             <li MayRequire="zal.expandwoodwork">VV_EbonyLumber</li>
             <li MayRequire="zal.expandwoodwork">VV_MahoganyLumber</li>
-            <li MayRequire="zal.expandwoodwork">VV_RosewoodLumber</li>
+            <li MayRequire="zal.expandwoodwork">VV_RosewoodLumber</li> -->
         </value>
     </Operation>
 

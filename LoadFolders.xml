@@ -31,8 +31,9 @@
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees">Mods/MedievalOverhaul/Trees</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Trees/Industrial</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestindustrialcrops">Mods/MedievalOverhaul/Trees/Industrial</li>
-        <li IfModActiveAll="zal.expandwoodwork,vvenchov.vvnewharvest">Mods/ExpandedWoodworking</li>
-        <li IfModActiveAll="zal.expandwoodwork,vvenchov.vvnewharvestindustrialcrops">Mods/ExpandedWoodworking</li>
+        <!-- Until new version of Expanded Woodworking is figured out; may not even be needed -->
+        <!-- <li IfModActiveAll="zal.expandwoodwork,vvenchov.vvnewharvest">Mods/ExpandedWoodworking</li>
+        <li IfModActiveAll="zal.expandwoodwork,vvenchov.vvnewharvestindustrialcrops">Mods/ExpandedWoodworking</li> -->
         <li IfModActiveAll="teflonjim.extendedwoodworking,vvenchov.vvnewharvest">Mods/ExtendedWoodworking</li>
         <li IfModActiveAll="teflonjim.extendedwoodworking,vvenchov.vvnewharvestindustrialcrops">Mods/ExtendedWoodworking</li>
         <li IfModActiveAll="mlie.simplechainslumber,vvenchov.vvnewharvest">Mods/SimpleChainsLumber</li>
