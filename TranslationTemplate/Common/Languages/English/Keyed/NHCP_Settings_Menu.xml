@@ -34,7 +34,7 @@
 
 
 	<NHCP.TabSubLabel_FuelDescription>Enabled things will be used as fuel.</NHCP.TabSubLabel_FuelDescription>
-	<NHCP.TabSubLabel_CommonalityDescription>Commonality values define how likely stuff is to generate from a material.\nMin: 0, Max: 10\n0 = never generates; 10 does not mean 100%-it's relative to all other materials.\nReference: Wood = 1.0; Gold = 0.02, so be careful with high values.</NHCP.TabSubLabel_CommonalityDescription>
+	<NHCP.TabSubLabel_CommonalityDescription>Commonality values define how likely stuff is to generate from a material.\nMin: 0, Max: 100\n0 = never generates; 100 does not mean 100%-it's relative to all other materials.\nReference: Wood = 1.0; Gold = 0.02, so be careful with high values.</NHCP.TabSubLabel_CommonalityDescription>
 
 	<NHCP.CheckboxLabel_Logging>Logging</NHCP.CheckboxLabel_Logging>
 	<NHCP.CheckboxSubLabel_Logging>Logs some information on game start.\nYou probably don't want it on.</NHCP.CheckboxSubLabel_Logging>
