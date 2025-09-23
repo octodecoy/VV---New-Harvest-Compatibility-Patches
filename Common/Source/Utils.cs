@@ -302,7 +302,7 @@ namespace NewHarvestPatches
             /// <remarks>If Medieval Overhaul, Expanded Woodworking or Extended Woodworking are active this returns <see langword="false"/>.
             /// All 3 mods add recipes to convert wood types, and it's too much hassle to change our recipe's product just to fit.
             /// </remarks>
-            public static bool ShowWoodConvertRecipe = !HasMedievalOverhaul && !IsAnyModActive("teflonjim.extendedwoodworking", "zal.expandwoodwork");
+            public static bool ShowWoodConvertRecipe = !HasMedievalOverhaul && !IsAnyModActive(ignorePostfix: true, "teflonjim.extendedwoodworking", "zal.expandwoodwork");
 
             /// <summary>
             /// Indicates whether Vanilla Expanded Framework's commonality Stuff Extension sliders should be displayed in menu.
@@ -310,14 +310,20 @@ namespace NewHarvestPatches
             /// <remarks>If !HasIndustrialModule or !HasVanillaExpandedFramework, returns <see langword="false"/>.</remarks>
             public static bool ShowVEFCommonalitySettings = HasIndustrialModule && HasVanillaExpandedFramework;
 
-            public static bool IsModActive(string packageId)
+            public static bool IsModActive(string packageId, bool ignorePostfix = true)
             {
-                return !string.IsNullOrWhiteSpace(packageId) && ModLister.GetActiveModWithIdentifier(packageId) != null;
+                return !string.IsNullOrWhiteSpace(packageId) && ModLister.GetActiveModWithIdentifier(packageId, ignorePostfix) != null;
             }
 
-            public static bool IsAnyModActive(params string[] packageIds)
+            public static bool IsAnyModActive(bool ignorePostfix = true, params string[] packageIds)
             {
-                return !packageIds.NullOrEmpty() && ModLister.AnyFromListActive([.. packageIds]);
+                if (packageIds.NullOrEmpty())
+                    return false;
+
+                if (ignorePostfix)
+                    return ModLister.AnyModActiveNoSuffix([.. packageIds]);
+                else
+                    return ModLister.AnyFromListActive([.. packageIds]);
             }
         }
     }

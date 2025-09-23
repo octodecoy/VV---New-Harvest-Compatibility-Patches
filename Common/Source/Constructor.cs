@@ -24,15 +24,8 @@ namespace NewHarvestPatches
     {
         static Constructor()
         {
-            if (!HasAnyModule)
-            {
-                Log.Error("New Harvest Patches is installed, but New Harvest is not.");
-                return;
-            }
-
             var enabledSettings = EnabledSettings;
 
-            //UpdateModVersion();
             var modVersions = NewHarvestVersions;
             if (!modVersions.NullOrEmpty()) // Dunno how
             {

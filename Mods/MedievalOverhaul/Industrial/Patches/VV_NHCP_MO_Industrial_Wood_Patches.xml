@@ -61,7 +61,7 @@
                     <value>
                         <ThingDef ParentName="VV_MO_PlankBase">
                             <defName>VV_EbonyWood</defName>
-                            <label>cedar wood planks</label>
+                            <label>ebony wood planks</label>
                             <description>Dense and dark processed wood from the ebony tree. Extremely durable and sought after for high-end furniture, construction and tools. Though heavier and harder to work with, its beauty and strength are unmatched.</description>
                             <graphicData>
                                 <color>(40,40,42)</color>
@@ -195,6 +195,31 @@
                             <key>VV_RosewoodWood</key>
                             <value>DankPyon_Log_VV_RosewoodWood</value>
                         </li>
+                    </value>
+                </li>
+                <!-- TREES -->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_CedarTree"]/plant/harvestedThingDef</xpath>
+                    <value>
+                        <harvestedThingDef>DankPyon_Log_VV_CedarWood</harvestedThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_EbonyTree"]/plant/harvestedThingDef</xpath>
+                    <value>
+                        <harvestedThingDef>DankPyon_Log_VV_EbonyWood</harvestedThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_MahoganyTree"]/plant/harvestedThingDef</xpath>
+                    <value>
+                        <harvestedThingDef>DankPyon_Log_VV_MahoganyWood</harvestedThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_RosewoodTree"]/plant/harvestedThingDef</xpath>
+                    <value>
+                        <harvestedThingDef>DankPyon_Log_VV_RosewoodWood</harvestedThingDef>
                     </value>
                 </li>
                 <!-- STORAGE -->
