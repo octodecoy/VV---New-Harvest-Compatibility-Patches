@@ -41,24 +41,6 @@
                         </operations>
                     </match>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/ingredients/li[@Name="ProduceIngredient"]/filter/thingDefs</xpath>
-                    <value>
-                        <li>VV_RedCabbages</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/fixedIngredientFilter/thingDefs</xpath>
-                    <value>
-                        <li>VV_RedCabbages</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/defaultIngredientFilter/thingDefs</xpath>
-                    <value>
-                        <li>VV_RedCabbages</li>
-                    </value>
-                </li>
             </operations>
         </match>
     </Operation>

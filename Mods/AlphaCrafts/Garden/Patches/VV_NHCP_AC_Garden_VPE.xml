@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- VPE -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Plants Expanded</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]</xpath>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/ingredients/li[@Name="ProduceIngredient"]/filter/thingDefs</xpath>
+                        <value>
+                            <li>VV_RedCabbages</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/fixedIngredientFilter/thingDefs</xpath>
+                        <value>
+                            <li>VV_RedCabbages</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/defaultIngredientFilter/thingDefs</xpath>
+                        <value>
+                            <li>VV_RedCabbages</li>
+                        </value>
+                    </li>                   
+                </operations>
+            </match>
+        </match>
+    </Operation>
+</Patch>
