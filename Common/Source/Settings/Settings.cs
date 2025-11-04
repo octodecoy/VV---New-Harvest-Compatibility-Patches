@@ -33,6 +33,7 @@ namespace NewHarvestPatches
         public bool UseVanillaLogGraphic = false;
         public bool AddWoodDryads = false;
         public bool HayNeedsCooling = true;
+        public bool GrainsProduceVCEFlourSecondary = false;
         public Dictionary<string, bool> FuelTypes = [];
         public Dictionary<string, CommonalityInfo> StuffCommonality = [];
         public Dictionary<string, bool> FallColorTrees = [];
@@ -58,14 +59,22 @@ namespace NewHarvestPatches
             // Have to have access to Def data so need to build after loaded in
             LongEventHandler.ExecuteWhenFinished(() =>
             {
-                var (oldVersion, newVersion) = UpdateModVersion();
-                CommonalityInfo.BuildCommonalityStats(ref StuffCommonality);
-                CheckboxInfo.BuildCheckboxInfo(ref _checkboxInfos);
-                ColorInfo.BuildColorInfo(ref MaterialColors);
-                DefToCategoryInfo.CacheDefToCategoryInfo(ref CategoryData);
-                CategoryLabelInfo.CacheDefaultCategoryLabelInfo(ref CategoryLabelCache);
-                BuildTabs();
-                WriteSettingsToFile(); // Write in case null stuff was removed from scribed data while building
+                StartStopwatch(nameof(ModSettings), nameof(NewHarvestPatchesModSettings));
+                try
+                {
+                    var (oldVersion, newVersion) = UpdateModVersion();
+                    CommonalityInfo.BuildCommonalityStats(ref StuffCommonality);
+                    CheckboxInfo.BuildCheckboxInfo(ref _checkboxInfos);
+                    ColorInfo.BuildColorInfo(ref MaterialColors);
+                    DefToCategoryInfo.CacheDefToCategoryInfo(ref CategoryData);
+                    CategoryLabelInfo.CacheDefaultCategoryLabelInfo(ref CategoryLabelCache);
+                    BuildTabs();
+                    WriteSettingsToFile(); // Write in case null stuff was removed from scribed data while building
+                }
+                finally
+                {
+                    LogStopwatch(nameof(ModSettings), nameof(NewHarvestPatchesModSettings));
+                }
             });
         }
 
@@ -86,6 +95,12 @@ namespace NewHarvestPatches
             CommonalityTab._commonalityBuffers?.Clear();
             ChangeColorSection._colorChannelBuffers?.Clear();
             Checkboxes._categoryLabelBuffers?.Clear();
+        }
+
+        internal static void ClearCaches()
+        {
+            ModAddedCategoryDictionary = null;
+            ModAddedCategoryTypeCache = null;
         }
 
         internal void ClearCategoryCache()
@@ -128,6 +143,7 @@ namespace NewHarvestPatches
                 Scribe_Values.Look(ref UseVanillaLogGraphic, nameof(UseVanillaLogGraphic), false, false);
                 Scribe_Values.Look(ref AddWoodDryads, nameof(AddWoodDryads), false, false);
                 Scribe_Values.Look(ref HayNeedsCooling, nameof(HayNeedsCooling), true, false);
+                Scribe_Values.Look(ref GrainsProduceVCEFlourSecondary, nameof(GrainsProduceVCEFlourSecondary), false, false);
 
                 if (HasIndustrialModule)
                 {
@@ -269,7 +285,6 @@ namespace NewHarvestPatches
         public const float ChildIndent = 48f;
         private static readonly Vector2 _resetButtonSize = new(200f, 40f);
         private static readonly Color _activeTabHighlightGreen = new(0.3f, 0.6f, 0.3f, 0.5f);
-        //private static readonly Color _menuSectionBGBorderColor = new ColorInt(135, 135, 135).ToColor;
         public static readonly Color MenuSectionBGBorderColor = new ColorInt(97, 108, 122).ToColor;
 
         private static readonly Dictionary<SettingsTab, TabCheckboxGroup> _tabCheckboxes = [];

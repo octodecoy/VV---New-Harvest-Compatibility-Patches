@@ -238,7 +238,6 @@ namespace NewHarvestPatches
             bool colorStateChanged = false;
             if (!hasColorChanges) // Only check if textfield values haven't changed
             {
-                //if (info.DoStuff && !ColorsEqual(info.NewStuffColor, stuffColor))
                 if (info.DoStuff && !info.NewStuffColor.EqualsColor(stuffColor, 0.001f))
                     colorStateChanged = true;
 
@@ -255,7 +254,7 @@ namespace NewHarvestPatches
             Rect buttonRect = new(buttonX, buttonY, 80f, buttonHeight);
 
             Text.Anchor = TextAnchor.MiddleCenter;
-            GUI.color = shouldEnableButton ? Color.white : _inactiveColor;
+            GUI.color = shouldEnableButton ? white : _inactiveColor;
             if (Widgets.ButtonText(buttonRect, Translator.TranslateKey(TKey.Type.Button, "Apply"), active: shouldEnableButton))
             {
                 // Create new color from input values
@@ -285,7 +284,7 @@ namespace NewHarvestPatches
 
                 SettingChanged = true;
             }
-            GUI.color = Color.white;
+            GUI.color = white;
         }
     }
 }

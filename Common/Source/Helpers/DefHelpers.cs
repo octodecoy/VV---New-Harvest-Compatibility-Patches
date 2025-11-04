@@ -112,32 +112,32 @@ namespace NewHarvestPatches
         //    return order ? [.. defs.OrderBy(td => td.label, StringComparer.Create(CultureInfo.CurrentCulture, false)).ToList()] : defs;
         //}
 
-        //private static (List<ThingDef> trees, List<ThingDef> plants) GetAllPlantDefs(bool order = true)
-        //{
-        //    var allPlants = DefDatabase<ThingDef>.AllDefsListForReading
-        //        .Where(td => td.IsPlant(startsWith: Prefix, endsWith: ""))
-        //        .ToList();
+        public static (List<ThingDef> trees, List<ThingDef> plants) GetAllPlantDefs(bool order = true)
+        {
+            var allPlants = DefDatabase<ThingDef>.AllDefsListForReading
+                .Where(td => td.IsPlant(startsWith: ModName.Prefix.VV_, endsWith: ""))
+                .ToList();
 
-        //    if (allPlants.NullOrEmpty())
-        //    {
-        //        ToLog("No plants found.", 1);
-        //        return ([], []);
-        //    }
+            if (allPlants.NullOrEmpty())
+            {
+                ToLog("No plants found.", 1);
+                return ([], []);
+            }
 
-        //    const string tree = "Tree";
-        //    var trees = allPlants
-        //        .Where(td => td.defName.EndsWith(tree))
-        //        .ToList();
+            const string tree = "Tree";
+            var trees = allPlants
+                .Where(td => td.defName.EndsWith(tree))
+                .ToList();
 
-        //    var plants = allPlants.Except(trees).ToList();
+            var plants = allPlants.Except(trees).ToList();
 
-        //    if (order)
-        //    {
-        //        return (trees.OrderBy(td => td.label, StringComparer.Create(CultureInfo.CurrentCulture, false)).ToList(), plants.OrderBy(td => td.label, StringComparer.Create(CultureInfo.CurrentCulture, false)).ToList());
-        //    }
+            if (order)
+            {
+                return (trees.OrderBy(td => td.label, StringComparer.Create(CultureInfo.CurrentCulture, false)).ToList(), plants.OrderBy(td => td.label, StringComparer.Create(CultureInfo.CurrentCulture, false)).ToList());
+            }
 
-        //    return (trees, plants);
-        //}
+            return (trees, plants);
+        }
 
         private static List<ThingDef> GetDeciduousTreeDefs(bool order = true)
         {

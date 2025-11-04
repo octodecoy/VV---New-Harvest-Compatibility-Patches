@@ -82,4 +82,6 @@
     <NHCP.Button_SettingsReset>Einstellungen zurückgesetzt!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Kategoriebezeichnung ändern</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Bezeichnung wurde erfolgreich geändert zu:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Getreide erzeugt Vanilla Cooking Expanded Mehl</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Neu geerntete Getreidepflanzen erzeugen zusätzlich Vanilla Cooking Expanded Mehl als sekundären Ertrag, in der Hälfte der Menge des Getreides.\n(Beispiel: Amaranthpflanzen erzeugen 10 Amarantkörner und 5 Mehl)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>

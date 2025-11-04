@@ -237,6 +237,16 @@ namespace NewHarvestPatches
                     ]
                 );
                 list.Add(addToCategory);
+
+                if (HasVanillaCookingExpanded)
+                {
+                    list.Add(new CheckboxInfo(
+                        settingName: nameof(settings.GrainsProduceVCEFlourSecondary),
+                        getter: () => settings.GrainsProduceVCEFlourSecondary,
+                        setter: v => settings.GrainsProduceVCEFlourSecondary = v,
+                        defForIcon: DefDatabase<ThingDef>.GetNamedSilentFail("VCE_Flour")
+                    ));
+                }
             }
             else
             {

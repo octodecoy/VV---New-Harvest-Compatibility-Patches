@@ -110,10 +110,17 @@ namespace NewHarvestPatches
                     CategorySyncer.SyncAllFoods();
                 }
 
+                if (HasGardenModule)
+                {
+                    if (HasVanillaCookingExpanded && Settings.GrainsProduceVCEFlourSecondary)
+                    {
+                        FlourOutputFixer.TryFixFlourOutput();
+                    }
+                }
+
                 LogInitTime();
 
-                ModAddedCategoryDictionary = null;
-                ModAddedCategoryTypeCache = null;
+                ClearCaches();
             });
         }
     }

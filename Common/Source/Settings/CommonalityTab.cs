@@ -16,8 +16,7 @@ namespace NewHarvestPatches
             bool settingChanged = false;
 
             // Draw description
-            DrawCustomLabel(ls, Translator.TranslateKey(TKey.Type.TabSubLabel, "CommonalityDescription"),
-                font: GameFont.Tiny, anchor: TextAnchor.MiddleCenter);
+            DrawCustomLabel(ls, Translator.TranslateKey(TKey.Type.TabSubLabel, "CommonalityDescription"), font: GameFont.Tiny, anchor: TextAnchor.MiddleCenter);
             ls.Gap();
 
             // Prepare labels and calculate max width once
@@ -75,8 +74,7 @@ namespace NewHarvestPatches
                         Translator.TranslateKey(TKey.Type.SliderLabel, "StructureCommonality") + " = ",
                         Translator.TranslateKey(TKey.Type.SliderLabel, "WeaponCommonality") + " = ",
                         Translator.TranslateKey(TKey.Type.SliderLabel, "ApparelCommonality") + " = "
-            ];
-
+                    ];
                     return (categoryLabels, categoryLabels.Max(l => l.GetWidthCached()));
                 }
                 else

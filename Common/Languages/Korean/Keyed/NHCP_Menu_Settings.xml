@@ -82,4 +82,6 @@
     <NHCP.Button_SettingsReset>설정이 재설정되었습니다!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>카테고리 레이블 변경</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>레이블이 다음으로 성공적으로 변경되었습니다:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>곡물이 Vanilla Cooking Expanded 밀가루를 생산</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>수확한 곡물 작물은 부가적으로 Vanilla Cooking Expanded 밀가루를 곡물 양의 절반만큼 생산합니다.\n(예: 아마란스 작물은 아마란스 곡물 10개와 밀가루 5개를 생산합니다)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>

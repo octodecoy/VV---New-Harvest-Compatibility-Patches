@@ -109,6 +109,14 @@
                         <xpath>/Defs/BiomeDef/wildPlants/VV_GinsengPlant</xpath>
                     </match>
                 </li>
+                <!-- Allow to actually grow in shade - Credit: Rhaken -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_GinsengPlant"]/plant</xpath>
+                    <value>
+                        <growMinGlow>0</growMinGlow>
+                        <growOptimalGlow>0</growOptimalGlow>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>GrainsProduceVCEFlourSecondary</setting>
+        <caseTrue Class="NewHarvestPatches.FindMod">
+            <modGroupOne>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Garden Crops</li>
+            </modGroupOne>
+            <modGroupTwo>
+                <li>Vanilla Cooking Expanded</li>
+            </modGroupTwo>
+            <logicBetweenGroups>And</logicBetweenGroups>
+            <caseTrue Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationAddModExtension">
+                        <xpath>/Defs/ThingDef[defName="VV_AmaranthPlant"]</xpath>
+                        <value>
+                            <li Class="VEF.Plants.DualCropExtension">
+                                <secondaryOutput>VCE_Flour</secondaryOutput>
+                                <outPutAmount>5</outPutAmount>
+                            </li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAddModExtension">
+                        <xpath>/Defs/ThingDef[defName="VV_MilletPlant"]</xpath>
+                        <value>
+                            <li Class="VEF.Plants.DualCropExtension">
+                                <secondaryOutput>VCE_Flour</secondaryOutput>
+                                <outPutAmount>5</outPutAmount>
+                            </li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAddModExtension">
+                        <xpath>/Defs/ThingDef[defName="VV_TeffPlant"]</xpath>
+                        <value>
+                            <li Class="VEF.Plants.DualCropExtension">
+                                <secondaryOutput>VCE_Flour</secondaryOutput>
+                                <outPutAmount>3</outPutAmount>
+                            </li>
+                        </value>
+                    </li>                    
+                </operations>
+            </caseTrue>
+        </caseTrue>
+    </Operation>
+</Patch>

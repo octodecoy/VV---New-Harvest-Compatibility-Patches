@@ -248,6 +248,7 @@ namespace NewHarvestPatches
             public static bool HasOdyssey = IsModActive("ludeon.rimworld.odyssey");
             public static bool HasIdeology = IsModActive("ludeon.rimworld.ideology");
             public static bool HasMedievalOverhaul = IsModActive("dankpyon.medieval.overhaul");
+            public static bool HasVanillaCookingExpanded = IsModActive("vanillaexpanded.vcooke");
 
             /// <summary>
             /// If installed, show setting to move Medicinal module drinks to its non-alcoholic category.

@@ -82,4 +82,6 @@
     <NHCP.Button_SettingsReset>настройки сброшены!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Изменить название категории</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Название успешно изменено на:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Зерновые производят муку Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Свежесобранные зерновые растения будут производить муку Vanilla Cooking Expanded как побочный продукт в количестве половины от урожая зерна.\n(Пример: растения амаранта дадут 10 зерен амаранта и 5 муки)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>

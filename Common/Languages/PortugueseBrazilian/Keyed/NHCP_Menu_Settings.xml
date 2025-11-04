@@ -82,4 +82,6 @@
     <NHCP.Button_SettingsReset>configurações redefinidas!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Alterar rótulo da categoria</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Rótulo alterado com sucesso para:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Grãos produzem farinha do Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Plantas de grãos recém-colhidas produzirão farinha do Vanilla Cooking Expanded como rendimento secundário, na quantidade de metade dos grãos.\n(Exemplo: plantas de amaranto produzirão 10 grãos de amaranto e 5 de farinha)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>

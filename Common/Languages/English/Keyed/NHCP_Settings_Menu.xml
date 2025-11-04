@@ -112,4 +112,7 @@
 
 	<NHCP.Button_ChangeCategoryLabel>Change Category Label</NHCP.Button_ChangeCategoryLabel>
 	<NHCP.Button_LabelChangedTo>Label successfully changed to:</NHCP.Button_LabelChangedTo>
+
+	<NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Grains Produce Vanilla Cooking Expanded Flour</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+	<NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>New Harvest grain plants will produce Vanilla Cooking Expanded flour as a secondary output at half the amount of the grain.\n(Example: Amaranth plants will produce 10 amaranth grain and 5 flour)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>

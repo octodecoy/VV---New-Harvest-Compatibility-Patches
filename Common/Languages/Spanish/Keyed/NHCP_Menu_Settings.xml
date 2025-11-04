@@ -82,4 +82,6 @@
     <NHCP.Button_SettingsReset>¡configuración restablecida!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Cambiar etiqueta de categoría</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Etiqueta cambiada exitosamente a:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Los granos producen harina Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Las plantas de granos recién cosechadas producirán harina Vanilla Cooking Expanded como producto secundario, en la cantidad de la mitad de los granos.\n(Ejemplo: las plantas de amaranto producirán 10 granos de amaranto y 5 de harina)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>

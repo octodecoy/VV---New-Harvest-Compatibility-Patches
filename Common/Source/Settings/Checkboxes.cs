@@ -17,7 +17,6 @@ namespace NewHarvestPatches
                 DrawCustomLabel(ls, Translator.TranslateKey(TKey.Type.TabSubLabel, "FuelDescription"),
                     font: GameFont.Tiny, anchor: TextAnchor.MiddleCenter);
             }
-
             ls.Gap(GenUI.Gap);
 
             bool mergingAnyCategories = Settings.MergingAnyCategories;
@@ -342,7 +341,13 @@ namespace NewHarvestPatches
             }
 
             // Otherwise use the standard logic
-            if (info.HasSubLabel && checkboxEnabled)
+            //if (info.HasSubLabel && checkboxEnabled)
+            //{
+            //    string subLabel = GetSubLabelText(info, hasNoTranslateLabel, label);
+            //    DrawCustomLabel(ls, subLabel, subLabel: true, indentSpaces: info.IndentSpaces);
+            //}
+
+            if (info.HasSubLabel)
             {
                 string subLabel = GetSubLabelText(info, hasNoTranslateLabel, label);
                 DrawCustomLabel(ls, subLabel, subLabel: true, indentSpaces: info.IndentSpaces);

@@ -229,22 +229,56 @@ namespace NewHarvestPatches
             return "/" + string.Join("/", path);
         }
 
+        //protected static string GetParentDefDefName(XmlNode node)
+        //{
+        //    if (node == null)
+        //        return "(unknown)";
+
+        //    XmlNode current = node;
+        //    while (current != null)
+        //    {
+        //        if (current.Name.EndsWith("Def"))
+        //        {
+        //            var defNameNode = current["defName"];
+        //            return defNameNode?.InnerText;
+        //        }
+        //        current = current.ParentNode;
+        //    }
+        //    return "(unknown)";
+        //}
+
         protected static string GetParentDefDefName(XmlNode node)
         {
             if (node == null)
-                return "??";
+                return "(unknown)";
 
             XmlNode current = node;
             while (current != null)
             {
                 if (current.Name.EndsWith("Def"))
                 {
-                    var defNameNode = current["defName"];
-                    return defNameNode?.InnerText;
+                    if (current.ParentNode != null && current.ParentNode.Name != "Defs")
+                    {
+                        current = current.ParentNode;
+                        continue;
+                    }
                 }
+
+                var defNameNode = current["defName"];
+                if (defNameNode != null && !string.IsNullOrWhiteSpace(defNameNode.InnerText))
+                {
+                    return defNameNode.InnerText;
+                }
+
+                var nameAttr = current.Attributes?["Name"];
+                if (nameAttr != null && !string.IsNullOrWhiteSpace(nameAttr.Value))
+                {
+                    return nameAttr.Value;
+                }
+                
                 current = current.ParentNode;
             }
-            return null;
+            return "(unknown)";
         }
 
         protected static string GetFullPathWithDefName(XmlNode node)

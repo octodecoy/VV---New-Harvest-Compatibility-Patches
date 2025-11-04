@@ -82,4 +82,6 @@
     <NHCP.Button_SettingsReset>設定がリセットされました！</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>カテゴリラベルを変更</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>ラベルは次のように正常に変更されました：</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>穀物が Vanilla Cooking Expanded の小麦粉を生産</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>収穫した穀物植物は、副産物として Vanilla Cooking Expanded の小麦粉を穀物量の半分生産します。\n（例：アマランサスはアマランサスの穀物を10個、小麦粉を5個生産します）</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>

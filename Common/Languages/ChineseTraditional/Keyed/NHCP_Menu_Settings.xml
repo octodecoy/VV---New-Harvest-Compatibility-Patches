@@ -82,4 +82,6 @@
     <NHCP.Button_SettingsReset>設置已重置！</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>更改類別標籤</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>標籤已成功更改為：</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>穀物產出 Vanilla Cooking Expanded 麵粉</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>新收穫的穀物植物將額外產出 Vanilla Cooking Expanded 麵粉，數量為穀物的一半。\n（示例：莧菜植物將產出 10 份莧菜穀物和 5 份麵粉）</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>

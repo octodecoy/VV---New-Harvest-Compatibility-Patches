@@ -82,4 +82,6 @@
     <NHCP.Button_SettingsReset>ustawienia zresetowane!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Zmień etykietę kategorii</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Etykieta została pomyślnie zmieniona na:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Zboża produkują mąkę Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Nowo zebrane rośliny zbożowe wytworzą dodatkowo mąkę Vanilla Cooking Expanded jako produkt poboczny, w ilości równej połowie ilości zboża.\n(Przykład: roślina amarantusa wyprodukuje 10 ziaren amarantusa i 5 mąki)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>

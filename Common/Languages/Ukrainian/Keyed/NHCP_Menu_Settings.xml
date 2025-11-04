@@ -82,4 +82,6 @@
     <NHCP.Button_SettingsReset>налаштування скинуто!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Змінити назву категорії</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Назву успішно змінено на:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Зернові продукують борошно Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Свіжозібрані зернові рослини вироблятимуть борошно Vanilla Cooking Expanded як побічний продукт у кількості половини від врожаю зерна.\n(Приклад: рослини амаранту дадуть 10 зерен амаранту та 5 борошна)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 </LanguageData>
