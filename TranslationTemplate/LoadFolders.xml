@@ -9,6 +9,7 @@
         <li IfModActiveAll="octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvestindustrialcrops">Common</li>
         <li IfModActiveAll="octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvestmedicinalplants">Common</li>
         <li IfModActiveAll="octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvesttrees">Common</li>
+        <li IfModActiveAll="octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvestflowers">Common</li>
         <li IfModActiveAll="octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Common/Forage</li>
         <li IfModActiveAll="octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvestforagecrops">Common/Forage</li>
         <li IfModActiveAll="octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Common/Industrial</li>

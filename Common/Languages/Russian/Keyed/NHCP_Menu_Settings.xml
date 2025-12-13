@@ -17,6 +17,7 @@
     <NHCP.General_Industrial>Промышленный</NHCP.General_Industrial>
     <NHCP.General_Medicinal>Лекарственные</NHCP.General_Medicinal>
     <NHCP.General_Trees>Деревья</NHCP.General_Trees>
+    <NHCP.General_Flowers>Цветы</NHCP.General_Flowers>
     <NHCP.Button_Select>Выбрать</NHCP.Button_Select>
     <NHCP.General_Default>По умолчанию: {0}</NHCP.General_Default>
     <NHCP.ON>ВКЛ</NHCP.ON>

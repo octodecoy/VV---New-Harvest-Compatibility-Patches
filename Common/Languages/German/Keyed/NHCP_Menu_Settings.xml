@@ -17,6 +17,7 @@
     <NHCP.General_Industrial>Industriell</NHCP.General_Industrial>
     <NHCP.General_Medicinal>Medizinisch</NHCP.General_Medicinal>
     <NHCP.General_Trees>Bäume</NHCP.General_Trees>
+    <NHCP.General_Flowers>Blumen</NHCP.General_Flowers>
     <NHCP.Button_Select>Auswählen</NHCP.Button_Select>
     <NHCP.General_Default>Standard: {0}</NHCP.General_Default>
     <NHCP.ON>AN</NHCP.ON>

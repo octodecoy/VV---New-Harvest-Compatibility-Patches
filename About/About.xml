@@ -3,7 +3,7 @@
     <name>VV - New Harvest: Compatibility Patches</name>
     <author>octodecoy</author>
     <packageId>octodecoy.vvnewharvest.compatpatches</packageId>
-    <modVersion>1.4</modVersion> <!-- 12/11/25 -->
+    <modVersion>1.5</modVersion> <!-- 12/13/25 -->
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
@@ -21,6 +21,7 @@
         [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3552456765]VV - New Harvest: Industrial Crops[/url]
         [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3552456140]VV - New Harvest: Medicinal Plants[/url]
         [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3552455805]VV - New Harvest: Trees[/url]
+        [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3623012591]VV - New Harvest: Flowers[/url]
     </description>
     <modDependenciesByVersion>
 		<v1.6>
@@ -34,6 +35,7 @@
 					<li>vvenchov.vvnewharvestindustrialcrops</li>
 					<li>vvenchov.vvnewharvestmedicinalplants</li>
 					<li>vvenchov.vvnewharvesttrees</li>
+                    <li>vvenchov.vvnewharvestflowers</li>
 				</alternativePackageIds>
 			</li>
 		</v1.6>
@@ -45,6 +47,7 @@
         <li>vvenchov.vvnewharvestindustrialcrops</li>
         <li>vvenchov.vvnewharvestmedicinalplants</li>
         <li>vvenchov.vvnewharvesttrees</li>
+        <li>vvenchov.vvnewharvestflowers</li>
         <li>regrowth.botr.core</li>
         <!-- Regrowth Core -->
         <!-- So it doesn't overwrite biome wildPlants additions. -->

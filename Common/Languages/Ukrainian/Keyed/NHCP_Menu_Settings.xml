@@ -17,6 +17,7 @@
     <NHCP.General_Industrial>Індустріальний</NHCP.General_Industrial>
     <NHCP.General_Medicinal>Лікувальний</NHCP.General_Medicinal>
     <NHCP.General_Trees>Дерева</NHCP.General_Trees>
+    <NHCP.General_Flowers>Квіти</NHCP.General_Flowers>
     <NHCP.Button_Select>Вибрати</NHCP.Button_Select>
     <NHCP.General_Default>За замовчуванням: {0}</NHCP.General_Default>
     <NHCP.ON>УВІМК.</NHCP.ON>

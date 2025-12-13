@@ -111,6 +111,7 @@ namespace NewHarvestPatches
                     if (HasIndustrialModule) ids.Add("vvenchov.vvnewharvestindustrialcrops");
                     if (HasMedicinalModule) ids.Add("vvenchov.vvnewharvestmedicinalplants");
                     if (HasTreesModule) ids.Add("vvenchov.vvnewharvesttrees");
+                    if (HasFlowersModule) ids.Add("vvenchov.vvnewharvestflowers");
                     return [.. ids];
                 }
             }
@@ -244,7 +245,8 @@ namespace NewHarvestPatches
             public static bool HasIndustrialModule = HasMainModule || IsModActive("vvenchov.vvnewharvestindustrialcrops");
             public static bool HasMedicinalModule = HasMainModule || IsModActive("vvenchov.vvnewharvestmedicinalplants");
             public static bool HasTreesModule = HasMainModule || IsModActive("vvenchov.vvnewharvesttrees");
-            public static bool HasAnyModule = HasForageModule || HasGardenModule || HasIndustrialModule || HasMedicinalModule || HasTreesModule;
+            public static bool HasFlowersModule = HasMainModule || IsModActive("vvenchov.vvnewharvestflowers");
+            public static bool HasAnyModule = HasForageModule || HasGardenModule || HasIndustrialModule || HasMedicinalModule || HasTreesModule || HasFlowersModule;
             public static bool HasOdyssey = IsModActive("ludeon.rimworld.odyssey");
             public static bool HasIdeology = IsModActive("ludeon.rimworld.ideology");
             public static bool HasMedievalOverhaul = IsModActive("dankpyon.medieval.overhaul");

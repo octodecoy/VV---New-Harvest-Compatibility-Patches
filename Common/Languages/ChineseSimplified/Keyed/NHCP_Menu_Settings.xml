@@ -17,6 +17,7 @@
     <NHCP.General_Industrial>工业</NHCP.General_Industrial>
     <NHCP.General_Medicinal>药用</NHCP.General_Medicinal>
     <NHCP.General_Trees>树木</NHCP.General_Trees>
+    <NHCP.General_Flowers>花朵</NHCP.General_Flowers>
     <NHCP.Button_Select>选择</NHCP.Button_Select>
     <NHCP.General_Default>默认: {0}</NHCP.General_Default>
     <NHCP.ON>开启</NHCP.ON>

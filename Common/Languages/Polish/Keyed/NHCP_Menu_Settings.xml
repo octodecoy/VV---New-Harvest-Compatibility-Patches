@@ -17,6 +17,7 @@
     <NHCP.General_Industrial>Przemysłowe</NHCP.General_Industrial>
     <NHCP.General_Medicinal>Lecznicze</NHCP.General_Medicinal>
     <NHCP.General_Trees>Drzewa</NHCP.General_Trees>
+    <NHCP.General_Flowers>Kwiaty</NHCP.General_Flowers>
     <NHCP.Button_Select>Wybierz</NHCP.Button_Select>
     <NHCP.General_Default>Domyślne: {0}</NHCP.General_Default>
     <NHCP.ON>WŁ.</NHCP.ON>

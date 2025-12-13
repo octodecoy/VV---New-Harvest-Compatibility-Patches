@@ -7,6 +7,7 @@ namespace NewHarvestPatches
         Garden,
         Industrial,
         Medicinal,
-        Trees
+        Trees,
+        Flowers
     }
 }

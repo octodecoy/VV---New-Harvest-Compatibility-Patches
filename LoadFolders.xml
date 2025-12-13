@@ -3,8 +3,8 @@
     <v1.6>
         <li>/</li>
         <!-- Common -->
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees">Common</li>
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees">Common/Biomes</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers">Common</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers">Common/Biomes</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops">Common/Categories/AnimalFoods</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees">Common/Categories/Fruit</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops">Common/Categories/Grains</li>

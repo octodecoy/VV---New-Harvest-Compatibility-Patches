@@ -17,6 +17,7 @@
     <NHCP.General_Industrial>산업</NHCP.General_Industrial>
     <NHCP.General_Medicinal>약용</NHCP.General_Medicinal>
     <NHCP.General_Trees>나무</NHCP.General_Trees>
+    <NHCP.General_Flowers>꽃</NHCP.General_Flowers>
     <NHCP.Button_Select>선택</NHCP.Button_Select>
     <NHCP.General_Default>기본값: {0}</NHCP.General_Default>
     <NHCP.ON>켜짐</NHCP.ON>
