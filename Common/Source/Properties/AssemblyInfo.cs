@@ -31,4 +31,4 @@
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")] // Leave static.
-[assembly: AssemblyFileVersion("1.2.0.0")] // Increment.
+[assembly: AssemblyFileVersion("1.3.0.0")] // Increment. 12/11/25

@@ -36,85 +36,88 @@ namespace NewHarvestPatches
                 }
             }
 
-            if (enabledSettings.Count() == 0)
-            {
-                // Nothing enabled, nothing to do past this point
-                return;
-            }
+            bool hasEnabledSettings = enabledSettings.Count() > 0;
 
-            foreach (var setting in enabledSettings)
+            if (hasEnabledSettings)
             {
-                ToLog($"Enabled setting: {setting}");
-            }
 
-            if (HasIndustrialModule)
-            {
-                if (enabledSettings.Any(s => s.StartsWith(Setting.Prefix.ColorChange_)))
+                foreach (var setting in enabledSettings)
                 {
-                    MaterialColorChanger.TryChangeMaterialColors();
+                    ToLog($"Enabled setting: {setting}");
                 }
 
-                if (Settings.AddMoreWoodFloors)
+                if (HasIndustrialModule)
                 {
-                    BridgeDropdownAdder.TryAddBridgeDropdown();
-                }
-
-                if (!HasFernyFloorMenu)
-                {
-                    if (enabledSettings.Any(s => s.EndsWith(Setting.Suffix.ToDropdowns)))
+                    if (enabledSettings.Any(s => s.StartsWith(Setting.Prefix.ColorChange_)))
                     {
-                        FloorDropdownAdder.TryAddFloorDropdowns(
-                        moveNewHarvestWoodFloors: Settings.NewHarvestWoodFloorsToDropdowns,
-                        moveBaseWoodFloors: Settings.BaseWoodFloorsToDropdowns,
-                        moveModWoodFloors: Settings.ModWoodFloorsToDropdowns);
+                        MaterialColorChanger.TryChangeMaterialColors();
+                    }
+
+                    if (Settings.AddMoreWoodFloors)
+                    {
+                        BridgeDropdownAdder.TryAddBridgeDropdown();
+                    }
+
+                    if (!HasFernyFloorMenu)
+                    {
+                        if (enabledSettings.Any(s => s.EndsWith(Setting.Suffix.ToDropdowns)))
+                        {
+                            FloorDropdownAdder.TryAddFloorDropdowns(
+                            moveNewHarvestWoodFloors: Settings.NewHarvestWoodFloorsToDropdowns,
+                            moveBaseWoodFloors: Settings.BaseWoodFloorsToDropdowns,
+                            moveModWoodFloors: Settings.ModWoodFloorsToDropdowns);
+                        }
+                    }
+
+                    if (HasIdeology)
+                    {
+                        if (Settings.AddWoodDryads)
+                        {
+                            DryadUISorter.TrySortDryads();
+                        }
+                    }
+
+                    if (ShowFuelSettings)
+                    {
+                        if (enabledSettings.Any(s => s.StartsWith(Setting.Prefix.DisabledFuel_)))
+                        {
+                            DisallowFuelTypes.TryDisallowFuels();
+                        }
+                    }
+
+                    if (enabledSettings.Any(s => s.StartsWith(Setting.Prefix.SetCommonality_)))
+                    {
+                        StuffCommonalityChanger.TryChangeStuffCommonality();
                     }
                 }
 
-                if (HasIdeology)
+                if (HasAnyTrees)
                 {
-                    if (Settings.AddWoodDryads)
+                    if (enabledSettings.Any(s => s.StartsWith(Setting.Prefix.NoFallColors_)))
                     {
-                        DryadUISorter.TrySortDryads();
+                        FallColorDisabler.TryDisableFallColors();
                     }
                 }
 
-                if (ShowFuelSettings)
-                {
-                    if (enabledSettings.Any(s => s.StartsWith(Setting.Prefix.DisabledFuel_)))
-                    {
-                        DisallowFuelTypes.TryDisallowFuels();
-                    }
-                }
-
-                if (enabledSettings.Any(s => s.StartsWith(Setting.Prefix.SetCommonality_)))
-                {
-                    StuffCommonalityChanger.TryChangeStuffCommonality();
-                }
+                CategoryLabelInfo.SetCategoryLabels();
             }
-
-            if (HasAnyTrees)
-            {
-                if (enabledSettings.Any(s => s.StartsWith(Setting.Prefix.NoFallColors_)))
-                {
-                    FallColorDisabler.TryDisableFallColors();
-                }
-            }
-
-            CategoryLabelInfo.SetCategoryLabels();
 
             // LongEventHandler in the hope that other things are complete, such as base hay movements
             LongEventHandler.ExecuteWhenFinished(() =>
             {
-                if (enabledSettings.Any(s => s.EndsWith(Setting.Suffix.Category)))
+                if (hasEnabledSettings)
                 {
-                    CategorySyncer.SyncAllFoods();
-                }
-
-                if (HasGardenModule)
-                {
-                    if (HasVanillaCookingExpanded && Settings.GrainsProduceVCEFlourSecondary)
+                    if (enabledSettings.Any(s => s.EndsWith(Setting.Suffix.Category)))
                     {
-                        FlourOutputFixer.TryFixFlourOutput();
+                        CategorySyncer.SyncAllFoods();
+                    }
+
+                    if (HasGardenModule)
+                    {
+                        if (HasVanillaCookingExpanded && Settings.GrainsProduceVCEFlourSecondary)
+                        {
+                            FlourOutputFixer.TryFixFlourOutput();
+                        }
                     }
                 }
 

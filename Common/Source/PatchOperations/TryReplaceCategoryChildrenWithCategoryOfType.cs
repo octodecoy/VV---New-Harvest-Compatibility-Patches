@@ -4,119 +4,6 @@
     {
         private readonly string categoryType = null;
 
-        //protected override bool ApplyWorker(XmlDocument xml)
-        //{
-        //    try
-        //    {
-        //        if (string.IsNullOrWhiteSpace(categoryType))
-        //            return false;
-
-        //        string newCategoryDefName = PatchOperationPathedExtended.GetCategoryName(xml, categoryType);
-        //        if (string.IsNullOrEmpty(newCategoryDefName))
-        //            return false;
-
-        //        if (ModAddedCategoryDictionary.NullOrEmpty())
-        //        {
-        //            ToLog("ModAddedCategoryCache dictionary is null or empty", 2);
-        //            return false;
-        //        }
-
-        //        if (!ModAddedCategoryDictionary.TryGetValue(categoryType, out var cachedSet))
-        //        {
-        //            ToLog($"No cached categories found for categoryType [{categoryType}]", 2);
-        //            return false;
-        //        }
-
-        //        if (cachedSet.NullOrEmpty())
-        //        {
-        //            ToLog($"Cached category set is null or empty for categoryType [{categoryType}]", 2);
-        //            return false;
-        //        }
-
-        //        XmlNodeList thingDefNodeList = xml.SelectNodes("/Defs/ThingDef");
-        //        if (thingDefNodeList == null || thingDefNodeList.Count == 0)
-        //            return false;
-
-        //        foreach (var cachedCategoryName in cachedSet)
-        //        {
-        //            var categoryNode = xml.SelectSingleNode($"/Defs/ThingCategoryDef[defName='{cachedCategoryName}']");
-        //            string thingCategoryDefName = categoryNode?.SelectSingleNode("defName")?.InnerText;
-        //            if (string.IsNullOrWhiteSpace(thingCategoryDefName))
-        //                continue;
-
-        //            var matchingThingDefs = FindThingDefsWithCategoryOrParentCategory(thingDefNodeList, thingCategoryDefName);
-        //            if (matchingThingDefs.Count > 0)
-        //            {
-        //                foreach (XmlNode thingDef in matchingThingDefs)
-        //                {
-        //                    if (thingDef == null)
-        //                        continue;
-
-        //                    string thingDefName = PatchOperationPathedExtended.GetThingDefName(thingDef);
-
-        //                    var thingCategoriesNode = thingDef.SelectSingleNode("thingCategories");
-        //                    List<string> oldCategories = [];
-        //                    if (thingCategoriesNode != null)
-        //                    {
-        //                        foreach (XmlNode li in thingCategoriesNode.SelectNodes("li"))
-        //                        {
-        //                            if (!string.IsNullOrWhiteSpace(li.InnerText))
-        //                                oldCategories.Add(li.InnerText);
-        //                        }
-        //                    }
-
-        //                    if (!PatchOperationPathedExtended.ResolveCategory(xml, thingDefName, newCategoryDefName, out string resolvedCategory))
-        //                    {
-        //                        continue;
-        //                    }
-
-        //                    if (thingDef.OwnerDocument == null)
-        //                        continue;
-
-        //                    // Remove the old <thingCategories> node if it exists
-        //                    string replacedOrAdded = "Added";
-        //                    if (thingCategoriesNode != null)
-        //                    {
-        //                        replacedOrAdded = "Replaced";
-        //                        thingDef.RemoveChild(thingCategoriesNode);
-        //                    }
-
-        //                    // Create a new <thingCategories> node
-        //                    thingCategoriesNode = thingDef.OwnerDocument.CreateElement("thingCategories");
-
-        //                    // Set Inherit="False" attribute
-        //                    XmlAttribute attr = thingDef.OwnerDocument.CreateAttribute("Inherit");
-        //                    attr.Value = "False";
-        //                    thingCategoriesNode.Attributes.Append(attr);
-
-        //                    // Create the new <li> node
-        //                    XmlElement liNode = thingDef.OwnerDocument.CreateElement("li");
-        //                    liNode.InnerText = resolvedCategory;
-
-        //                    // Append the <li> node
-        //                    thingCategoriesNode.AppendChild(liNode);
-
-        //                    // Append the new <thingCategories> node to the ThingDef
-        //                    thingDef.AppendChild(thingCategoriesNode);
-
-        //                    ToLog($"{replacedOrAdded} thingCategories for ThingDef [{thingDefName}] with [{newCategoryDefName}]. Previous categories: [{string.Join(", ", oldCategories)}]", 0);
-        //                }
-        //            }
-        //            else
-        //            {
-        //                ToLog($"No ThingDefs found with category or parent category [{thingCategoryDefName}]", 2);
-        //            }
-        //        }
-
-        //        return true;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ExToLog(ex, MethodBase.GetCurrentMethod());
-        //        return false;
-        //    }
-        //}
-
         protected override bool ApplyWorker(XmlDocument xml)
         {
             try
@@ -199,37 +86,97 @@
             }
         }
 
+        // CAUSES LOOP!
+        //private static bool HasCategoryInSelfOrAncestors(
+        //    XmlNode thingDef,
+        //    string thingCategoryDefName,
+        //    Dictionary<string, XmlNode> defNameToNode)
+        //{
+        //    var current = thingDef;
+        //    while (current != null)
+        //    {
+        //        var thingCategoriesNode = current.SelectSingleNode("thingCategories");
+
+        //        if (thingCategoriesNode is XmlElement tcElem)
+        //        if (thingCategoriesNode != null)
+        //        {
+        //            var categories = thingCategoriesNode.SelectNodes("li");
+        //            // Direct match - this ThingDef directly has the category
+        //            bool hasCategory = categories != null && categories.Cast<XmlNode>().Any(li => li.InnerText == thingCategoryDefName);
+
+        //            if (hasCategory)
+        //                return true;
+
+        //            // If this is a parent with Inherit="False", don't search further up the hierarchy
+        //            var inheritAttr = thingCategoriesNode.Attributes?["Inherit"]?.Value;
+        //            if (string.Equals(inheritAttr, "False", StringComparison.OrdinalIgnoreCase))
+        //                break;
+        //        }
+
+        //        // Try to follow the parent chain
+        //        var parentName = current.Attributes?["ParentName"]?.Value;
+        //        if (string.IsNullOrEmpty(parentName) || !defNameToNode.TryGetValue(parentName, out current))
+        //            break;
+        //    }
+        //    return false;
+        //}
+
         private static bool HasCategoryInSelfOrAncestors(
             XmlNode thingDef,
             string thingCategoryDefName,
-            Dictionary<string, XmlNode> defNameToNode)
+            Dictionary<string, XmlNode> categoryDefNameToNode)
         {
-            var current = thingDef;
-            while (current != null)
+            // Get direct categories from this ThingDef
+            var cats = new List<string>();
+            var tcNode = thingDef.SelectSingleNode("thingCategories");
+            if (tcNode != null)
             {
-                var thingCategoriesNode = current.SelectSingleNode("thingCategories");
-                if (thingCategoriesNode != null)
+                foreach (XmlNode li in tcNode.ChildNodes)
                 {
-                    var categories = thingCategoriesNode.SelectNodes("li");
-                    // Direct match - this ThingDef directly has the category
-                    bool hasCategory = categories != null && categories.Cast<XmlNode>().Any(li => li.InnerText == thingCategoryDefName);
-
-                    if (hasCategory)
-                        return true;
-
-                    // If this is a parent with Inherit="False", don't search further up the hierarchy
-                    var inheritAttr = thingCategoriesNode.Attributes?["Inherit"]?.Value;
-                    if (string.Equals(inheritAttr, "False", StringComparison.OrdinalIgnoreCase))
-                        break;
+                    if (li.Name == "li" && !string.IsNullOrEmpty(li.InnerText))
+                        cats.Add(li.InnerText.Trim());
                 }
-
-                // Try to follow the parent chain
-                var parentName = current.Attributes?["ParentName"]?.Value;
-                if (string.IsNullOrEmpty(parentName) || !defNameToNode.TryGetValue(parentName, out current))
-                    break;
             }
+
+            // Check each category, walking its parent chain
+            foreach (var cat in cats)
+            {
+                if (CategoryMatchesOrAncestor(cat, thingCategoryDefName, categoryDefNameToNode))
+                    return true;
+            }
+
             return false;
         }
+
+        // Returns true if this category or any of its ancestor categories matches the target.
+        private static bool CategoryMatchesOrAncestor(
+            string categoryDefName,
+            string targetCategoryDefName,
+            Dictionary<string, XmlNode> categoryDefNameToNode)
+        {
+            var visited = new HashSet<string>();
+            string current = categoryDefName;
+
+            while (!string.IsNullOrEmpty(current))
+            {
+                // Cycle protection
+                if (!visited.Add(current))
+                    return false;
+
+                if (string.Equals(current, targetCategoryDefName, StringComparison.OrdinalIgnoreCase))
+                    return true;
+
+                if (!categoryDefNameToNode.TryGetValue(current, out XmlNode node))
+                    return false;
+
+                // Get <parent> tag
+                var parentNode = node.SelectSingleNode("parent");
+                current = parentNode?.InnerText?.Trim();
+            }
+
+            return false;
+        }
+
 
         private static List<XmlNode> FindThingDefsWithCategoryOrParentCategory(XmlNodeList thingDefNodeList, string thingCategoryDefName)
         {

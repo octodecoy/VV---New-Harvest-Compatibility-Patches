@@ -28,4 +28,19 @@
             </value>
         </match>
     </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Flowers</li>             
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="VV_Aubrieta"]</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>/Defs/BiomeDef[defName="BMT_ChromaticOasis"]/wildPlants</xpath>
+                <value>
+                    <VV_GoldenBarrelCactus>0.005</VV_GoldenBarrelCactus>
+                </value>
+            </match>   
+        </match>
+    </Operation>
 </Patch>

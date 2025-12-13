@@ -99,7 +99,10 @@ namespace NewHarvestPatches
 
         internal static void ClearCaches()
         {
+            ModAddedCategoryDictionary?.Clear();
             ModAddedCategoryDictionary = null;
+
+            ModAddedCategoryTypeCache?.Clear();
             ModAddedCategoryTypeCache = null;
         }
 
@@ -166,14 +169,11 @@ namespace NewHarvestPatches
                     FallColorTrees ??= [];
                 }
 
-                if (HasAnyModule)
-                {
-                    Scribe_Collections.Look(ref CategoryData, nameof(CategoryData), LookMode.Deep);
-                    CategoryData ??= [];
+                Scribe_Collections.Look(ref CategoryData, nameof(CategoryData), LookMode.Deep);
+                CategoryData ??= [];
 
-                    Scribe_Collections.Look(ref CategoryLabelCache, nameof(CategoryLabelCache), LookMode.Value, LookMode.Deep);
-                    CategoryLabelCache ??= [];
-                }
+                Scribe_Collections.Look(ref CategoryLabelCache, nameof(CategoryLabelCache), LookMode.Value, LookMode.Deep);
+                CategoryLabelCache ??= [];
             }
         }
 
@@ -187,10 +187,10 @@ namespace NewHarvestPatches
         {
             get
             {
-                foreach (var field in _boolFields)
+                foreach (var @field in _boolFields)
                 {
-                    if ((bool)field.GetValue(this))
-                        yield return field.Name;
+                    if ((bool)@field.GetValue(this))
+                        yield return @field.Name;
                 }
 
                 if (HasIndustrialModule)

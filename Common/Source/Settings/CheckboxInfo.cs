@@ -253,6 +253,7 @@ namespace NewHarvestPatches
                 settings.AddToGrainsCategory = false;
                 settings.MergeGrainsCategory = false;
                 settings.GrainsCategoryResourceReadout = false;
+                settings.GrainsProduceVCEFlourSecondary = false;
             }
 
             if (HasAnyVegetables)

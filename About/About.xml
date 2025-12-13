@@ -3,11 +3,11 @@
     <name>VV - New Harvest: Compatibility Patches</name>
     <author>octodecoy</author>
     <packageId>octodecoy.vvnewharvest.compatpatches</packageId>
-    <modVersion>1.3</modVersion>
+    <modVersion>1.4</modVersion> <!-- 12/11/25 -->
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
-    <url>https://github.com/octodecoy/VV---New-Harvest-Compatibility-Patches</url>
+    <url>https://steamcommunity.com/sharedfiles/filedetails/?id=3570411438</url>
     <description>        
         VV - New Harvest: Compatibility Patches provides integration for the base game, DLCs, and other mods, ensuring that content from the main [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3448458106]VV - New Harvest[/url] mod (or its standalone modules) works seamlessly together.
         
