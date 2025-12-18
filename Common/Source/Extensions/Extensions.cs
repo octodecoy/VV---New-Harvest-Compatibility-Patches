@@ -15,7 +15,7 @@ namespace NewHarvestPatches
             if (string.IsNullOrWhiteSpace(source) || string.IsNullOrWhiteSpace(toCheck))
                 return false;
 
-            return source?.IndexOf(toCheck, StringComparison.OrdinalIgnoreCase) >= 0;
+            return source.IndexOf(toCheck, StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
         public static bool IsBetween<T>(this T value, T min, T max) where T : IComparable<T>

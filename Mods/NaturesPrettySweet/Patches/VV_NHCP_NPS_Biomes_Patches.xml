@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-    <!-- <Operation Class="PatchOperationFindMod">
+    <Operation Class="PatchOperationFindMod">
         <mods>
             <li>VV - New Harvest</li>
             <li>VV - New Harvest: Garden Crops</li>
@@ -8,32 +8,21 @@
         <match Class="PatchOperationSequence">
             <operations>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/wildPlants</xpath>
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]/wildPlants</xpath>
                     <value>
-                        <VV_DragonFruitPlant>0.01</VV_DragonFruitPlant>
+                        <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]/wildPlants</xpath>
                     <value>
                         <VV_BlackcurrantBush>0.01</VV_BlackcurrantBush>
+                        <VV_RosehipBush>0.01</VV_RosehipBush>
                         <VV_BlackberryBush>0.01</VV_BlackberryBush>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]/wildPlants</xpath>
-                    <value>
-                        <VV_RosehipBush>0.002</VV_RosehipBush>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/wildPlants</xpath>
-                    <value>
-                        <VV_RosehipBush>0.005</VV_RosehipBush>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]/wildPlants</xpath>
+                    <xpath>/Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/wildPlants</xpath>
                     <value>
                         <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
                     </value>
@@ -41,6 +30,19 @@
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="TKKN_Oasis"]/wildPlants</xpath>
                     <value>
+                        <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]/wildPlants</xpath>
+                    <value>
+                        <VV_RosehipBush>0.05</VV_RosehipBush>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/wildPlants</xpath>
+                    <value>
+                        <VV_RosehipBush>0.05</VV_RosehipBush>
                         <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
                     </value>
                 </li>
@@ -55,7 +57,19 @@
         <match Class="PatchOperationSequence">
             <operations>
                 <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_EbonyTree>0.003</VV_EbonyTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/wildPlants</xpath>
+                    <value>
+                        <VV_CorkTree>0.01</VV_CorkTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/wildPlants</xpath>
                     <value>
                         <VV_CorkTree>0.01</VV_CorkTree>
                     </value>
@@ -71,42 +85,60 @@
         <match Class="PatchOperationSequence">
             <operations>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/wildPlants</xpath>
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]/wildPlants</xpath>
                     <value>
-                        <VV_DragonFruitPlant>0.01</VV_DragonFruitPlant>
+                        <VV_ThymePlant>0.005</VV_ThymePlant>
+                        <VV_LavenderPlant>0.005</VV_LavenderPlant>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]/wildPlants</xpath>
                     <value>
+                        <VV_LindenTree>0.003</VV_LindenTree>
                         <VV_ChamomilePlant>0.005</VV_ChamomilePlant>
+                        <VV_LemonBalmPlant>0.005</VV_LemonBalmPlant>
+                        <VV_GinsengPlant>0.005</VV_GinsengPlant>
                         <VV_StJohnsWortPlant>0.005</VV_StJohnsWortPlant>
                         <VV_YarrowPlant>0.005</VV_YarrowPlant>
                         <VV_NettlePlant>0.005</VV_NettlePlant>
+                        <VV_HawthornTree>0.003</VV_HawthornTree>
                         <VV_EchinaceaPlant>0.005</VV_EchinaceaPlant>
                         <VV_CalendulaPlant>0.005</VV_CalendulaPlant>
                         <VV_ValerianPlant>0.005</VV_ValerianPlant>
+                        <VV_GinkgoTree>0.001</VV_GinkgoTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/wildPlants</xpath>
+                    <value>
+                        <VV_GinsengPlant>0.005</VV_GinsengPlant>
+                        <VV_LavenderPlant>0.005</VV_LavenderPlant>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Oasis"]/wildPlants</xpath>
+                    <value>
+                        <VV_ThymePlant>0.005</VV_ThymePlant>
+                        <VV_LavenderPlant>0.005</VV_LavenderPlant>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]/wildPlants</xpath>
                     <value>
                         <VV_LindenTree>0.003</VV_LindenTree>
-                        <VV_ChamomilePlant>0.002</VV_ChamomilePlant>
+                        <VV_ChamomilePlant>0.05</VV_ChamomilePlant>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/wildPlants</xpath>
                     <value>
-                        <VV_LindenTree>0.003</VV_LindenTree>
                         <VV_ChamomilePlant>0.005</VV_ChamomilePlant>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]/wildPlants</xpath>
-                    <value>
+                        <VV_StJohnsWortPlant>0.005</VV_StJohnsWortPlant>
+                        <VV_YarrowPlant>0.005</VV_YarrowPlant>
                         <VV_ThymePlant>0.005</VV_ThymePlant>
+                        <VV_EchinaceaPlant>0.005</VV_EchinaceaPlant>
                         <VV_LavenderPlant>0.005</VV_LavenderPlant>
+                        <VV_CalendulaPlant>0.005</VV_CalendulaPlant>
                     </value>
                 </li>
             </operations>
@@ -120,6 +152,27 @@
         <match Class="PatchOperationSequence">
             <operations>
                 <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]/wildPlants</xpath>
+                    <value>
+                        <VV_PomegranateTree>0.01</VV_PomegranateTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_SourCherryTree>0.005</VV_SourCherryTree>
+                        <VV_QuinceTree>0.005</VV_QuinceTree>
+                        <VV_WalnutTree>0.005</VV_WalnutTree>
+                        <VV_PecanTree>0.005</VV_PecanTree>
+                        <VV_ChestnutTree>0.005</VV_ChestnutTree>
+                        <VV_HazelnutTree>0.005</VV_HazelnutTree>
+                        <VV_MulberryTree>0.005</VV_MulberryTree>
+                        <VV_StonePineTree>0.005</VV_StonePineTree>
+                        <VV_PersimmonTree>0.005</VV_PersimmonTree>
+                        <VV_ApricotTree>0.005</VV_ApricotTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/wildPlants</xpath>
                     <value>
                         <VV_PomegranateTree>0.01</VV_PomegranateTree>
@@ -128,50 +181,81 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]/wildPlants</xpath>
-                    <value>
-                        <VV_WalnutTree>0.02</VV_WalnutTree>
-                        <VV_ChestnutTree>0.02</VV_ChestnutTree>
-                        <VV_HazelnutTree>0.02</VV_HazelnutTree>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]/wildPlants</xpath>
-                    <value>
-                        <VV_QuinceTree>0.002</VV_QuinceTree>
-                        <VV_SourCherryTree>0.002</VV_SourCherryTree>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/wildPlants</xpath>
-                    <value>
-                        <VV_QuinceTree>0.005</VV_QuinceTree>
-                        <VV_SourCherryTree>0.005</VV_SourCherryTree>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]/wildPlants</xpath>
-                    <value>
-                        <VV_PomegranateTree>0.01</VV_PomegranateTree>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]/wildPlants</xpath>
-                    <value>
-                        <VV_PomegranateTree>0.01</VV_PomegranateTree>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="TKKN_Oasis"]/wildPlants</xpath>
                     <value>
-                        <VV_PapayaTree>0.01</VV_PapayaTree>
-                        <VV_GrapefruitTree>0.01</VV_GrapefruitTree>
                         <VV_PomegranateTree>0.01</VV_PomegranateTree>
                         <VV_LimeTree>0.01</VV_LimeTree>
                         <VV_PersimmonTree>0.01</VV_PersimmonTree>
                     </value>
                 </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]/wildPlants</xpath>
+                    <value>
+                        <VV_QuinceTree>0.01</VV_QuinceTree>
+                        <VV_SourCherryTree>0.01</VV_SourCherryTree>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/wildPlants</xpath>
+                    <value>
+                        <VV_PomegranateTree>0.01</VV_PomegranateTree>
+                        <VV_MulberryTree>0.01</VV_MulberryTree>
+                        <VV_StonePineTree>0.01</VV_StonePineTree>
+                        <VV_PersimmonTree>0.01</VV_PersimmonTree>
+                        <VV_ApricotTree>0.01</VV_ApricotTree>
+                    </value>
+                </li>
             </operations>
         </match>
-    </Operation> -->
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Flowers</li>
+        </mods>   
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]/wildPlants</xpath>
+                    <value>
+                        <VV_GoldenBarrelCactus>0.02</VV_GoldenBarrelCactus>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_Primrose>0.01</VV_Primrose>
+                        <VV_Lilac>0.01</VV_Lilac>
+                        <VV_Wisteria>0.02</VV_Wisteria>
+                        <VV_Ivy>0.03</VV_Ivy>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/wildPlants</xpath>
+                    <value>
+                        <VV_GoldenBarrelCactus>0.02</VV_GoldenBarrelCactus>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Oasis"]/wildPlants</xpath>
+                    <value>
+                        <VV_GoldenBarrelCactus>0.03</VV_GoldenBarrelCactus>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]/wildPlants</xpath>
+                    <value>
+                        <VV_Tulip>0.05</VV_Tulip>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/wildPlants</xpath>
+                    <value>
+                        <VV_Tulip>0.02</VV_Tulip>
+                        <VV_GoldenBarrelCactus>0.04</VV_GoldenBarrelCactus>
+                    </value>
+                </li>
+            </operations>
+        </match> 
+    </Operation>
 </Patch>

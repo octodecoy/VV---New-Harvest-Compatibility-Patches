@@ -3,7 +3,7 @@
     <name>VV - New Harvest: Compatibility Patches</name>
     <author>octodecoy</author>
     <packageId>octodecoy.vvnewharvest.compatpatches</packageId>
-    <modVersion>1.5</modVersion> <!-- 12/13/25 -->
+    <modVersion>1.6</modVersion> <!-- 12/18/25 -->
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
@@ -77,7 +77,7 @@
         <li>dismarzero.vgp.vgpmoreveggies</li>
         <li>oskarpotocki.vfe.medieval2</li>
         <li>thevillain.animalfoodsextended</li>
-        <!-- In the hope that any category movements occur first  -->
+        <!-- In the hope that any category movements occur first -->
         <li>sarg.alphacrafts</li>
         <li>vanillaexpanded.vcooke</li>
         <!-- May or may not be needed but why not -->

@@ -176,46 +176,43 @@
             <li>VV - New Harvest</li>
             <li>VV - New Harvest: Flowers</li>             
         </mods>
-        <match Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[defName="VV_Aubrieta"]</xpath>
-            <match Class="PatchOperationSequence">
-                <operations>
-                    <li Class="PatchOperationAdd">
-                        <xpath>/Defs/BiomeDef[defName="BiomesIslands_TemperateIslandBase"]/wildPlants</xpath>
-                        <value>
-                            <VV_Primrose>0.003</VV_Primrose>
-                            <VV_Lilac>0.004</VV_Lilac>
-                            <VV_Wisteria>0.005</VV_Wisteria>
-                            <VV_Ivy>0.02</VV_Ivy>
-                        </value>
-                    </li>    
-                    <li Class="PatchOperationAdd">
-                        <xpath>/Defs/BiomeDef[defName="BiomesIslands_BorealIsland"]/wildPlants</xpath>
-                        <value>
-                            <VV_Primrose>0.003</VV_Primrose>
-                            <VV_Ivy>0.03</VV_Ivy>
-                        </value>
-                    </li>   
-                    <li Class="PatchOperationAdd">
-                        <xpath>/Defs/BiomeDef[defName="BiomesIslands_DesertIslandBase"]/wildPlants</xpath>
-                        <value>
-                            <VV_GoldenBarrelCactus>0.005</VV_GoldenBarrelCactus>
-                        </value>
-                    </li>   
-                    <li Class="PatchOperationAdd">
-                        <xpath>/Defs/BiomeDef[defName="BiomesIslands_TropicalIslandBase"]/wildPlants</xpath>
-                        <value>
-                            <VV_VenusFlytrap>0.005</VV_VenusFlytrap>
-                        </value>
-                    </li>   
-                    <li Class="PatchOperationAdd">
-                        <xpath>/Defs/BiomeDef[defName="BiomesIslands_Atoll"]/wildPlants</xpath>
-                        <value>
-                            <VV_VenusFlytrap>0.002</VV_VenusFlytrap>
-                        </value>
-                    </li>  
-                </operations>
-            </match>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="BiomesIslands_TemperateIslandBase"]/wildPlants</xpath>
+                    <value>
+                        <VV_Primrose>0.02</VV_Primrose>
+                        <VV_Lilac>0.02</VV_Lilac>
+                        <VV_Wisteria>0.04</VV_Wisteria>
+                        <VV_Ivy>0.03</VV_Ivy>
+                    </value>
+                </li>    
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="BiomesIslands_BorealIsland"]/wildPlants</xpath>
+                    <value>
+                        <VV_Primrose>0.02</VV_Primrose>
+                        <VV_Ivy>0.03</VV_Ivy>
+                    </value>
+                </li>   
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="BiomesIslands_DesertIslandBase"]/wildPlants</xpath>
+                    <value>
+                        <VV_GoldenBarrelCactus>0.04</VV_GoldenBarrelCactus>
+                    </value>
+                </li>   
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="BiomesIslands_TropicalIslandBase"]/wildPlants</xpath>
+                    <value>
+                        <VV_VenusFlytrap>0.04</VV_VenusFlytrap>
+                    </value>
+                </li>   
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="BiomesIslands_Atoll"]/wildPlants</xpath>
+                    <value>
+                        <VV_VenusFlytrap>0.01</VV_VenusFlytrap>
+                    </value>
+                </li>  
+            </operations>
         </match>
     </Operation>
 </Patch>

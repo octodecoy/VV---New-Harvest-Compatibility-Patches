@@ -5,7 +5,7 @@
     <Operation Class="PatchOperationConditional">
         <xpath>/Defs/ResearchProjectDef[defName="DankPyon_BasicAgriculture"]</xpath>
         <match Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[defName="DankPyon_Plant_Garlic"]/plant/sowResearchPrerequisites[li="DankPyon_BasicAgriculture"]</xpath>
+            <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="DankPyon_BasicAgriculture"]</xpath>
             <match Class="NewHarvestPatches.AddOrReplace">
                 <xpath>                    
                     /Defs/ThingDef
@@ -28,7 +28,7 @@
     <Operation Class="PatchOperationConditional">
         <xpath>/Defs/ResearchProjectDef[defName="DankPyon_IntermediateAgriculture"]</xpath>
         <match Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[defName="DankPyon_Plant_Wheat"]/plant/sowResearchPrerequisites[li="DankPyon_IntermediateAgriculture"]</xpath>
+            <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="DankPyon_IntermediateAgriculture"]</xpath>
             <match Class="NewHarvestPatches.AddOrReplace">
                 <xpath>                    
                     /Defs/ThingDef
@@ -52,7 +52,7 @@
     <Operation Class="PatchOperationConditional">
         <xpath>/Defs/ResearchProjectDef[defName="DankPyon_AdvancedAgriculture"]</xpath>
         <match Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[defName="DankPyon_Plant_Grape"]/plant/sowResearchPrerequisites[li="DankPyon_AdvancedAgriculture"]</xpath>
+            <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="DankPyon_AdvancedAgriculture"]</xpath>
             <match Class="NewHarvestPatches.AddOrReplace">
                 <xpath>                    
                     /Defs/ThingDef

@@ -229,24 +229,6 @@ namespace NewHarvestPatches
             return "/" + string.Join("/", path);
         }
 
-        //protected static string GetParentDefDefName(XmlNode node)
-        //{
-        //    if (node == null)
-        //        return "(unknown)";
-
-        //    XmlNode current = node;
-        //    while (current != null)
-        //    {
-        //        if (current.Name.EndsWith("Def"))
-        //        {
-        //            var defNameNode = current["defName"];
-        //            return defNameNode?.InnerText;
-        //        }
-        //        current = current.ParentNode;
-        //    }
-        //    return "(unknown)";
-        //}
-
         protected static string GetParentDefDefName(XmlNode node)
         {
             if (node == null)

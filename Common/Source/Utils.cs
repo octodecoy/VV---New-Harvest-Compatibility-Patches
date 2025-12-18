@@ -136,12 +136,84 @@ namespace NewHarvestPatches
 
 
 
+            //public static Dictionary<string, (string version, string translationKey)> GetModVersions(params string[] packageIDs)
+            //{
+            //    if (packageIDs.Length == 0)
+            //        return [];
+
+            //    string[] moduleNames = [.. Enum.GetValues(typeof(Module)).Cast<Module>().Select(m => m.ToString())];
+
+            //    var dictionary = new Dictionary<string, (string, string)>();
+            //    foreach (var packageID in packageIDs)
+            //    {
+            //        var mod = ModLister.GetActiveModWithIdentifier(packageID);
+            //        if (mod != null)
+            //        {
+            //            string translationKey = null;
+            //            foreach (var moduleName in moduleNames)
+            //            {
+            //                if (packageID.ContainsIgnoreCase(moduleName))
+            //                {
+            //                    translationKey = moduleName;
+            //                    break;
+            //                }
+            //            }
+
+            //            string modVersion = mod.ModVersion ?? "??";
+            //            translationKey ??= HasMainModule ? $"{Module.Full}" : "??";
+            //            dictionary[mod.Name] = (modVersion, translationKey);
+
+            //            // If main is installed, the others won't be, or shouldn't be
+            //            if (translationKey == $"{Module.Full}")
+            //            {
+            //                return dictionary;
+            //            }
+            //        }
+            //    }
+            //    return dictionary;
+            //}
+
+            //public static Dictionary<string, (string version, string translationKey)> GetModVersions(params string[] packageIDs)
+            //{
+            //    if (packageIDs.Length == 0)
+            //        return [];
+
+            //    var dictionary = new Dictionary<string, (string, string)>();
+            //    foreach (var packageID in packageIDs)
+            //    {
+            //        var mod = ModLister.GetActiveModWithIdentifier(packageID);
+            //        if (mod != null)
+            //        {
+            //            string translationKey = null;
+            //            foreach (var moduleName in StaticArrays.ModuleNames)
+            //            {
+            //                if (packageID.ContainsIgnoreCase(moduleName))
+            //                {
+            //                    translationKey = moduleName;
+            //                    break;
+            //                }
+            //            }
+
+            //            string modVersion = mod.ModVersion ?? "??";
+            //            translationKey ??= HasMainModule ? $"{Module.Full}" : "??";
+            //            dictionary[mod.Name] = (modVersion, translationKey);
+
+            //            // If main is installed, the others won't be, or shouldn't be
+            //            if (translationKey == $"{Module.Full}")
+            //            {
+            //                return dictionary;
+            //            }
+            //        }
+            //    }
+            //    return dictionary;
+            //}
+
             public static Dictionary<string, (string version, string translationKey)> GetModVersions(params string[] packageIDs)
             {
                 if (packageIDs.Length == 0)
                     return [];
 
-                string[] moduleNames = [.. Enum.GetValues(typeof(Module)).Cast<Module>().Select(m => m.ToString())];
+                var moduleNames = StaticArrays.ModuleNames; // index 0 is "Full"
 
                 var dictionary = new Dictionary<string, (string, string)>();
                 foreach (var packageID in packageIDs)
@@ -159,15 +231,17 @@ namespace NewHarvestPatches
                             }
                         }
 
-                        string modVersion = mod.ModVersion ?? "??";
-                        translationKey ??= HasMainModule ? $"{Module.Full}" : "??";
-                        dictionary[mod.Name] = (modVersion, translationKey);
-
-                        // If main is installed, the others won't be, or shouldn't be
-                        if (translationKey == $"{Module.Full}")
+                        bool hasModVersion = !string.IsNullOrWhiteSpace(mod.ModVersion);
+                        if (!hasModVersion)
                         {
-                            return dictionary;
+                            ToLog($"Found mod [{mod.Name}] with unknown version.", 2);
                         }
+
+                        string modVersion = hasModVersion ? mod.ModVersion : "UNKNOWN VERSION";
+
+                        translationKey ??= HasMainModule ? moduleNames[0] : "UNKNOWN MODULE";
+
+                        dictionary[mod.Name] = (modVersion, translationKey);
                     }
                 }
                 return dictionary;

@@ -68,5 +68,10 @@ namespace NewHarvestPatches
                 public const string RadioLabel = nameof(RadioLabel);
             }
         }
+
+        public static class Safety
+        {
+            public const int CategoryTraversalLimit = 128;
+        }
     }
 }

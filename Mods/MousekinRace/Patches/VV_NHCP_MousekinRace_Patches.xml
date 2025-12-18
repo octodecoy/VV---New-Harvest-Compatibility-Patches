@@ -88,25 +88,22 @@
             <li>VV - New Harvest</li>
             <li>VV - New Harvest: Flowers</li>
         </mods>  
-        <match Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[defName="VV_Aubrieta"]</xpath>
-            <match Class="PatchOperationAdd">
-                <xpath>/Defs/MousekinRace.FlowerListDef[defName="Mousekin_ValidFlowers"]/flowerPlants</xpath>
-                <value>
-                    <li>VV_Aubrieta</li>
-                    <li>VV_Begonia</li>
-                    <li>VV_CallaLily</li>
-                    <li>VV_Dymondia</li>
-                    <li>VV_Gerbera</li>
-                    <li>VV_Hydrangea</li>
-                    <li>VV_Lilac</li>
-                    <li>VV_Orchid</li>
-                    <li>VV_Petunia</li>
-                    <li>VV_Primrose</li>
-                    <li>VV_Tulip</li>
-                    <li>VV_Wisteria</li>
-                </value>
-            </match>
-        </match>   
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/MousekinRace.FlowerListDef[defName="Mousekin_ValidFlowers"]/flowerPlants</xpath>
+            <value>
+                <li>VV_Aubrieta</li>
+                <li>VV_Begonia</li>
+                <li>VV_CallaLily</li>
+                <li>VV_Dymondia</li>
+                <li>VV_Gerbera</li>
+                <li>VV_Hydrangea</li>
+                <li>VV_Lilac</li>
+                <li>VV_Orchid</li>
+                <li>VV_Petunia</li>
+                <li>VV_Primrose</li>
+                <li>VV_Tulip</li>
+                <li>VV_Wisteria</li>
+            </value>
+        </match>
     </Operation>
 </Patch>

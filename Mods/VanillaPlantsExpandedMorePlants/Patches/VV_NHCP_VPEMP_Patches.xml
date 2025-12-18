@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Flowers</li>           
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>
+                /Defs/ThingDef[
+                defName="VV_Gerbera" or
+                defName="VV_Begonia" or
+                defName="VV_CallaLily" or
+                defName="VV_Tulip" or
+                defName="VV_Petunia" or
+                defName="VV_Primrose" or
+                defName="VV_Orchid" or
+                defName="VV_VenusFlytrap" or
+                defName="VV_GoldenBarrelCactus" or
+                defName="VV_Aubrieta" or
+                defName="VV_Ivy" or
+                defName="VV_Dymondia" or
+                defName="VV_Lilac" or
+                defName="VV_Hydrangea" or
+                defName="VV_Wisteria"]
+                /plant/sowTags
+            </xpath>
+            <value>
+                <li>VCE_FlowerGarden</li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

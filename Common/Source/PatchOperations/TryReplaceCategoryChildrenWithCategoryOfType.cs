@@ -86,41 +86,6 @@
             }
         }
 
-        // CAUSES LOOP!
-        //private static bool HasCategoryInSelfOrAncestors(
-        //    XmlNode thingDef,
-        //    string thingCategoryDefName,
-        //    Dictionary<string, XmlNode> defNameToNode)
-        //{
-        //    var current = thingDef;
-        //    while (current != null)
-        //    {
-        //        var thingCategoriesNode = current.SelectSingleNode("thingCategories");
-
-        //        if (thingCategoriesNode is XmlElement tcElem)
-        //        if (thingCategoriesNode != null)
-        //        {
-        //            var categories = thingCategoriesNode.SelectNodes("li");
-        //            // Direct match - this ThingDef directly has the category
-        //            bool hasCategory = categories != null && categories.Cast<XmlNode>().Any(li => li.InnerText == thingCategoryDefName);
-
-        //            if (hasCategory)
-        //                return true;
-
-        //            // If this is a parent with Inherit="False", don't search further up the hierarchy
-        //            var inheritAttr = thingCategoriesNode.Attributes?["Inherit"]?.Value;
-        //            if (string.Equals(inheritAttr, "False", StringComparison.OrdinalIgnoreCase))
-        //                break;
-        //        }
-
-        //        // Try to follow the parent chain
-        //        var parentName = current.Attributes?["ParentName"]?.Value;
-        //        if (string.IsNullOrEmpty(parentName) || !defNameToNode.TryGetValue(parentName, out current))
-        //            break;
-        //    }
-        //    return false;
-        //}
-
         private static bool HasCategoryInSelfOrAncestors(
             XmlNode thingDef,
             string thingCategoryDefName,
@@ -157,8 +122,20 @@
             var visited = new HashSet<string>();
             string current = categoryDefName;
 
+            int iterations = 0;
+
             while (!string.IsNullOrEmpty(current))
             {
+                // Cycle protection
+                if (++iterations > Safety.CategoryTraversalLimit)
+                {
+                    ToLog($"Category traversal exceeded limit ({Safety.CategoryTraversalLimit}) for starting category [{categoryDefName}]. Aborting traversal.", 2);
+                    return false;
+                }
+
+                if (iterations > 1)
+                    ToLog($"Category traversal iteration #{iterations}; starting [{categoryDefName}], current [{current}], target [{targetCategoryDefName}].", 1);
+
                 // Cycle protection
                 if (!visited.Add(current))
                     return false;
@@ -167,7 +144,12 @@
                     return true;
 
                 if (!categoryDefNameToNode.TryGetValue(current, out XmlNode node))
+                {
+                    // Missing node — normal termination
+                    if (iterations > 1)
+                        ToLog($"Category [{current}] not found in lookup while traversing from [{categoryDefName}] to [{targetCategoryDefName}]. Aborting.", 2);
                     return false;
+                }
 
                 // Get <parent> tag
                 var parentNode = node.SelectSingleNode("parent");

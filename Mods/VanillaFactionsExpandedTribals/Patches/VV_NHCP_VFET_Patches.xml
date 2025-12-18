@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Forage Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Agriculture"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="VFET_Agriculture"]</xpath>
+                        <match Class="NewHarvestPatches.AddOrReplace">
+                            <xpath>/Defs/ThingDef[defName="VV_Alfalfa" or defName="VV_Clover" or defName="VV_TimothyGrass"]/plant</xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>VFET_Agriculture</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Garden Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Agriculture"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="VFET_Agriculture"]</xpath>
+                        <match Class="NewHarvestPatches.AddOrReplace">
+                            <xpath>
+                                /Defs/ThingDef[
+                                defName="VV_MilletPlant" or 
+                                defName="VV_AmaranthPlant" or 
+                                defName="VV_TeffPlant" or
+                                defName="VV_QuinoaPlant" or
+                                defName="VV_SpinachPlant" or
+                                defName="VV_ParsnipPlant" or
+                                defName="VV_WhiteTurnipPlant" or
+                                defName="VV_LeekPlant" or
+                                defName="VV_BlackBeanPlant" or
+                                defName="VV_RedCabbagePlant"]
+                                /plant
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>VFET_Agriculture</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Cultivation"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="VFET_Cultivation"]</xpath>
+                        <match Class="NewHarvestPatches.AddOrReplace">
+                            <xpath>
+                                /Defs/ThingDef[
+                                defName="VV_BlackberryBush" or
+                                defName="VV_BroccoliPlant" or 
+                                defName="VV_AsparagusPlant" or 
+                                defName="VV_ArtichokePlant" or
+                                defName="VV_BlackcurrantBush" or
+                                defName="VV_RosehipBush" or
+                                defName="VV_DragonFruitPlant"]
+                                /plant
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>VFET_Cultivation</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Industrial Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Agriculture"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="VFET_Agriculture"]</xpath>
+                        <match Class="NewHarvestPatches.AddOrReplace">
+                            <xpath>/Defs/ThingDef[defName="VV_ReedPlant"]/plant</xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>VFET_Agriculture</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Cultivation"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="VFET_Cultivation"]</xpath>
+                        <match Class="NewHarvestPatches.AddOrReplace">
+                            <xpath>/Defs/ThingDef[defName="VV_JutePlant" or defName="VV_RamiePlant" or defName="VV_RattanPlant"]/plant</xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>VFET_Cultivation</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

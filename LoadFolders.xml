@@ -82,6 +82,7 @@
         <li IfModActiveAll="owlchemist.seedspleaselite,vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvesttrees">Mods/SeedsPlease/Trees/VPE_And_VGP</li>
         <li IfModActiveAll="oskarpotocki.vfe.medieval2,vvenchov.vvnewharvest">Mods/VanillaFactionsExpandedMedieval2</li>
         <li IfModActiveAll="oskarpotocki.vfe.medieval2,vvenchov.vvnewharvestmedicinalplants">Mods/VanillaFactionsExpandedMedieval2</li>
+        <li IfModActive="oskarpotocki.vfe.tribals">Mods/VanillaFactionsExpandedTribals</li>
         <li IfModActive="vanillaexpanded.vbrewe">Mods/VanillaBrewingExpanded</li>
         <li IfModActive="vanillaexpanded.outposts">Mods/VanillaOutpostsExpanded</li>
         <li IfModActiveAll="vanillaexpanded.vplantse,vvenchov.vvnewharvest">Mods/VanillaPlantsExpanded/Forage</li>
@@ -94,6 +95,7 @@
         <li IfModActiveAll="vanillaexpanded.vplantse,vvenchov.vvnewharvesttrees">Mods/VanillaPlantsExpanded/Trees</li>
         <li IfModActiveAll="vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvest">Mods/VanillaPlantsExpanded/Trees/VGP</li>
         <li IfModActiveAll="vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvesttrees">Mods/VanillaPlantsExpanded/Trees/VGP</li>
+        <li IfModActive="vanillaexpanded.vplantsemore">Mods/VanillaPlantsExpandedMorePlants</li>
         <li IfModActiveAll="vanillaexpanded.vcooke,vvenchov.vvnewharvest">Mods/VanillaCookingExpanded</li>
         <li IfModActiveAll="vanillaexpanded.vcooke,vvenchov.vvnewharvesttrees">Mods/VanillaCookingExpanded</li>
         <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvest">Mods/VanillaExpandedFramework/Garden</li>
