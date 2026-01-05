@@ -12,8 +12,6 @@ global using static NewHarvestPatches.NewHarvestPatchesModSettings;
 global using static NewHarvestPatches.Utils.Logger;
 global using static NewHarvestPatches.Utils.ModChecker;
 global using static NewHarvestPatches.Utils.SettingChecker;
-global using static NewHarvestPatches.Utils.VersionChecker;
-global using static NewHarvestPatches.DefHelpers;
 global using static NewHarvestPatches.Constants;
 global using static UnityEngine.Color;
 
@@ -26,7 +24,7 @@ namespace NewHarvestPatches
         {
             var enabledSettings = EnabledSettings;
 
-            var modVersions = NewHarvestVersions;
+            var modVersions = Utils.VersionChecker.NewHarvestVersions;
             if (!modVersions.NullOrEmpty()) // Dunno how
             {
                 foreach (var modVersion in modVersions)
@@ -69,7 +67,7 @@ namespace NewHarvestPatches
                         }
                     }
 
-                    if (HasIdeology)
+                    if (ModsConfig.RoyaltyActive)
                     {
                         if (Settings.AddWoodDryads)
                         {
@@ -111,7 +109,7 @@ namespace NewHarvestPatches
                     {
                         CategorySyncer.SyncAllFoods();
                     }
-
+                    
                     if (HasGardenModule)
                     {
                         if (HasVanillaCookingExpanded && Settings.GrainsProduceVCEFlourSecondary)
@@ -120,7 +118,7 @@ namespace NewHarvestPatches
                         }
                     }
                 }
-
+                
                 LogInitTime();
 
                 ClearCaches();

@@ -17,7 +17,6 @@
     <NHCP.General_Industrial>工業</NHCP.General_Industrial>
     <NHCP.General_Medicinal>藥用</NHCP.General_Medicinal>
     <NHCP.General_Trees>樹木</NHCP.General_Trees>
-    <NHCP.General_Flowers>花朵</NHCP.General_Flowers>
     <NHCP.Button_Select>選擇</NHCP.Button_Select>
     <NHCP.General_Default>默認: {0}</NHCP.General_Default>
     <NHCP.ON>開啟</NHCP.ON>
@@ -30,8 +29,6 @@
     <NHCP.TabSubLabel_CommonalityDescription>常見度值定義了材料生成的可能性。\n最小值: 0, 最大值: 100\n0 = 永不生成；100 並不代表 100%——它是相對於其他所有材料的。\n參考: 木材 = 1.0；黃金 = 0.02，所以使用高值時要小心。</NHCP.TabSubLabel_CommonalityDescription>
     <NHCP.CheckboxLabel_Logging>日誌</NHCP.CheckboxLabel_Logging>
     <NHCP.CheckboxSubLabel_Logging>在遊戲開始時記錄一些資訊。\n你大概不需要開啟它。</NHCP.CheckboxSubLabel_Logging>
-    <NHCP.CheckboxLabel_HayNeedsCooling>乾草需要冷藏</NHCP.CheckboxLabel_HayNeedsCooling>
-    <NHCP.CheckboxSubLabel_HayNeedsCooling>如果關閉，將移除新收穫乾草需要冷藏的需求。\n它在戶外時只會逐漸損壞。</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.General_AnimalFoods>動物飼料</NHCP.General_AnimalFoods>
     <NHCP.General_Grains>穀物</NHCP.General_Grains>
     <NHCP.General_Fruit>水果</NHCP.General_Fruit>
@@ -83,6 +80,9 @@
     <NHCP.Button_SettingsReset>設置已重置！</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>更改類別標籤</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>標籤已成功更改為：</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_HayNeedsCooling>乾草需要冷藏</NHCP.CheckboxLabel_HayNeedsCooling>
+    <NHCP.CheckboxSubLabel_HayNeedsCooling>如果關閉，將移除新收穫乾草需要冷藏的需求。\n它在戶外時只會逐漸損壞。</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>穀物產出 Vanilla Cooking Expanded 麵粉</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>新收穫的穀物植物將額外產出 Vanilla Cooking Expanded 麵粉，數量為穀物的一半。\n（示例：莧菜植物將產出 10 份莧菜穀物和 5 份麵粉）</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.General_Flowers>花朵</NHCP.General_Flowers>
 </LanguageData>

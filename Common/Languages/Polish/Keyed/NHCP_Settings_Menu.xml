@@ -17,7 +17,6 @@
     <NHCP.General_Industrial>Przemysłowe</NHCP.General_Industrial>
     <NHCP.General_Medicinal>Lecznicze</NHCP.General_Medicinal>
     <NHCP.General_Trees>Drzewa</NHCP.General_Trees>
-    <NHCP.General_Flowers>Kwiaty</NHCP.General_Flowers>
     <NHCP.Button_Select>Wybierz</NHCP.Button_Select>
     <NHCP.General_Default>Domyślne: {0}</NHCP.General_Default>
     <NHCP.ON>WŁ.</NHCP.ON>
@@ -30,8 +29,6 @@
     <NHCP.TabSubLabel_CommonalityDescription>Wartości powszechności określają, jak często dany materiał się pojawia.\nMin: 0, Max: 100\n0 = nigdy się nie pojawia; 100 nie oznacza 100% – to wartość względna w porównaniu z innymi materiałami.\nPrzykład: Drewno = 1,0; Złoto = 0,02, więc uważaj przy wysokich wartościach.</NHCP.TabSubLabel_CommonalityDescription>
     <NHCP.CheckboxLabel_Logging>Logowanie</NHCP.CheckboxLabel_Logging>
     <NHCP.CheckboxSubLabel_Logging>Rejestruje pewne informacje przy starcie gry.\nPrawdopodobnie nie chcesz tego włączać.</NHCP.CheckboxSubLabel_Logging>
-    <NHCP.CheckboxLabel_HayNeedsCooling>Siano wymaga chłodzenia</NHCP.CheckboxLabel_HayNeedsCooling>
-    <NHCP.CheckboxSubLabel_HayNeedsCooling>Jeśli wyłączone, usuwa potrzebę chłodzenia siana z Nowych Zbiorów.\nZamiast tego będzie się po prostu psuło na zewnątrz.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.General_AnimalFoods>Pokarm dla zwierząt</NHCP.General_AnimalFoods>
     <NHCP.General_Grains>Ziarna</NHCP.General_Grains>
     <NHCP.General_Fruit>Owoce</NHCP.General_Fruit>
@@ -83,6 +80,9 @@
     <NHCP.Button_SettingsReset>ustawienia zresetowane!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Zmień etykietę kategorii</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Etykieta została pomyślnie zmieniona na:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_HayNeedsCooling>Siano wymaga chłodzenia</NHCP.CheckboxLabel_HayNeedsCooling>
+    <NHCP.CheckboxSubLabel_HayNeedsCooling>Jeśli wyłączone, usuwa potrzebę chłodzenia siana z Nowych Zbiorów.\nZamiast tego będzie się po prostu psuło na zewnątrz.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Zboża produkują mąkę Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Nowo zebrane rośliny zbożowe wytworzą dodatkowo mąkę Vanilla Cooking Expanded jako produkt poboczny, w ilości równej połowie ilości zboża.\n(Przykład: roślina amarantusa wyprodukuje 10 ziaren amarantusa i 5 mąki)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.General_Flowers>Kwiaty</NHCP.General_Flowers>
 </LanguageData>

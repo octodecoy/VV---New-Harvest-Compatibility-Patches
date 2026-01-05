@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_GinkgoTree"]/label</xpath>
+        <value>
+            <label>emperor ginkgo tree</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_GinkgoLeaves"]/label</xpath>
+        <value>
+            <label>emperor ginkgo leaves</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_GinkgoTea"]/label</xpath>
+        <value>
+            <label>emperor ginkgo tea</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_GinsengPlant"]/label</xpath>
+        <value>
+            <label>red ginseng plant</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_GinsengRoots"]/label</xpath>
+        <value>
+            <label>red ginseng roots</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_GinsengDecoction"]/label</xpath>
+        <value>
+            <label>red ginseng decoction</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_YarrowPlant"]/label</xpath>
+        <value>
+            <label>peter cottontail yarrow plant</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_YarrowBlossoms"]/label</xpath>
+        <value>
+            <label>peter cottontail yarrow blossoms</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_NettlePlant"]/label</xpath>
+        <value>
+            <label>stinging nettle plant</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_NettleLeaves"]/label</xpath>
+        <value>
+            <label>stinging nettle leaves</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_StJohnsWortPlant"]/label</xpath>
+        <value>
+            <label>hypericum plant</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_StJohnsWortBlossoms"]/label</xpath>
+        <value>
+            <label>hypericum blossoms</label>
+        </value>
+    </Operation>
+</Patch>

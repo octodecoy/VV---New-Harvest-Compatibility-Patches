@@ -17,7 +17,6 @@
     <NHCP.General_Industrial>Industrial</NHCP.General_Industrial>
     <NHCP.General_Medicinal>Medicinal</NHCP.General_Medicinal>
     <NHCP.General_Trees>Árboles</NHCP.General_Trees>
-    <NHCP.General_Flowers>Flores</NHCP.General_Flowers>
     <NHCP.Button_Select>Seleccionar</NHCP.Button_Select>
     <NHCP.General_Default>Predeterminado: {0}</NHCP.General_Default>
     <NHCP.ON>ON</NHCP.ON>
@@ -30,8 +29,6 @@
     <NHCP.TabSubLabel_CommonalityDescription>Los valores de comunalidad definen la probabilidad de aparición de un material.\nMín: 0, Máx: 100\n0 = nunca aparece; 100 no significa 100% — es relativo a otros materiales.\nReferencia: Madera = 1.0; Oro = 0.02, ten cuidado con valores altos.</NHCP.TabSubLabel_CommonalityDescription>
     <NHCP.CheckboxLabel_Logging>Registro</NHCP.CheckboxLabel_Logging>
     <NHCP.CheckboxSubLabel_Logging>Registra información al iniciar el juego.\nProbablemente no quieras activarlo.</NHCP.CheckboxSubLabel_Logging>
-    <NHCP.CheckboxLabel_HayNeedsCooling>El heno necesita refrigeración</NHCP.CheckboxLabel_HayNeedsCooling>
-    <NHCP.CheckboxSubLabel_HayNeedsCooling>Si está desactivado, se elimina la necesidad de refrigerar el heno de la Nueva Cosecha.\nEn su lugar, simplemente se deteriorará si se deja al aire libre.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.General_AnimalFoods>Alimentos para animales</NHCP.General_AnimalFoods>
     <NHCP.General_Grains>Granos</NHCP.General_Grains>
     <NHCP.General_Fruit>Frutas</NHCP.General_Fruit>
@@ -83,6 +80,9 @@
     <NHCP.Button_SettingsReset>¡configuración restablecida!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Cambiar etiqueta de categoría</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Etiqueta cambiada exitosamente a:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_HayNeedsCooling>El heno necesita refrigeración</NHCP.CheckboxLabel_HayNeedsCooling>
+    <NHCP.CheckboxSubLabel_HayNeedsCooling>Si está desactivado, se elimina la necesidad de refrigerar el heno de la Nueva Cosecha.\nEn su lugar, simplemente se deteriorará si se deja al aire libre.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Los granos producen harina Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Las plantas de granos recién cosechadas producirán harina Vanilla Cooking Expanded como producto secundario, en la cantidad de la mitad de los granos.\n(Ejemplo: las plantas de amaranto producirán 10 granos de amaranto y 5 de harina)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.General_Flowers>Flores</NHCP.General_Flowers>
 </LanguageData>

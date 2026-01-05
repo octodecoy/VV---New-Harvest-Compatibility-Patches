@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- To allow decoctions to be made at various mod added alchemy workbenches.  Decoctions are cooking worktype but the alchemy benches are not. -->
+    <WorkGiverDef>
+        <defName>VV_NHCP_DoBillsAlchemyCooking</defName>
+        <label>craft decoction</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Cooking</workType>
+        <priorityInType>110</priorityInType>
+        <fixedBillGiverDefs />
+        <verb>crafting</verb>
+        <gerund>crafting at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+</Defs>

@@ -31,6 +31,8 @@
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees">Mods/MedievalOverhaul/Trees</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Trees/Industrial</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestindustrialcrops">Mods/MedievalOverhaul/Trees/Industrial</li>
+        <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Flowers</li>
+        <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvestflowers">Mods/MedievalOverhaul/Flowers</li>
         <!-- Until new version of Expanded Woodworking is figured out; may not even be needed -->
         <!-- <li IfModActiveAll="zal.expandwoodwork,vvenchov.vvnewharvest">Mods/ExpandedWoodworking</li>
         <li IfModActiveAll="zal.expandwoodwork,vvenchov.vvnewharvestindustrialcrops">Mods/ExpandedWoodworking</li> -->
@@ -95,7 +97,6 @@
         <li IfModActiveAll="vanillaexpanded.vplantse,vvenchov.vvnewharvesttrees">Mods/VanillaPlantsExpanded/Trees</li>
         <li IfModActiveAll="vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvest">Mods/VanillaPlantsExpanded/Trees/VGP</li>
         <li IfModActiveAll="vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvesttrees">Mods/VanillaPlantsExpanded/Trees/VGP</li>
-        <li IfModActive="vanillaexpanded.vplantsemore">Mods/VanillaPlantsExpandedMorePlants</li>
         <li IfModActiveAll="vanillaexpanded.vcooke,vvenchov.vvnewharvest">Mods/VanillaCookingExpanded</li>
         <li IfModActiveAll="vanillaexpanded.vcooke,vvenchov.vvnewharvesttrees">Mods/VanillaCookingExpanded</li>
         <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvest">Mods/VanillaExpandedFramework/Garden</li>
@@ -135,5 +136,14 @@
         <li IfModActiveAll="mlie.rc2.core,vvenchov.vvnewharvestgardencrops">Mods/RimCuisine2/Garden</li>
         <li IfModActiveAll="mlie.rc2.core,vvenchov.vvnewharvest">Mods/RimCuisine2/Trees</li>
         <li IfModActiveAll="mlie.rc2.core,vvenchov.vvnewharvesttrees">Mods/RimCuisine2/Trees</li>
+
+        <!-- Added 12/23/25 -->
+         <li IfModActive="vanillaexpanded.vplantsemore">Mods/VanillaPlantsExpandedMorePlants</li>
+        <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvest">Mods/Apothecary/Forage</li>
+        <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvestforagecrops">Mods/Apothecary/Forage</li>
+        <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvest">Mods/Apothecary/Industrial</li>
+        <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvestindustrialcrops">Mods/Apothecary/Industrial</li>
+        <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvest">Mods/Apothecary/Medicinal</li>
+        <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvestmedicinalplants">Mods/Apothecary/Medicinal</li>
     </v1.6>
 </loadFolders>

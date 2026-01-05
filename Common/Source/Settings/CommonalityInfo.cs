@@ -25,7 +25,7 @@ namespace NewHarvestPatches
                     ? commonalityInfo.RemoveNulls<ThingDef, string, CommonalityInfo>(includeValues: false, includeKeys: true)
                     : [];
 
-            var dictionary = IndustrialResourceDefDictionary;
+            var dictionary = ThingDefUtility.IndustrialResourceDefDictionary;
             if (dictionary.NullOrEmpty())
             {
                 ToLog($"Could not get defs for commonality dictionary.", 2);

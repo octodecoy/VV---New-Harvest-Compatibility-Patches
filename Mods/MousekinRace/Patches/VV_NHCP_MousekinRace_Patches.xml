@@ -51,20 +51,33 @@
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>
-                        /Defs/ThingDef
-                        [defName="VV_SoothingHerbalOintment" or 
-                        defName="VV_RestorativeHerbalOintment" or 
-                        defName="VV_AdvancedHerbalMedicine" or
-                        defName="VV_GinsengDecoction" or
-                        defName="VV_EchinaceaDecoction" or
-                        defName="VV_ValerianDecoction"]
-                        /recipeMaker/recipeUsers
-                    </xpath>
-                    <value>
-                        <li>Mousekin_WorkbenchAlchemy</li>
-                    </value>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Mousekin_WorkbenchAlchemy"]</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>
+                                    /Defs/ThingDef
+                                    [defName="VV_SoothingHerbalOintment" or 
+                                    defName="VV_RestorativeHerbalOintment" or 
+                                    defName="VV_AdvancedHerbalMedicine" or
+                                    defName="VV_GinsengDecoction" or
+                                    defName="VV_EchinaceaDecoction" or
+                                    defName="VV_ValerianDecoction"]
+                                    /recipeMaker/recipeUsers
+                                </xpath>
+                                <value>
+                                    <li>Mousekin_WorkbenchAlchemy</li>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/WorkGiverDef[defName="VV_NHCP_DoBillsAlchemyCooking"]/fixedBillGiverDefs</xpath>
+                                <value>
+                                    <li>Mousekin_WorkbenchAlchemy</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/MousekinRace.FlowerListDef[defName="Mousekin_ValidFlowers"]/flowerPlants</xpath>

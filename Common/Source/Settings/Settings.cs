@@ -34,6 +34,7 @@ namespace NewHarvestPatches
         public bool AddWoodDryads = false;
         public bool HayNeedsCooling = true;
         public bool GrainsProduceVCEFlourSecondary = false;
+        public bool WeedSpreadingBehavior = false;
         public Dictionary<string, bool> FuelTypes = [];
         public Dictionary<string, CommonalityInfo> StuffCommonality = [];
         public Dictionary<string, bool> FallColorTrees = [];
@@ -62,13 +63,14 @@ namespace NewHarvestPatches
                 StartStopwatch(nameof(ModSettings), nameof(NewHarvestPatchesModSettings));
                 try
                 {
-                    var (oldVersion, newVersion) = UpdateModVersion();
+                    var (oldVersion, newVersion) = Utils.VersionChecker.UpdateModVersion();
                     CommonalityInfo.BuildCommonalityStats(ref StuffCommonality);
                     CheckboxInfo.BuildCheckboxInfo(ref _checkboxInfos);
                     ColorInfo.BuildColorInfo(ref MaterialColors);
                     DefToCategoryInfo.CacheDefToCategoryInfo(ref CategoryData);
                     CategoryLabelInfo.CacheDefaultCategoryLabelInfo(ref CategoryLabelCache);
                     BuildTabs();
+
                     WriteSettingsToFile(); // Write in case null stuff was removed from scribed data while building
                 }
                 finally
@@ -112,6 +114,8 @@ namespace NewHarvestPatches
             WriteSettingsToFile();
         }
 
+        //public Dictionary<ThingDef, WeedSpawnerInfo> test = [];
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -147,6 +151,7 @@ namespace NewHarvestPatches
                 Scribe_Values.Look(ref AddWoodDryads, nameof(AddWoodDryads), false, false);
                 Scribe_Values.Look(ref HayNeedsCooling, nameof(HayNeedsCooling), true, false);
                 Scribe_Values.Look(ref GrainsProduceVCEFlourSecondary, nameof(GrainsProduceVCEFlourSecondary), false, false);
+                Scribe_Values.Look(ref WeedSpreadingBehavior, nameof(WeedSpreadingBehavior), false, false);
 
                 if (HasIndustrialModule)
                 {
@@ -244,7 +249,7 @@ namespace NewHarvestPatches
                     {
                         foreach (var kvp in FallColorTrees)
                         {
-                            // Enabled if the value is false - to turn off fall colors
+                            // Enabled if the value is false since all are on by default - to turn off fall colors
                             if (!kvp.Value)
                                 yield return Setting.Prefix.NoFallColors_ + kvp.Key;
                         }
@@ -334,7 +339,7 @@ namespace NewHarvestPatches
                 // Try to parse the tab label to SettingsTab
                 if (Enum.TryParse<SettingsTab>(tab.label, out var settingsTab))
                 {
-                    if (settingsTab == SettingsTab.Commonality) // Has no checkboxes
+                    if (settingsTab == SettingsTab.Commonality) // Has no checkboxes or not _checkboxInfos checkboxes
                         return false;
                     return !_checkboxInfos.Any(c => c.Tab == settingsTab);
                 }
@@ -486,6 +491,7 @@ namespace NewHarvestPatches
                             Checkboxes._categoryLabelBuffers?.Clear(); // Reset text field values
                         }
                     }
+
                     SettingChanged = true;
                     Messages.Message(Translator.TranslateKey(TKey.Type.Tab, $"{tab}") + " " + Translator.TranslateKey(TKey.Type.Button, "SettingsReset"), MessageTypeDefOf.PositiveEvent, false);
                     
@@ -531,7 +537,7 @@ namespace NewHarvestPatches
             {
                 if (!Find.WindowStack.IsOpen<SettingWindows.ResizableWindow>())
                 {
-                    var installedModules = NewHarvestVersions;
+                    var installedModules = Utils.VersionChecker.NewHarvestVersions;
                     if (installedModules.NullOrEmpty())
                         return buttonRect;
 
@@ -637,8 +643,8 @@ namespace NewHarvestPatches
                 var tempListing = new Listing_Standard();
                 tempListing.Begin(innerTempRect);
                 DoCheckboxes(tempListing);
-                DoSliders(tempListing);
-                DoDropdowns(tempListing);
+                DoCommonalityTab(tempListing);
+                DoMaterialColorSection(tempListing);
                 height = (Mathf.Ceil(tempListing.CurHeight) / 0.95f) + GenUI.Gap; // In case of run off
                 tempListing.End();
             }
@@ -659,13 +665,12 @@ namespace NewHarvestPatches
             settingListing.Begin(innerContentRect);
 
             DoCheckboxes(settingListing);
-            DoSliders(settingListing);
-            DoDropdowns(settingListing);
+            DoCommonalityTab(settingListing);
+            DoMaterialColorSection(settingListing);
 
             settingListing.End();
             Widgets.EndScrollView();
 
-            UpdateScrollInfoForTab(_currentTab, position, height);
             UpdateScrollInfoForTab(_currentTab, position, height);
 
             return (contentAreaRect, viewRect, innerContentRect);
@@ -681,7 +686,7 @@ namespace NewHarvestPatches
             return ls.CurHeight;
         }
 
-        private float DoSliders(Listing_Standard ls)
+        private float DoCommonalityTab(Listing_Standard ls)
         {
             if (_currentTab == SettingsTab.Commonality)
             {
@@ -693,7 +698,7 @@ namespace NewHarvestPatches
             return ls.CurHeight;
         }
 
-        private float DoDropdowns(Listing_Standard ls)
+        private float DoMaterialColorSection(Listing_Standard ls)
         {
             if (_currentTab == SettingsTab.Visuals)
             {

@@ -17,7 +17,6 @@
     <NHCP.General_Industrial>工業</NHCP.General_Industrial>
     <NHCP.General_Medicinal>薬用</NHCP.General_Medicinal>
     <NHCP.General_Trees>木</NHCP.General_Trees>
-    <NHCP.General_Flowers>花</NHCP.General_Flowers>
     <NHCP.Button_Select>選択</NHCP.Button_Select>
     <NHCP.General_Default>デフォルト: {0}</NHCP.General_Default>
     <NHCP.ON>オン</NHCP.ON>
@@ -30,8 +29,6 @@
     <NHCP.TabSubLabel_CommonalityDescription>出現率は、素材が生成される可能性を決定します。\n最小: 0、最大: 100\n0 = 生成されない; 100 = 100%ではなく、他のすべての素材に対して相対的です。\n参考: 木材 = 1.0; 金 = 0.02。高い値には注意してください。</NHCP.TabSubLabel_CommonalityDescription>
     <NHCP.CheckboxLabel_Logging>ログ記録</NHCP.CheckboxLabel_Logging>
     <NHCP.CheckboxSubLabel_Logging>ゲーム起動時にいくつかの情報を記録します。\n通常は有効にしない方がよいです。</NHCP.CheckboxSubLabel_Logging>
-    <NHCP.CheckboxLabel_HayNeedsCooling>干し草は冷蔵が必要</NHCP.CheckboxLabel_HayNeedsCooling>
-    <NHCP.CheckboxSubLabel_HayNeedsCooling>オフにすると、新収穫の干し草を冷蔵する必要がなくなります。\n屋外に置かれた場合は、代わりに劣化していきます。</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.General_AnimalFoods>動物の餌</NHCP.General_AnimalFoods>
     <NHCP.General_Grains>穀物</NHCP.General_Grains>
     <NHCP.General_Fruit>果物</NHCP.General_Fruit>
@@ -83,6 +80,9 @@
     <NHCP.Button_SettingsReset>設定がリセットされました！</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>カテゴリラベルを変更</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>ラベルは次のように正常に変更されました：</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_HayNeedsCooling>干し草は冷蔵が必要</NHCP.CheckboxLabel_HayNeedsCooling>
+    <NHCP.CheckboxSubLabel_HayNeedsCooling>オフにすると、新収穫の干し草を冷蔵する必要がなくなります。\n屋外に置かれた場合は、代わりに劣化していきます。</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>穀物が Vanilla Cooking Expanded の小麦粉を生産</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>収穫した穀物植物は、副産物として Vanilla Cooking Expanded の小麦粉を穀物量の半分生産します。\n（例：アマランサスはアマランサスの穀物を10個、小麦粉を5個生産します）</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.General_Flowers>花</NHCP.General_Flowers>
 </LanguageData>

@@ -95,7 +95,7 @@ namespace NewHarvestPatches
 
         public static class VersionChecker
         {
-            public static bool HasCurrentGameVersion = HasOdyssey || IsGameVersionAtLeast(new Version("1.6"));
+            public static bool HasCurrentGameVersion = ModsConfig.OdysseyActive || IsGameVersionAtLeast(new Version("1.6"));
             /// <summary>
             /// Version from the mod's About.xml.
             /// </summary>
@@ -123,7 +123,8 @@ namespace NewHarvestPatches
 
             public static bool IsGameVersionAtLeast(Version version, bool checkBuild = false, bool checkRev = false)
             {
-                if (version == null) return false;
+                if (version == null) 
+                    return false;
 
                 // Build a version to compare against, depending on which parts we care about
                 int build = checkBuild ? VersionControl.CurrentBuild : 0;
@@ -133,80 +134,6 @@ namespace NewHarvestPatches
 
                 return current.CompareTo(version) >= 0;
             }
-
-
-
-            //public static Dictionary<string, (string version, string translationKey)> GetModVersions(params string[] packageIDs)
-            //{
-            //    if (packageIDs.Length == 0)
-            //        return [];
-
-            //    string[] moduleNames = [.. Enum.GetValues(typeof(Module)).Cast<Module>().Select(m => m.ToString())];
-
-            //    var dictionary = new Dictionary<string, (string, string)>();
-            //    foreach (var packageID in packageIDs)
-            //    {
-            //        var mod = ModLister.GetActiveModWithIdentifier(packageID);
-            //        if (mod != null)
-            //        {
-            //            string translationKey = null;
-            //            foreach (var moduleName in moduleNames)
-            //            {
-            //                if (packageID.ContainsIgnoreCase(moduleName))
-            //                {
-            //                    translationKey = moduleName;
-            //                    break;
-            //                }
-            //            }
-
-            //            string modVersion = mod.ModVersion ?? "??";
-            //            translationKey ??= HasMainModule ? $"{Module.Full}" : "??";
-            //            dictionary[mod.Name] = (modVersion, translationKey);
-
-            //            // If main is installed, the others won't be, or shouldn't be
-            //            if (translationKey == $"{Module.Full}")
-            //            {
-            //                return dictionary;
-            //            }
-            //        }
-            //    }
-            //    return dictionary;
-            //}
-
-            //public static Dictionary<string, (string version, string translationKey)> GetModVersions(params string[] packageIDs)
-            //{
-            //    if (packageIDs.Length == 0)
-            //        return [];
-
-            //    var dictionary = new Dictionary<string, (string, string)>();
-            //    foreach (var packageID in packageIDs)
-            //    {
-            //        var mod = ModLister.GetActiveModWithIdentifier(packageID);
-            //        if (mod != null)
-            //        {
-            //            string translationKey = null;
-            //            foreach (var moduleName in StaticArrays.ModuleNames)
-            //            {
-            //                if (packageID.ContainsIgnoreCase(moduleName))
-            //                {
-            //                    translationKey = moduleName;
-            //                    break;
-            //                }
-            //            }
-
-            //            string modVersion = mod.ModVersion ?? "??";
-            //            translationKey ??= HasMainModule ? $"{Module.Full}" : "??";
-            //            dictionary[mod.Name] = (modVersion, translationKey);
-
-            //            // If main is installed, the others won't be, or shouldn't be
-            //            if (translationKey == $"{Module.Full}")
-            //            {
-            //                return dictionary;
-            //            }
-            //        }
-            //    }
-            //    return dictionary;
-            //}
 
             public static Dictionary<string, (string version, string translationKey)> GetModVersions(params string[] packageIDs)
             {
@@ -309,6 +236,13 @@ namespace NewHarvestPatches
             public static NewHarvestPatchesModSettings Settings => NewHarvestPatchesMod.Settings;
 
             public static IEnumerable<string> EnabledSettings => Settings.EnabledSettings;
+
+            public static List<string> ExtractNamesFromEnabledSettings(string substring)
+            {
+                return [.. EnabledSettings
+                .Where(s => s.StartsWith(substring))
+                .Select(s => s.Substring(substring.Length))];
+            }
         }
 
         public static class ModChecker
@@ -321,30 +255,29 @@ namespace NewHarvestPatches
             public static bool HasTreesModule = HasMainModule || IsModActive("vvenchov.vvnewharvesttrees");
             public static bool HasFlowersModule = HasMainModule || IsModActive("vvenchov.vvnewharvestflowers");
             public static bool HasAnyModule = HasForageModule || HasGardenModule || HasIndustrialModule || HasMedicinalModule || HasTreesModule || HasFlowersModule;
-            public static bool HasOdyssey = IsModActive("ludeon.rimworld.odyssey");
-            public static bool HasIdeology = IsModActive("ludeon.rimworld.ideology");
-            public static bool HasMedievalOverhaul = IsModActive("dankpyon.medieval.overhaul");
-            public static bool HasVanillaCookingExpanded = IsModActive("vanillaexpanded.vcooke");
+            public static bool HasMedievalOverhaul = ModsConfig.IsActive("dankpyon.medieval.overhaul");
+            public static bool HasVanillaCookingExpanded = ModsConfig.IsActive("vanillaexpanded.vcooke");
+            public static bool HasVanillaPlantsExpandedMorePlants = ModsConfig.IsActive("vanillaexpanded.vplantsemore");
 
             /// <summary>
             /// If installed, show setting to move Medicinal module drinks to its non-alcoholic category.
             /// </summary>
-            public static bool HasVanillaBrewingExpanded = IsModActive("vanillaexpanded.vbrewe");
+            public static bool HasVanillaBrewingExpanded = ModsConfig.IsActive("vanillaexpanded.vbrewe");
 
             /// <summary>
             /// If Ferny's Floor Menu is active, we don't need to show our floor dropdown settings, as it makes dropdowns obsolete.
             /// </summary>
-            public static bool HasFernyFloorMenu = IsModActive("ferny.floormenu");
+            public static bool HasFernyFloorMenu = ModsConfig.IsActive("ferny.floormenu");
 
             /// <summary>
             /// If Vanilla Expanded Framework is active, we can show commonality sliders utlizing its StuffExtension class instead of base game commonality stat.
             /// </summary>
-            public static bool HasVanillaExpandedFramework = IsModActive("oskarpotocki.vanillafactionsexpanded.core");
+            public static bool HasVanillaExpandedFramework = ModsConfig.IsActive("oskarpotocki.vanillafactionsexpanded.core");
 
             /// <summary>
             /// If Better Sliders is active, we don't need to place text fields next to our sliders.
             /// </summary>
-            public static bool HasBetterSliders = IsModActive("sirrandoo.bettersliders");
+            public static bool HasBetterSliders = ModsConfig.IsActive("sirrandoo.bettersliders");
 
 
             /// <summary>
@@ -371,7 +304,7 @@ namespace NewHarvestPatches
             /// <remarks>If !HasIndustrialModule or HasMedievalOverhaul or LWM's Fuel Filter is active this returns <see langword="false"/>.
             /// Both mods add a fuel ITab, so user can just toggle fuels themselves.
             /// </remarks>
-            public static bool ShowFuelSettings = HasIndustrialModule && !HasMedievalOverhaul && !IsModActive("zal.lwmfuelfilter");
+            public static bool ShowFuelSettings = HasIndustrialModule && !HasMedievalOverhaul && !ModsConfig.IsActive("zal.lwmfuelfilter");
 
             /// <summary>
             /// Indicates whether the Wood Conversion Recipe setting should be displayed in menu.
@@ -387,6 +320,10 @@ namespace NewHarvestPatches
             /// <remarks>If !HasIndustrialModule or !HasVanillaExpandedFramework, returns <see langword="false"/>.</remarks>
             public static bool ShowVEFCommonalitySettings = HasIndustrialModule && HasVanillaExpandedFramework;
 
+            /// <summary>
+            /// Checks if a mod is active based on its PackageID.  Mainly used to check for New Harvest modules while ignoring steam_suffix postfix for Dev versions.
+            /// </summary>
+            /// <returns>Returns <see langword="false"/> if the passed PackageID is not active.</returns>
             public static bool IsModActive(string packageId, bool ignorePostfix = true)
             {
                 return !string.IsNullOrWhiteSpace(packageId) && ModLister.GetActiveModWithIdentifier(packageId, ignorePostfix) != null;

@@ -35,11 +35,6 @@ namespace NewHarvestPatches
             if (dictionary.NullOrEmpty())
                 return;
 
-            //var enabledDefNames = EnabledSettings
-            //    .Where(s => s.StartsWith(Setting.Prefix.ColorChange_))
-            //    .Select(s => s.Substring(Setting.Prefix.ColorChange_.Length))
-            //    .ToList();
-
             var enabledDefNames = ExtractNamesFromEnabledSettings(Setting.Prefix.ColorChange_);
             if (enabledDefNames.NullOrEmpty())
                 return;

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="AYApothecaryTable"]</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/WorkGiverDef[defName="VV_NHCP_DoBillsAlchemyCooking"]/fixedBillGiverDefs</xpath>
+            <value>
+                <li>AYApothecaryTable</li>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Apothecary Expansion</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Untamo_AYApothecaryTable_Basic"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/WorkGiverDef[defName="VV_NHCP_DoBillsAlchemyCooking"]/fixedBillGiverDefs</xpath>
+                        <value>
+                            <li>Untamo_AYApothecaryTable_Basic</li>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Untamo_AYApothecaryTable_Intermediate"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/WorkGiverDef[defName="VV_NHCP_DoBillsAlchemyCooking"]/fixedBillGiverDefs</xpath>
+                        <value>
+                            <li>Untamo_AYApothecaryTable_Intermediate</li>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Untamo_AYApothecaryTable_Advanced"]</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/WorkGiverDef[defName="VV_NHCP_DoBillsAlchemyCooking"]/fixedBillGiverDefs</xpath>
+                        <value>
+                            <li>Untamo_AYApothecaryTable_Advanced</li>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

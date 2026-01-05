@@ -53,6 +53,7 @@ namespace NewHarvestPatches
             {
                 current = current.Parent;
             }
+
             return current;
         }
 
@@ -60,11 +61,13 @@ namespace NewHarvestPatches
         {
             if (info.Getter == null || !info.Getter())
                 return true;
+
             var parent = info.Parent;
             while (parent != null)
             {
                 if (parent.Getter == null || !parent.Getter())
                     return true;
+
                 parent = parent.Parent;
             }
             return false;
@@ -80,7 +83,7 @@ namespace NewHarvestPatches
                     getter: () => settings.Logging,
                     setter: v => settings.Logging = v,
                     defForIcon: DefDatabase<ThingDef>.GetNamedSilentFail($"{ModName.Prefix.VV_NHCP_}Logging_UIDef")
-                )
+                ),
             };
 
             if (HasForageModule)
@@ -142,12 +145,11 @@ namespace NewHarvestPatches
             }
             else
             {
+                settings.AddHayConversionRecipe = false;
                 settings.AddToAnimalFoodsCategory = false;
                 settings.MergeAnimalFoodsCategory = false;
                 settings.AnimalFoodsCategoryResourceReadout = false;
             }
-
-
 
             if (HasAnyFruit)
             {
@@ -246,6 +248,10 @@ namespace NewHarvestPatches
                         setter: v => settings.GrainsProduceVCEFlourSecondary = v,
                         defForIcon: DefDatabase<ThingDef>.GetNamedSilentFail("VCE_Flour")
                     ));
+                }
+                else
+                {
+                    settings.GrainsProduceVCEFlourSecondary = false;
                 }
             }
             else
@@ -357,13 +363,17 @@ namespace NewHarvestPatches
                 defForIconList = [.. DefDatabase<ThingDef>.AllDefsListForReading
                     .Where(d => d?.defName?.StartsAndEndsWith(start: ModName.Prefix.VV_, end: "Tea") == true && d.IsIngestible)
                     .Select(d => d.defName)];
-                var defForIcon = defForIconList.Count > 0 ? GetRandomizedDefForIcon<ThingDef>([.. defForIconList]) : null;
+                var defForIcon = defForIconList.Count > 0 ? DefUtility.GetRandomizedDefForIcon<ThingDef>([.. defForIconList]) : null;
                 list.Add(new CheckboxInfo(
                     settingName: nameof(settings.MoveDrinksToVBECategory),
                     getter: () => settings.MoveDrinksToVBECategory,
                     setter: v => settings.MoveDrinksToVBECategory = v,
                     defForIcon: defForIcon
                 ));
+            }
+            else
+            {
+                settings.MoveDrinksToVBECategory = false;
             }
 
             if (HasIndustrialModule)
@@ -426,13 +436,19 @@ namespace NewHarvestPatches
                         defForIcon: DefDatabase<TerrainDef>.GetNamedSilentFail("VV_RosewoodFloor")
                     ));
                 }
+                else
+                {
+                    settings.NewHarvestWoodFloorsToDropdowns = false;
+                    settings.BaseWoodFloorsToDropdowns = false;
+                    settings.ModWoodFloorsToDropdowns = false;
+                }
 
                 if (ShowWoodConvertRecipe)
                 {
-                    defForIconList = [.. IndustrialResourceDefDictionary?
+                    defForIconList = [.. ThingDefUtility.IndustrialResourceDefDictionary?
                     .Where(kvp => kvp.Value.isWood)
                     .Select(kvp => kvp.Key.defName)];
-                    var defForIcon = defForIconList.Count > 0 ? GetRandomizedDefForIcon<ThingDef>([.. defForIconList]) : null;
+                    var defForIcon = defForIconList.Count > 0 ? DefUtility.GetRandomizedDefForIcon<ThingDef>([.. defForIconList]) : null;
                     list.Add(new CheckboxInfo(
                         settingName: nameof(settings.AddWoodConversionRecipe),
                         getter: () => settings.AddWoodConversionRecipe,
@@ -441,14 +457,18 @@ namespace NewHarvestPatches
                         defForIcon: defForIcon
                     ));
                 }
+                else
+                {
+                    settings.AddWoodConversionRecipe = false;
+                }
 
-                if (HasIdeology)
+                if (ModsConfig.RoyaltyActive)
                 {
                     defForIconList = [.. DefDatabase<GauranlenTreeModeDef>.AllDefsListForReading
                     .Where(d => d?.defName?.StartsWith(ModName.Prefix.VV_) == true &&
                                 d.hyperlinks[0].def?.defName?.StartsWith(ModName.Prefix.VV_NHCP_) == true)
                     .Select(d => d.hyperlinks[0].def.defName)];
-                    var defForIcon = defForIconList.Count > 0 ? GetRandomizedDefForIcon<ThingDef>([.. defForIconList]) : null;
+                    var defForIcon = defForIconList.Count > 0 ? DefUtility.GetRandomizedDefForIcon<ThingDef>([.. defForIconList]) : null;
                     list.Add(new CheckboxInfo(
                         settingName: nameof(settings.AddWoodDryads),
                         getter: () => settings.AddWoodDryads,
@@ -456,8 +476,12 @@ namespace NewHarvestPatches
                         defForIcon: HasIndustrialModule ? defForIcon : null
                     ));
                 }
+                else
+                {
+                    settings.AddWoodDryads = false;
+                }
 
-                if (HasOdyssey)
+                if (ModsConfig.OdysseyActive)
                 {
                     list.Add(new CheckboxInfo(
                         settingName: nameof(settings.AddAquaticReedsToBiomes),
@@ -466,6 +490,21 @@ namespace NewHarvestPatches
                         defForIcon: DefDatabase<ThingDef>.GetNamedSilentFail("VV_ReedPlant")
                     ));
                 }
+                else
+                {
+                    settings.AddAquaticReedsToBiomes = false;
+                }
+            }
+            else
+            {
+                settings.UseVanillaLogGraphic = false;
+                settings.AddMoreWoodFloors = false;
+                settings.NewHarvestWoodFloorsToDropdowns = false;
+                settings.BaseWoodFloorsToDropdowns = false;
+                settings.ModWoodFloorsToDropdowns = false;
+                settings.AddWoodConversionRecipe = false;
+                settings.AddWoodDryads = false;
+                settings.AddAquaticReedsToBiomes = false;
             }
 
             if (HasForageModule || HasIndustrialModule)
@@ -476,7 +515,7 @@ namespace NewHarvestPatches
                                 d.costList?.Count == 1 &&
                                 d.costList[0]?.thingDef?.defName?.Contains("Wood") is false)
                     .Select(d => d.defName)];
-                var defForIcon = defForIconList.Count > 0 ? GetRandomizedDefForIcon<TerrainDef>([.. defForIconList]) : null;
+                var defForIcon = defForIconList.Count > 0 ? DefUtility.GetRandomizedDefForIcon<TerrainDef>([.. defForIconList]) : null;
                 list.Add(new CheckboxInfo(
                     settingName: nameof(settings.NewHarvestNonWoodFloorsToDropdown),
                     getter: () => settings.NewHarvestNonWoodFloorsToDropdown,
@@ -485,10 +524,14 @@ namespace NewHarvestPatches
                     defForIcon: defForIcon
                 ));
             }
+            else
+            {
+                settings.NewHarvestNonWoodFloorsToDropdown = false;
+            }
 
             if (ShowFuelSettings)
             {
-                var dictionary = IndustrialResourceDefDictionary;
+                var dictionary = ThingDefUtility.IndustrialResourceDefDictionary;
                 if (dictionary.NullOrEmpty())
                 {
                     ToLog($"Could not get Industrial defs for fuel dictionary.", 2);
@@ -529,7 +572,7 @@ namespace NewHarvestPatches
 
             if (HasAnyTrees)
             {
-                var treeList = DeciduousTreeDefs;
+                var treeList = ThingDefUtility.DeciduousTreeDefs;
                 if (treeList.NullOrEmpty())
                 {
                     ToLog($"Could not get fall color tree defs.", 2);

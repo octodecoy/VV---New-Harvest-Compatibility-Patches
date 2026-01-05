@@ -1,12 +1,9 @@
-using Verse;
-
 namespace NewHarvestPatches
 {
     // [StaticConstructorOnStartup] or else warning.
     [StaticConstructorOnStartup]
     public static class UITextureBank
     {
-        //public static Texture2D UIBackgroundIcon = ContentFinder<Texture2D>.Get("NHCP/UI/MenuBackground/BackgroundLogo", false);
         public static Texture2D UIBackgroundIcon = null;
 
         static UITextureBank()

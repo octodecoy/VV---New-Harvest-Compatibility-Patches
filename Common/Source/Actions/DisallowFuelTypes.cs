@@ -26,16 +26,11 @@ namespace NewHarvestPatches
 
         private static void DisallowFuels()
         {
-            //var disabledFuelDefNames = EnabledSettings
-            //    .Where(s => s.StartsWith(Setting.Prefix.DisabledFuel_))
-            //    .Select(s => s.Substring(Setting.Prefix.DisabledFuel_.Length))
-            //    .ToList();
-
             var disabledDefNames = ExtractNamesFromEnabledSettings(Setting.Prefix.DisabledFuel_);
             if (disabledDefNames.NullOrEmpty())
                 return;
 
-            var fuelDefs = GetDefsOfTypeByDefNames<ThingDef>(defNames: [.. disabledDefNames]).ToHashSet();
+            var fuelDefs = DefUtility.GetDefsOfTypeByDefNames<ThingDef>(defNames: [.. disabledDefNames]).ToHashSet();
             if (fuelDefs.NullOrEmpty())
                 return;
 

@@ -77,35 +77,35 @@ namespace NewHarvestPatches
                     if (HasForageModule && Settings.AddToAnimalFoodsCategory && !Settings.MergeAnimalFoodsCategory)
                     {
                         sourceCategory = NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_AnimalFoods;
-                        thingDefList = GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
+                        thingDefList = ThingDefUtility.GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
                         TrySyncDefsToCategory(thingDefList, sourceCategory?.defName, Category.Type.AnimalFoods, "Hay");
                     }
 
                     if (HasAnyFruit && Settings.AddToFruitCategory && !Settings.MergeFruitCategory)
                     {
                         sourceCategory = NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Fruit;
-                        thingDefList = GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
+                        thingDefList = ThingDefUtility.GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
                         TrySyncDefsToCategory(thingDefList, sourceCategory?.defName, Category.Type.Fruit, "RawBerries");
                     }
 
                     if (HasGardenModule && Settings.AddToGrainsCategory && !Settings.MergeGrainsCategory)
                     {
                         sourceCategory = NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Grains;
-                        thingDefList = GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
+                        thingDefList = ThingDefUtility.GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
                         TrySyncDefsToCategory(thingDefList, sourceCategory?.defName, Category.Type.Grains, "RawCorn");
                     }
 
                     if (HasTreesModule && Settings.AddToNutsCategory && !Settings.MergeNutsCategory)
                     {
                         sourceCategory = NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Nuts;
-                        thingDefList = GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
+                        thingDefList = ThingDefUtility.GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
                         TrySyncDefsToCategory(thingDefList, sourceCategory?.defName, Category.Type.Nuts);
                     }
 
                     if (HasAnyVegetables && Settings.AddToVegetablesCategory && !Settings.MergeVegetablesCategory)
                     {
                         sourceCategory = NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Vegetables;
-                        thingDefList = GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
+                        thingDefList = ThingDefUtility.GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
                         TrySyncDefsToCategory(thingDefList, sourceCategory?.defName, Category.Type.Vegetables, "RawPotatoes");
                     }
                 }

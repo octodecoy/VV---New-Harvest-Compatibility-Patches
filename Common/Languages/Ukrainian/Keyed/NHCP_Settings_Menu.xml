@@ -17,7 +17,6 @@
     <NHCP.General_Industrial>Індустріальний</NHCP.General_Industrial>
     <NHCP.General_Medicinal>Лікувальний</NHCP.General_Medicinal>
     <NHCP.General_Trees>Дерева</NHCP.General_Trees>
-    <NHCP.General_Flowers>Квіти</NHCP.General_Flowers>
     <NHCP.Button_Select>Вибрати</NHCP.Button_Select>
     <NHCP.General_Default>За замовчуванням: {0}</NHCP.General_Default>
     <NHCP.ON>УВІМК.</NHCP.ON>
@@ -30,8 +29,6 @@
     <NHCP.TabSubLabel_CommonalityDescription>Значення поширеності визначають ймовірність появи матеріалу.\nМін: 0, Макс: 100\n0 = ніколи не з’являється; 100 не означає 100% — це відносно інших матеріалів.\nПриклад: Дерево = 1,0; Золото = 0,02, будьте обережні з високими значеннями.</NHCP.TabSubLabel_CommonalityDescription>
     <NHCP.CheckboxLabel_Logging>Логування</NHCP.CheckboxLabel_Logging>
     <NHCP.CheckboxSubLabel_Logging>Реєструє деяку інформацію при запуску гри.\nЙмовірно, увімкнути це не потрібно.</NHCP.CheckboxSubLabel_Logging>
-    <NHCP.CheckboxLabel_HayNeedsCooling>Сіно потребує охолодження</NHCP.CheckboxLabel_HayNeedsCooling>
-    <NHCP.CheckboxSubLabel_HayNeedsCooling>Якщо вимкнено, зникає потреба охолоджувати сіно з Нового Урожаю.\nНатомість воно просто буде псуватися на вулиці.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.General_AnimalFoods>Корм для тварин</NHCP.General_AnimalFoods>
     <NHCP.General_Grains>Зерно</NHCP.General_Grains>
     <NHCP.General_Fruit>Фрукти</NHCP.General_Fruit>
@@ -83,6 +80,9 @@
     <NHCP.Button_SettingsReset>налаштування скинуто!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Змінити назву категорії</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Назву успішно змінено на:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_HayNeedsCooling>Сіно потребує охолодження</NHCP.CheckboxLabel_HayNeedsCooling>
+    <NHCP.CheckboxSubLabel_HayNeedsCooling>Якщо вимкнено, зникає потреба охолоджувати сіно з Нового Урожаю.\nНатомість воно просто буде псуватися на вулиці.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Зернові продукують борошно Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Свіжозібрані зернові рослини вироблятимуть борошно Vanilla Cooking Expanded як побічний продукт у кількості половини від врожаю зерна.\n(Приклад: рослини амаранту дадуть 10 зерен амаранту та 5 борошна)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.General_Flowers>Квіти</NHCP.General_Flowers>
 </LanguageData>

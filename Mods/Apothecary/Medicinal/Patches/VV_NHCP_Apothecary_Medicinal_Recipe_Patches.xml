@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="MakeAYYarrowOil" or defName="MakeBulkAYYarrowOil"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYYarrowOil" or defName="MakeBulkAYYarrowOil"]/ingredients/li/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_YarrowBlossoms</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYYarrowOil" or defName="MakeBulkAYYarrowOil"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>VV_YarrowBlossoms</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="MakeAYStJohnsWortOil" or defName="MakeBulkAYStJohnsWortOil"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYStJohnsWortOil" or defName="MakeBulkAYStJohnsWortOil"]/ingredients/li/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_StJohnsWortBlossoms</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYYarrowOil" or defName="MakeBulkAYYarrowOil"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>VV_StJohnsWortBlossoms</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="MakeAYGinkgoPowder" or defName="MakeBulkAYGinkgoPowder"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYGinkgoPowder" or defName="MakeBulkAYGinkgoPowder"]/ingredients/li/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_GinkgoLeaves</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYGinkgoPowder" or defName="MakeBulkAYGinkgoPowder"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>VV_GinkgoLeaves</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="MakeAYGinsengPowder" or defName="MakeBulkAYGinsengPowder"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYGinsengPowder" or defName="MakeBulkAYGinsengPowder"]/ingredients/li/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_GinsengRoots</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYGinsengPowder" or defName="MakeBulkAYGinsengPowder"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>VV_GinsengRoots</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>
+            /Defs/RecipeDef[
+            defName="MakeAYNettlePowder" or 
+            defName="MakeBulkAYNettlePowder" or 
+            defName="MakeAYCompost" or 
+            defName="MakeBulkAYCompost" or 
+            defName="MakeNettleHemp" or 
+            defName="MakeBulkAYNettleHemp"]
+        </xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/RecipeDef[
+                        defName="MakeAYNettlePowder" or 
+                        defName="MakeBulkAYNettlePowder" or 
+                        defName="MakeAYCompost" or 
+                        defName="MakeBulkAYCompost" or 
+                        defName="MakeNettleHemp" or 
+                        defName="MakeBulkAYNettleHemp"]
+                        /ingredients/li/filter/thingDefs
+                    </xpath>
+                    <value>
+                        <li>VV_NettleLeaves</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/RecipeDef[
+                        defName="MakeAYNettlePowder" or 
+                        defName="MakeBulkAYNettlePowder" or 
+                        defName="MakeAYCompost" or 
+                        defName="MakeBulkAYCompost" or 
+                        defName="MakeNettleHemp" or 
+                        defName="MakeBulkAYNettleHemp"]
+                        /fixedIngredientFilter/thingDefs
+                    </xpath>
+                    <value>
+                        <li>VV_NettleLeaves</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

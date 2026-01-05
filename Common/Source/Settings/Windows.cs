@@ -52,7 +52,7 @@ namespace NewHarvestPatches
 
             private void DoModulesWindow(Listing_Standard ls)
             {
-                var installedModules = NewHarvestVersions;
+                var installedModules = Utils.VersionChecker.NewHarvestVersions;
                 Text.Anchor = TextAnchor.MiddleLeft;
                 GUI.color = cyan;
                 foreach (var (version, key) in installedModules.Values)

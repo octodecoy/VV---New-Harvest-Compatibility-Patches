@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[defName="MakeAYSaltedMeatBarrel" or defName="MakeAYSaltedMeatBarrel"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYSaltedMeatBarrel" or defName="MakeAYSaltedMeatBarrel"]/ingredients/li[2]/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_CedarWood</li>
+                        <li>VV_EbonyWood</li>
+                        <li>VV_MahoganyWood</li>
+                        <li>VV_RosewoodWood</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="MakeAYSaltedMeatBarrel" or defName="MakeAYSaltedMeatBarrel"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>VV_CedarWood</li>
+                        <li>VV_EbonyWood</li>
+                        <li>VV_MahoganyWood</li>
+                        <li>VV_RosewoodWood</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

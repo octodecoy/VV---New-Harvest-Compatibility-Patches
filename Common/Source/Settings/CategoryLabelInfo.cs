@@ -12,7 +12,7 @@
         internal static void CacheDefaultCategoryLabelInfo(ref Dictionary<string, CategoryLabelInfo> categoryLabelCache)
         {
             categoryLabelCache ??= [];
-            var categories = GetThingCategoryDefs();
+            var categories = ThingCategoryUtility.GetThingCategoryDefs();
             foreach (var category in categories)
             {
                 if (!categoryLabelCache.TryGetValue(category.defName, out var categoryLabelInfo))
@@ -55,7 +55,7 @@
             if (Settings.CategoryLabelCache.NullOrEmpty())
                 return;
 
-            var categories = GetThingCategoryDefs();
+            var categories = ThingCategoryUtility.GetThingCategoryDefs();
             foreach (var category in categories)
             {
                 if (!Settings.CategoryLabelCache.TryGetValue(category.defName, out var categoryLabelInfo))

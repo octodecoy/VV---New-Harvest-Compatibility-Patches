@@ -1,66 +1,9 @@
 namespace NewHarvestPatches
 {
-    internal static class DefHelpers
+    internal static class ThingDefUtility
     {
-        internal static List<ThingCategoryDef> GetThingCategoryDefs()
-        {
-            return
-            [
-                NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_AnimalFoods,
-                NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Fruit,
-                NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Grains,
-                NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Nuts,
-                NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Vegetables
-            ];
-        }
-
         public static Dictionary<ThingDef, (bool canBeFuel, bool isWood)> IndustrialResourceDefDictionary => GetIndustrialResourceDefDictionary();
         public static List<ThingDef> DeciduousTreeDefs => GetDeciduousTreeDefs();
-
-        public static List<string> ExtractNamesFromEnabledSettings(string substring)
-        {
-            return [.. EnabledSettings
-                .Where(s => s.StartsWith(substring))
-                .Select(s => s.Substring(substring.Length))];
-        }
-
-        public static T GetRandomizedDefForIcon<T>(params string[] defNames) where T : Def
-        {
-            if (defNames.NullOrEmpty())
-                return null;
-
-            return DefDatabase<T>.GetNamedSilentFail(defNames[Rand.Range(0, defNames.Length)]);
-        }
-
-        public static List<T> GetDefsOfTypeByModContentPack<T>(params string[] packageIDs) where T : Def
-        {
-            // Not as helpful as initially thought, as patch added/replaced defs can have null modcontentpack
-            if (packageIDs.NullOrEmpty())
-                return [];
-
-            var packageIDsList = packageIDs.ToList();
-            packageIDsList.Add(NewHarvestPatchesMod.Instance.MetaData.PackageId); // Our own packageID
-
-            return [.. DefDatabase<T>.AllDefsListForReading
-                .Where(d => d.modContentPack?.PackageId is string id &&
-                            packageIDsList.Any(pid => string.Equals(pid, id, StringComparison.OrdinalIgnoreCase)))];
-        }
-
-
-        public static List<T> GetDefsOfTypeByDefNames<T>(bool order = true, params string[] defNames) where T : Def
-        {
-            if (defNames.NullOrEmpty())
-                return [];
-
-            var defs = new List<T>();
-            foreach (var defName in defNames)
-            {
-                var def = DefDatabase<T>.GetNamedSilentFail(defName);
-                if (def != null)
-                    defs.Add(def);
-            }
-            return order ? [.. defs.OrderBy(td => td.label, StringComparer.Create(CultureInfo.CurrentCulture, false)).ToList()] : defs;
-        }
 
         private static Dictionary<ThingDef, (bool canBeFuel, bool isWood)> GetIndustrialResourceDefDictionary(bool order = true)
         {

@@ -9,6 +9,6 @@ namespace NewHarvestPatches
         Crafting,
         Floors,
         Fuel,
-        Visuals
+        Visuals,
     }
 }

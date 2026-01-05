@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildPlants</xpath>
+        <value>
+            <VV_Ivy>0.05</VV_Ivy>
+        </value>
+    </Operation>      
+</Patch>

@@ -25,11 +25,6 @@ namespace NewHarvestPatches
 
         private static void DisableFallColors()
         { 
-            //var treesDefNames = EnabledSettings
-            //    .Where(s => s.StartsWith(Setting.Prefix.NoFallColors_))
-            //    .Select(s => s.Substring(Setting.Prefix.NoFallColors_.Length))
-            //    .ToList();
-
             var enabledDefNames = ExtractNamesFromEnabledSettings(Setting.Prefix.NoFallColors_);
             if (enabledDefNames.NullOrEmpty())
                 return;

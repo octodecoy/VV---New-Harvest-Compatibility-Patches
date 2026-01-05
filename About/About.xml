@@ -3,7 +3,7 @@
     <name>VV - New Harvest: Compatibility Patches</name>
     <author>octodecoy</author>
     <packageId>octodecoy.vvnewharvest.compatpatches</packageId>
-    <modVersion>1.6</modVersion> <!-- 12/18/25 -->
+    <modVersion>1.7</modVersion> <!-- 1/5/26 -->
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
@@ -81,5 +81,6 @@
         <li>sarg.alphacrafts</li>
         <li>vanillaexpanded.vcooke</li>
         <!-- May or may not be needed but why not -->
+        <li>untamo.apothecary.expansion</li>
     </loadAfter>
 </ModMetaData>

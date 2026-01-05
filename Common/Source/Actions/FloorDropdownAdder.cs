@@ -30,7 +30,7 @@ namespace NewHarvestPatches
 
         private static List<ThingDef> GetNewHarvestWoodDefs()
         {
-            var woodList = IndustrialResourceDefDictionary;
+            var woodList = ThingDefUtility.IndustrialResourceDefDictionary;
             if (woodList.NullOrEmpty())
                 return [];
 

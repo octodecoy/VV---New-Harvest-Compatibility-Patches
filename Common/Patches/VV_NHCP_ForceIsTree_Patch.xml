@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Industrial Crops</li>
+        </mods>
+        <match Class="NewHarvestPatches.AddOrReplace">
+            <xpath>/Defs/ThingDef[defName="VV_CorkTree" or defName="VV_WhiteMulberryTree" or defName="VV_RubberTree"]/plant</xpath>
+            <value>
+                <forceIsTree>true</forceIsTree>
+            </value>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>
+        </mods>
+        <match Class="NewHarvestPatches.AddOrReplace">
+            <xpath>/Defs/ThingDef[defName="VV_LindenTree" or defName="VV_HawthornTree" or defName="VV_GinkgoTree"]/plant</xpath>
+            <value>
+                <forceIsTree>true</forceIsTree>
+            </value>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Trees</li>
+        </mods>
+        <match Class="NewHarvestPatches.AddOrReplace">
+            <xpath>
+                /Defs/ThingDef[
+                defName="VV_SourCherryTree" or 
+                defName="VV_ApricotTree" or 
+                defName="VV_QuinceTree" or
+                defName="VV_MedlarTree" or
+                defName="VV_MulberryTree" or
+                defName="VV_PapayaTree" or
+                defName="VV_GrapefruitTree" or
+                defName="VV_PomegranateTree" or
+                defName="VV_DurianTree" or
+                defName="VV_WalnutTree" or
+                defName="VV_HazelnutTree" or
+                defName="VV_JabuticabaTree" or
+                defName="VV_CashewTree" or
+                defName="VV_ChestnutTree" or
+                defName="VV_StonePineTree" or
+                defName="VV_LimeTree" or
+                defName="VV_PersimmonTree" or
+                defName="VV_PecanTree" or
+                defName="VV_SugarMapleTree"]
+                /plant
+            </xpath>
+            <value>
+                <forceIsTree>true</forceIsTree>
+            </value>
+        </match>
+    </Operation>
+</Patch>

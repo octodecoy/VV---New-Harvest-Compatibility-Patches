@@ -29,14 +29,9 @@ namespace NewHarvestPatches
 
         private static ThingDef[] GetEnabledDefs()
         {
-            //var enabledDefNames = EnabledSettings
-            //    .Where(s => s.StartsWith(Setting.Prefix.SetCommonality_))
-            //    .Select(s => s.Substring(Setting.Prefix.SetCommonality_.Length))
-            //    .ToList();
-
             var enabledDefNames = ExtractNamesFromEnabledSettings(Setting.Prefix.SetCommonality_);
 
-            return !enabledDefNames.NullOrEmpty() ? [.. GetDefsOfTypeByDefNames<ThingDef>(order: false, defNames: [.. enabledDefNames])] : [];
+            return !enabledDefNames.NullOrEmpty() ? [.. DefUtility.GetDefsOfTypeByDefNames<ThingDef>(order: false, defNames: [.. enabledDefNames])] : [];
         }
 
         private static void ChangeStuffCommonality_Standard()

@@ -66,6 +66,7 @@ namespace NewHarvestPatches
                 public const string Button = nameof(Button);
                 public const string SectionLabel = nameof(SectionLabel);
                 public const string RadioLabel = nameof(RadioLabel);
+                public const string Tooltip = nameof(Tooltip);
             }
         }
 

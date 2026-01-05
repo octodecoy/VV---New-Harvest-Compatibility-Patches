@@ -17,7 +17,6 @@
     <NHCP.General_Industrial>산업</NHCP.General_Industrial>
     <NHCP.General_Medicinal>약용</NHCP.General_Medicinal>
     <NHCP.General_Trees>나무</NHCP.General_Trees>
-    <NHCP.General_Flowers>꽃</NHCP.General_Flowers>
     <NHCP.Button_Select>선택</NHCP.Button_Select>
     <NHCP.General_Default>기본값: {0}</NHCP.General_Default>
     <NHCP.ON>켜짐</NHCP.ON>
@@ -30,8 +29,6 @@
     <NHCP.TabSubLabel_CommonalityDescription>희귀도 값은 재료가 생성될 확률을 정의합니다.\n최소: 0, 최대: 100\n0 = 생성되지 않음; 100 = 100%를 의미하지 않으며, 다른 재료와의 상대적인 값입니다.\n참고: 나무 = 1.0; 금 = 0.02. 높은 값은 주의하세요.</NHCP.TabSubLabel_CommonalityDescription>
     <NHCP.CheckboxLabel_Logging>로그 기록</NHCP.CheckboxLabel_Logging>
     <NHCP.CheckboxSubLabel_Logging>게임 시작 시 일부 정보를 기록합니다.\n일반적으로 켜두지 않는 것이 좋습니다.</NHCP.CheckboxSubLabel_Logging>
-    <NHCP.CheckboxLabel_HayNeedsCooling>건초는 냉장이 필요함</NHCP.CheckboxLabel_HayNeedsCooling>
-    <NHCP.CheckboxSubLabel_HayNeedsCooling>해제하면 새 수확 건초를 냉장할 필요가 없어집니다.\n대신 야외에 두면 점차 부패하게 됩니다.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.General_AnimalFoods>동물 먹이</NHCP.General_AnimalFoods>
     <NHCP.General_Grains>곡물</NHCP.General_Grains>
     <NHCP.General_Fruit>과일</NHCP.General_Fruit>
@@ -83,6 +80,9 @@
     <NHCP.Button_SettingsReset>설정이 재설정되었습니다!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>카테고리 레이블 변경</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>레이블이 다음으로 성공적으로 변경되었습니다:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_HayNeedsCooling>건초는 냉장이 필요함</NHCP.CheckboxLabel_HayNeedsCooling>
+    <NHCP.CheckboxSubLabel_HayNeedsCooling>해제하면 새 수확 건초를 냉장할 필요가 없어집니다.\n대신 야외에 두면 점차 부패하게 됩니다.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>곡물이 Vanilla Cooking Expanded 밀가루를 생산</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>수확한 곡물 작물은 부가적으로 Vanilla Cooking Expanded 밀가루를 곡물 양의 절반만큼 생산합니다.\n(예: 아마란스 작물은 아마란스 곡물 10개와 밀가루 5개를 생산합니다)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.General_Flowers>꽃</NHCP.General_Flowers>
 </LanguageData>

@@ -17,7 +17,6 @@
     <NHCP.General_Industrial>Промышленный</NHCP.General_Industrial>
     <NHCP.General_Medicinal>Лекарственные</NHCP.General_Medicinal>
     <NHCP.General_Trees>Деревья</NHCP.General_Trees>
-    <NHCP.General_Flowers>Цветы</NHCP.General_Flowers>
     <NHCP.Button_Select>Выбрать</NHCP.Button_Select>
     <NHCP.General_Default>По умолчанию: {0}</NHCP.General_Default>
     <NHCP.ON>ВКЛ</NHCP.ON>
@@ -30,8 +29,6 @@
     <NHCP.TabSubLabel_CommonalityDescription>Значения распространённости определяют вероятность появления материала.\nМин: 0, Макс: 100\n0 = никогда не появляется; 100 не означает 100% — это относительное значение по сравнению с другими материалами.\nПример: Дерево = 1.0; Золото = 0.02, будьте осторожны с высокими значениями.</NHCP.TabSubLabel_CommonalityDescription>
     <NHCP.CheckboxLabel_Logging>Логирование</NHCP.CheckboxLabel_Logging>
     <NHCP.CheckboxSubLabel_Logging>Логирует некоторую информацию при запуске игры.\nВероятно, включать это не стоит.</NHCP.CheckboxSubLabel_Logging>
-    <NHCP.CheckboxLabel_HayNeedsCooling>Сено нужно охлаждать</NHCP.CheckboxLabel_HayNeedsCooling>
-    <NHCP.CheckboxSubLabel_HayNeedsCooling>Если отключено, отпадает необходимость охлаждать сено из Нового Урожая.\nВместо этого оно просто будет портиться на улице.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.General_AnimalFoods>Корма для животных</NHCP.General_AnimalFoods>
     <NHCP.General_Grains>Зерно</NHCP.General_Grains>
     <NHCP.General_Fruit>Фрукты</NHCP.General_Fruit>
@@ -83,6 +80,9 @@
     <NHCP.Button_SettingsReset>настройки сброшены!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Изменить название категории</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Название успешно изменено на:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_HayNeedsCooling>Сено нужно охлаждать</NHCP.CheckboxLabel_HayNeedsCooling>
+    <NHCP.CheckboxSubLabel_HayNeedsCooling>Если отключено, отпадает необходимость охлаждать сено из Нового Урожая.\nВместо этого оно просто будет портиться на улице.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Зерновые производят муку Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Свежесобранные зерновые растения будут производить муку Vanilla Cooking Expanded как побочный продукт в количестве половины от урожая зерна.\n(Пример: растения амаранта дадут 10 зерен амаранта и 5 муки)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.General_Flowers>Цветы</NHCP.General_Flowers>
 </LanguageData>

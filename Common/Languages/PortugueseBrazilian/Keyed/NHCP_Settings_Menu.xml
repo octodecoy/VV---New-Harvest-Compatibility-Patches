@@ -17,7 +17,6 @@
     <NHCP.General_Industrial>Industrial</NHCP.General_Industrial>
     <NHCP.General_Medicinal>Medicinal</NHCP.General_Medicinal>
     <NHCP.General_Trees>Árvores</NHCP.General_Trees>
-    <NHCP.General_Flowers>Flores</NHCP.General_Flowers>
     <NHCP.Button_Select>Selecionar</NHCP.Button_Select>
     <NHCP.General_Default>Padrão: {0}</NHCP.General_Default>
     <NHCP.ON>LIG.</NHCP.ON>
@@ -30,8 +29,6 @@
     <NHCP.TabSubLabel_CommonalityDescription>Os valores de comunalidade definem a frequência com que um material aparece.\nMín: 0, Máx: 100\n0 = nunca aparece; 100 não significa 100% — é relativo a outros materiais.\nExemplo: Madeira = 1,0; Ouro = 0,02, então cuidado com valores altos.</NHCP.TabSubLabel_CommonalityDescription>
     <NHCP.CheckboxLabel_Logging>Registro</NHCP.CheckboxLabel_Logging>
     <NHCP.CheckboxSubLabel_Logging>Registra algumas informações ao iniciar o jogo.\nProvavelmente você não quer isso ativado.</NHCP.CheckboxSubLabel_Logging>
-    <NHCP.CheckboxLabel_HayNeedsCooling>Feno precisa de refrigeração</NHCP.CheckboxLabel_HayNeedsCooling>
-    <NHCP.CheckboxSubLabel_HayNeedsCooling>Se desativado, remove a necessidade de refrigerar o feno da Nova Colheita.\nEm vez disso, ele apenas se deteriorará se deixado ao ar livre.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.General_AnimalFoods>Alimentos para animais</NHCP.General_AnimalFoods>
     <NHCP.General_Grains>Grãos</NHCP.General_Grains>
     <NHCP.General_Fruit>Frutas</NHCP.General_Fruit>
@@ -83,6 +80,9 @@
     <NHCP.Button_SettingsReset>configurações redefinidas!</NHCP.Button_SettingsReset>
     <NHCP.Button_ChangeCategoryLabel>Alterar rótulo da categoria</NHCP.Button_ChangeCategoryLabel>
     <NHCP.Button_LabelChangedTo>Rótulo alterado com sucesso para:</NHCP.Button_LabelChangedTo>
+    <NHCP.CheckboxLabel_HayNeedsCooling>Feno precisa de refrigeração</NHCP.CheckboxLabel_HayNeedsCooling>
+    <NHCP.CheckboxSubLabel_HayNeedsCooling>Se desativado, remove a necessidade de refrigerar o feno da Nova Colheita.\nEm vez disso, ele apenas se deteriorará se deixado ao ar livre.</NHCP.CheckboxSubLabel_HayNeedsCooling>
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Grãos produzem farinha do Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Plantas de grãos recém-colhidas produzirão farinha do Vanilla Cooking Expanded como rendimento secundário, na quantidade de metade dos grãos.\n(Exemplo: plantas de amaranto produzirão 10 grãos de amaranto e 5 de farinha)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
+    <NHCP.General_Flowers>Flores</NHCP.General_Flowers>
 </LanguageData>
