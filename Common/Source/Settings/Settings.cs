@@ -88,7 +88,16 @@ namespace NewHarvestPatches
 
         internal void UpdateScribedVersion(Version newVersion)
         {
-            ModVersion = $"{newVersion.Major}.{newVersion.Minor}";
+            // Build proper version string with Build component if it exists
+            if (newVersion.Build >= 0)
+            {
+                ModVersion = $"{newVersion.Major}.{newVersion.Minor}.{newVersion.Build}";
+            }
+            else
+            {
+                ModVersion = $"{newVersion.Major}.{newVersion.Minor}";
+            }
+
             WriteSettingsToFile();
         }
 

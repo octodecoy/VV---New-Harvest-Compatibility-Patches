@@ -180,6 +180,7 @@ namespace NewHarvestPatches
                 return string.IsNullOrWhiteSpace(versionString) ? null : new Version(versionString);
             }
 
+
             internal static (Version oldVersion, Version newVersion) UpdateModVersion()
             {
                 try
@@ -195,32 +196,48 @@ namespace NewHarvestPatches
 
                     Version savedVersion = null;
                     bool update = false;
+
                     if (string.IsNullOrWhiteSpace(savedVersionString))
                     {
-                        ToLog($"No saved version found, setting to version {currentVersion.Major}.{currentVersion.Minor}.", 0);
+                        string versionDisplay = currentVersion.Build >= 0
+                            ? $"{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}"
+                            : $"{currentVersion.Major}.{currentVersion.Minor}";
+                        ToLog($"No saved version found, setting to version {versionDisplay}.", 0);
                         update = true;
                     }
                     else
                     {
-                        savedVersion = new(savedVersionString);
-                        bool majorMinorEqual = savedVersion.Major == currentVersion.Major && savedVersion.Minor == currentVersion.Minor;
-                        if (!majorMinorEqual)
+                        savedVersion = new Version(savedVersionString);
+
+                        // Use Version.CompareTo for proper version comparison
+                        int comparison = currentVersion.CompareTo(savedVersion);
+
+                        if (comparison != 0)
                         {
                             update = true;
-                            if (savedVersion.Major < currentVersion.Major || (savedVersion.Major == currentVersion.Major && savedVersion.Minor < currentVersion.Minor))
+                            string currentDisplay = currentVersion.Build >= 0
+                                ? $"{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}"
+                                : $"{currentVersion.Major}.{currentVersion.Minor}";
+                            string savedDisplay = savedVersion.Build >= 0
+                                ? $"{savedVersion.Major}.{savedVersion.Minor}.{savedVersion.Build}"
+                                : $"{savedVersion.Major}.{savedVersion.Minor}";
+
+                            if (comparison > 0)
                             {
-                                ToLog($"Updated from version [{savedVersion.Major}.{savedVersion.Minor}] to version [{currentVersion.Major}.{currentVersion.Minor}].", 0);
+                                ToLog($"Updated from version [{savedDisplay}] to version [{currentDisplay}].", 0);
                             }
                             else
                             {
-                                ToLog($"Downgraded from version [{savedVersion.Major}.{savedVersion.Minor}] to version [{currentVersion.Major}.{currentVersion.Minor}]. This is unexpected.", 1);
+                                ToLog($"Downgraded from version [{savedDisplay}] to version [{currentDisplay}]. This is unexpected.", 1);
                             }
                         }
                     }
+
                     if (update)
                     {
                         Settings.UpdateScribedVersion(currentVersion);
                     }
+
                     return (savedVersion, currentVersion);
                 }
                 catch (Exception ex)

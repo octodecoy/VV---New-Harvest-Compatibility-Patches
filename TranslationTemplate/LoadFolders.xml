@@ -109,17 +109,17 @@
         <li IfModActiveAll="vanillaexpanded.vfearchitect,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvestindustrialcrop">Mods/VanillaFurnitureExpandedArchitect</li>
         <li IfModActiveAll="vanillaexpanded.vfearchitect,ludeon.rimworld.royalty,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Mods/VanillaFurnitureExpandedArchitect/Royalty</li>
         <li IfModActiveAll="vanillaexpanded.vfearchitect,ludeon.rimworld.royalty,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvestindustrialcrop">Mods/VanillaFurnitureExpandedArchitect/Royalty</li>
-        <li IfModActiveAll="mlie.naturesprettysweet,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Mods/NaturesPrettySweet/Trees</li>
-        <li IfModActiveAll="mlie.naturesprettysweet,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvesttrees">Mods/NaturesPrettySweet/Trees</li>
         <li IfModActiveAll="mlie.rc2.core,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Mods/RimCuisine2/Garden</li>
         <li IfModActiveAll="mlie.rc2.core,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvestgardencrops">Mods/RimCuisine2/Garden</li>
         <li IfModActiveAll="mlie.rc2.core,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Mods/RimCuisine2/Trees</li>
         <li IfModActiveAll="mlie.rc2.core,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvesttrees">Mods/RimCuisine2/Trees</li>
 
         <!-- Added 12/23/25 -->
-        <li IfModActiveAll="mlie.apothecary,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Mods/Apothecary/Medicinal</li>
-        <li IfModActiveAll="mlie.apothecary,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvestmedicinalplants">Mods/Apothecary/Medicinal</li>
         <li IfModActiveAll="vanillaexpanded.vplantsemore.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Mods/VanillaPlantsExpandedMorePlants/Flowers</li>
         <li IfModActiveAll="vanillaexpanded.vplantsemore.vvnewharvest.compatpatches,vvenchov.vvnewharvestflowers">Mods/VanillaPlantsExpandedMorePlants/Flowers</li>
+        <li IfModActiveAll="mlie.naturesprettysweet,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Mods/NaturesPrettySweet/Trees</li>
+        <li IfModActiveAll="mlie.naturesprettysweet,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvesttrees">Mods/NaturesPrettySweet/Trees</li>
+        <li IfModActiveAll="mlie.apothecary,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvest">Mods/Apothecary/Medicinal</li>
+        <li IfModActiveAll="mlie.apothecary,octodecoy.vvnewharvest.compatpatches,vvenchov.vvnewharvestmedicinalplants">Mods/Apothecary/Medicinal</li>
     </v1.6>
 </loadFolders>

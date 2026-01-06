@@ -129,21 +129,25 @@
         <li IfModActiveAll="vanillaexpanded.vfearchitect,vvenchov.vvnewharvestindustrialcrop">Mods/VanillaFurnitureExpandedArchitect</li>
         <li IfModActiveAll="vanillaexpanded.vfearchitect,ludeon.rimworld.royalty,vvenchov.vvnewharvest">Mods/VanillaFurnitureExpandedArchitect/Royalty</li>
         <li IfModActiveAll="vanillaexpanded.vfearchitect,ludeon.rimworld.royalty,vvenchov.vvnewharvestindustrialcrop">Mods/VanillaFurnitureExpandedArchitect/Royalty</li>
-        <li IfModActive="mlie.naturesprettysweet">Mods/NaturesPrettySweet</li>
-        <li IfModActiveAll="mlie.naturesprettysweet,vvenchov.vvnewharvest">Mods/NaturesPrettySweet/Trees</li>
-        <li IfModActiveAll="mlie.naturesprettysweet,vvenchov.vvnewharvesttrees">Mods/NaturesPrettySweet/Trees</li>
         <li IfModActiveAll="mlie.rc2.core,vvenchov.vvnewharvest">Mods/RimCuisine2/Garden</li>
         <li IfModActiveAll="mlie.rc2.core,vvenchov.vvnewharvestgardencrops">Mods/RimCuisine2/Garden</li>
         <li IfModActiveAll="mlie.rc2.core,vvenchov.vvnewharvest">Mods/RimCuisine2/Trees</li>
         <li IfModActiveAll="mlie.rc2.core,vvenchov.vvnewharvesttrees">Mods/RimCuisine2/Trees</li>
 
         <!-- Added 12/23/25 -->
-         <li IfModActive="vanillaexpanded.vplantsemore">Mods/VanillaPlantsExpandedMorePlants</li>
+        <li IfModActive="vanillaexpanded.vplantsemore">Mods/VanillaPlantsExpandedMorePlants</li>
+        <li IfModActive="mlie.naturesprettysweet">Mods/NaturesPrettySweet</li>
+        <li IfModActiveAll="mlie.naturesprettysweet,vvenchov.vvnewharvest">Mods/NaturesPrettySweet/Trees</li>
+        <li IfModActiveAll="mlie.naturesprettysweet,vvenchov.vvnewharvesttrees">Mods/NaturesPrettySweet/Trees</li>
         <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvest">Mods/Apothecary/Forage</li>
         <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvestforagecrops">Mods/Apothecary/Forage</li>
         <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvest">Mods/Apothecary/Industrial</li>
         <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvestindustrialcrops">Mods/Apothecary/Industrial</li>
         <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvest">Mods/Apothecary/Medicinal</li>
         <li IfModActiveAll="mlie.apothecary,vvenchov.vvnewharvestmedicinalplants">Mods/Apothecary/Medicinal</li>
+
+        <!-- Added 1/6/26 -->
+        <li IfModActive="ferny.progressionagriculture">Mods/ProgressionAgriculture</li>
+        <li IfModActive="chaoticenrico.bettertrees">Mods/BetterTrees</li>
     </v1.6>
 </loadFolders>
