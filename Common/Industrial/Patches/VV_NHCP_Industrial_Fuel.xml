@@ -1,45 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <!-- If a def is turned off in settings, we remove it in code.  But just blanket add here. -->
-    <!-- Add to anything that has woodlog in the fuel filter regardless of CompProperties_Refuelable, so mod added comp properties will be found too  -->
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>/Defs/ThingDef/comps/li/fuelFilter/thingDefs[li="WoodLog"]</xpath>
-        <value>
-            <li>VV_CedarWood</li>
-            <li>VV_Cork</li>
-            <li>VV_EbonyWood</li>
-            <li>VV_MahoganyWood</li>
-            <li>VV_RamieFibers</li>
-            <li>VV_Rattan</li>
-            <li>VV_RawJute</li>
-            <li>VV_ReedStalks</li>
-            <li>VV_RosewoodWood</li>
-            <!-- Until new version of Expanded Woodworking is figured out; may not even be needed -->
-            <!-- <li MayRequire="zal.expandwoodwork">VV_CedarLumber</li>
-            <li MayRequire="zal.expandwoodwork">VV_EbonyLumber</li>
-            <li MayRequire="zal.expandwoodwork">VV_MahoganyLumber</li>
-            <li MayRequire="zal.expandwoodwork">VV_RosewoodLumber</li> -->
-        </value>
-    </Operation>
-
-    <!-- Don't want to add these unless MO lumber chain is on -->
+    <!-- Add to anything that has woodlog in the fuel filter regardless of CompProperties_Refuelable, so mod added comp properties will be found too. -->
+    <!-- If  Burn It for Fuel 2 is installed don't do anything, let it handle fuel completely. -->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>Medieval Overhaul</li>
+            <li>[JPT] Burn It for Fuel 2</li>
         </mods>
-        <match Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef/killedLeavings/DankPyon_RawWood</xpath>
-            <match Class="PatchOperationAdd">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef/comps/li/fuelFilter/thingDefs[li="WoodLog"]</xpath>
-                <value>
-                    <li>DankPyon_Log_VV_CedarWood</li>
-                    <li>DankPyon_Log_VV_EbonyWood</li>
-                    <li>DankPyon_Log_VV_MahoganyWood</li>
-                    <li>DankPyon_Log_VV_RosewoodWood</li>                        
-                </value>
-            </match>
-        </match>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>/Defs/ThingDef/comps/li/fuelFilter/thingDefs[li="WoodLog"]</xpath>
+                    <value>
+                        <li>VV_CedarWood</li>
+                        <li>VV_Cork</li>
+                        <li>VV_EbonyWood</li>
+                        <li>VV_MahoganyWood</li>
+                        <li>VV_RamieFibers</li>
+                        <li>VV_Rattan</li>
+                        <li>VV_RawJute</li>
+                        <li>VV_ReedStalks</li>
+                        <li>VV_RosewoodWood</li>
+                    </value>
+                </li>
+                <!-- Don't want to add these unless MO lumber chain is on -->
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Medieval Overhaul</li>
+                    </mods>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/killedLeavings/DankPyon_RawWood</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef/comps/li/fuelFilter/thingDefs[li="WoodLog"]</xpath>
+                            <value>
+                                <li>DankPyon_Log_VV_CedarWood</li>
+                                <li>DankPyon_Log_VV_EbonyWood</li>
+                                <li>DankPyon_Log_VV_MahoganyWood</li>
+                                <li>DankPyon_Log_VV_RosewoodWood</li>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </nomatch>
     </Operation>
 </Patch>

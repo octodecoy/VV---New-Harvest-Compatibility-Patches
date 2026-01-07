@@ -163,34 +163,43 @@
             <xpath>/Defs/ThingDef/killedLeavings/DankPyon_RawWood</xpath>
             <nomatch Class="PatchOperationSequence">
                 <operations>
-                    <li Class="PatchOperationAdd">
-                        <success>Always</success>
-                        <xpath>                            
-                            /Defs/ThingDef/comps/li
-                            [@Class="CompProperties_Refuelable"]
-                            /fuelFilter/categories
-                            [not(li="WoodTypes")]
-                            [li="DankPyon_Wood" or li="DankPyon_RawWood"]
-                        </xpath>
-                        <value>
-                            <li>WoodTypes</li>
-                        </value>
-                    </li>
-                    <li Class="PatchOperationAdd">
-                        <success>Always</success>
-                        <xpath>                            
-                            Defs/ThingDef/comps/li
-                            [@Class="CompProperties_Refuelable"]
-                            /fuelFilter
-                            [not(categories[li="WoodTypes"])]
-                            /thingDefs[li="WoodLog" or li="DankPyon_Coal"]
-                        </xpath>
-                        <value>
-                            <li>VV_CedarWood</li>
-                            <li>VV_EbonyWood</li>
-                            <li>VV_MahoganyWood</li>
-                            <li>VV_RosewoodWood</li>
-                        </value>
+                    <li Class="PatchOperationFindMod">
+                        <mods>
+                            <li>[JPT] Burn It for Fuel 2</li>
+                        </mods>
+                        <nomatch Class="PatchOperationSequence">
+                            <operations>
+                                <li Class="PatchOperationAdd">
+                                    <success>Always</success>
+                                    <xpath>                            
+                                        /Defs/ThingDef/comps/li
+                                        [@Class="CompProperties_Refuelable"]
+                                        /fuelFilter/categories
+                                        [not(li="WoodTypes")]
+                                        [li="DankPyon_Wood" or li="DankPyon_RawWood"]
+                                    </xpath>
+                                    <value>
+                                        <li>WoodTypes</li>
+                                    </value>
+                                </li>
+                                <li Class="PatchOperationAdd">
+                                    <success>Always</success>
+                                    <xpath>                            
+                                        Defs/ThingDef/comps/li
+                                        [@Class="CompProperties_Refuelable"]
+                                        /fuelFilter
+                                        [not(categories[li="WoodTypes"])]
+                                        /thingDefs[li="WoodLog" or li="DankPyon_Coal"]
+                                    </xpath>
+                                    <value>
+                                        <li>VV_CedarWood</li>
+                                        <li>VV_EbonyWood</li>
+                                        <li>VV_MahoganyWood</li>
+                                        <li>VV_RosewoodWood</li>
+                                    </value>
+                                </li>
+                            </operations>
+                        </nomatch>
                     </li>
                     <li Class="PatchOperationAdd">
                         <success>Always</success>

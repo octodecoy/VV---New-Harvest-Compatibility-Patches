@@ -318,10 +318,10 @@ namespace NewHarvestPatches
             /// <summary>
             /// Indicates whether the fuel settings should be displayed in menu.
             /// </summary>
-            /// <remarks>If !HasIndustrialModule or HasMedievalOverhaul or LWM's Fuel Filter is active this returns <see langword="false"/>.
+            /// <remarks>If !HasIndustrialModule or HasMedievalOverhaul or LWM's Fuel Filter/[JPT] Burn It for Fuel 2 is active this returns <see langword="false"/>.
             /// Both mods add a fuel ITab, so user can just toggle fuels themselves.
             /// </remarks>
-            public static bool ShowFuelSettings = HasIndustrialModule && !HasMedievalOverhaul && !ModsConfig.IsActive("zal.lwmfuelfilter");
+            public static bool ShowFuelSettings = HasIndustrialModule && !HasMedievalOverhaul && !ModsConfig.IsActive("zal.lwmfuelfilter") && !ModsConfig.IsActive("jpt.burnitforfuel");
 
             /// <summary>
             /// Indicates whether the Wood Conversion Recipe setting should be displayed in menu.
