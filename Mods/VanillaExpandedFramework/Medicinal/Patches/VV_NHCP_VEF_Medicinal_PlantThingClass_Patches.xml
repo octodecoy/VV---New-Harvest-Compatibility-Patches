@@ -11,11 +11,10 @@
                         <thingClass>VEF.Plants.Plant_PrefersRocky</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_LavenderPlant"]/description</xpath>
-                    <value>
-                        <description>A fragrant herb with purple flower spikes, valued for its calming aroma and use in herbal remedies.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Lavender shows a marked preference for rocky soils, flourishing in them.</description>
-                    </value>
+                    <mode>AppendWhole</mode>
+                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Lavender shows a marked preference for rocky soils, flourishing in them.</replaceWith>
                 </li>
             </operations>
         </match>

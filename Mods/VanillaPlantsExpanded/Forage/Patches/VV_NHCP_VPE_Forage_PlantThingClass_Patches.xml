@@ -11,11 +11,10 @@
                         <thingClass>VanillaPlantsExpanded.Plant_RainAffected</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_Clover"]/description</xpath>
-                    <value>
-                        <description>A resilient, low-growing plant with trifoliate leaves and vibrant flowers. Often cultivated as animal forage due to its fast growth and adaptability.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Clover will receive a huge 50% growth boost if it is raining.</description>
-                    </value>
+                    <mode>AppendWhole</mode>
+                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Clover will receive a huge 50% growth boost if it is raining.</replaceWith>
                 </li>
             </operations>
         </match>

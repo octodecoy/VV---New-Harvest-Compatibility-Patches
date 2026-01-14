@@ -11,11 +11,10 @@
                         <thingClass>VEF.Plants.Plant_FasterInTropics</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_DragonFruitPlant"]/description</xpath>
-                    <value>
-                        <description>A tropical plant that produces large, vibrant fruits with a sweet and tangy flavor. Dragon fruit plants thrive in hot, sunny climates with well-drained soil.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Dragonfruit plants grow 30% faster in equatorial regions. The size of the equatorial region depends on the planet's overall temperature: below 15º for Normal, below 35º for Warm, below 65º for Hot and all the planet for Very Hot. Planets with below Normal temperature are considered to have no equator.</description>
-                    </value>
+                    <mode>AppendWhole</mode>
+                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Dragonfruit plants grow 30% faster in equatorial regions. The size of the equatorial region depends on the planet's overall temperature: below 15º for Normal, below 35º for Warm, below 65º for Hot and all the planet for Very Hot. Planets with below Normal temperature are considered to have no equator.</replaceWith>
                 </li>
             </operations>
         </match>
@@ -31,11 +30,10 @@
                         <thingClass>VEF.Plants.Plant_NoWaterNearby</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_AmaranthPlant"]/description</xpath>
-                    <value>
-                        <description>A vibrant, leafy plant that produces small, edible seeds. Amaranth is highly nutritious and can grow in a variety of climates, making it a versatile crop.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Amaranth plants have adapted to drought conditions so well that they recieve a 70% growth penalty when grown within 10 tiles of water.</description>
-                    </value>
+                    <mode>AppendWhole</mode>
+                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Amaranth plants have adapted to drought conditions so well that they recieve a 70% growth penalty when grown within 10 tiles of water.</replaceWith>
                 </li>
             </operations>
         </match>
@@ -50,11 +48,10 @@
                         <thingClass>VEF.Plants.Plant_NoWaterNearby</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_MilletPlant"]/description</xpath>
-                    <value>
-                        <description>A hardy, drought-resistant plant that grows in a variety of conditions. Its small, sturdy seeds are a great source of nutrition and can thrive in poor soil.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Millet plants have adapted to drought conditions so well that they recieve a 70% growth penalty when grown within 10 tiles of water.</description>
-                    </value>
+                    <mode>AppendWhole</mode>
+                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Millet plants have adapted to drought conditions so well that they recieve a 70% growth penalty when grown within 10 tiles of water.</replaceWith>
                 </li>
             </operations>
         </match>
@@ -70,11 +67,10 @@
                         <thingClass>VEF.Plants.Plant_Resistant</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_ArtichokePlant"]/description</xpath>
-                    <value>
-                        <description>A large, perennial plant with spiky leaves that produces edible flower buds. Artichokes thrive in mild climates with plenty of sunlight.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Artichoke plants are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</description>
-                    </value>
+                    <mode>AppendWhole</mode>
+                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Artichoke plants are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</replaceWith>
                 </li>
             </operations>
         </match>
@@ -89,11 +85,10 @@
                         <thingClass>VEF.Plants.Plant_Resistant</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_AsparagusPlant"]/description</xpath>
-                    <value>
-                        <description>Asparagus is a tender vegetable plant grown for its edible green shoots. It thrives in fertile soil and provides a nutritious harvest once mature.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Artichoke plants are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</description>
-                    </value>
+                    <mode>AppendWhole</mode>
+                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Artichoke plants are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</replaceWith>
                 </li>
             </operations>
         </match>
