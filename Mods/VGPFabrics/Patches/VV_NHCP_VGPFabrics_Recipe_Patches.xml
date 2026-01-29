@@ -8,7 +8,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationConditional">
-					<xpath>/Defs/RecipeDef[defName="TableLoom"]</xpath>
+					<xpath>/Defs/ThingDef[defName="TableLoom"]</xpath>
 					<match Class="PatchOperationSequence">
 						<operations>
 							<li Class="PatchOperationAdd">
@@ -27,7 +27,7 @@
 					</match>
 				</li>
 				<li Class="PatchOperationConditional">
-					<xpath>/Defs/RecipeDef[defName="TableElecLoom"]</xpath>
+					<xpath>/Defs/ThingDef[defName="TableElecLoom"]</xpath>
 					<match Class="PatchOperationSequence">
 						<operations>
 							<li Class="PatchOperationAdd">
